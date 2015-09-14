@@ -1,7 +1,22 @@
+
+
 html, body {
-      padding: 10;
-      margin: 10;
+      padding: 30;
+      margin: 30;
     }
+
+
+    h1 { font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+         font-weight: normal;
+         font-size: 1.75em;
+         letter-spacing: .2em;
+         line-height: 1.1em;
+         margin:0px;
+         text-align: center;
+         text-transform: uppercase;
+
+    }
+
     body {
           color: #325050;
           background: #f0f8ff;
@@ -14,4 +29,6 @@ html, body {
           font-family: 'Libre Baskerville', sans-serif;
           Arial; font-size: 20pt;
     }
+
+
 
