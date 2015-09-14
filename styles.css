@@ -11,6 +11,7 @@ html, body {
     }
 
     [data-id="published-at"] {
-          Arial; font-size: 13pt;
+          font-family: 'Libre Baskerville', sans-serif;
+          Arial; font-size: 20pt;
     }
 
