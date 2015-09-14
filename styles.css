@@ -14,8 +14,19 @@ html, body {
          margin:0px;
          text-align: center;
          text-transform: uppercase;
-
+         padding: 20;
     }
+
+    [data-id="page-link"] {
+         color: #35787E; 
+         font-family: 'Source Sans Pro', sans-serif; 
+         font-size: 28px; 
+         font-weight: 400; 
+         line-height: 32px; 
+         margin: 0 0 24px; }
+    }
+    
+    a:hover span { cursor: pointer }
 
     body {
           color: #325050;
@@ -29,6 +40,7 @@ html, body {
           font-family: 'Libre Baskerville', sans-serif;
           Arial; font-size: 20pt;
     }
+
 
 
 
