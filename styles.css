@@ -41,12 +41,12 @@ html, body {
           background: #f0f8ff;
           font-family: 'Libre Baskerville', sans-serif;
           Arial; font-size: 14pt;
-          font-size: 70%;
+          font-size: 80%;
     }
 
     [data-id="published-at"] {
           font-family: 'Libre Baskerville', sans-serif;
-          Arial; font-size: 12pt;
+          Arial; font-size: 8pt;
     }
 
 
