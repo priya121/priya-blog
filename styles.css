@@ -29,10 +29,13 @@ html, body {
     
     a:hover span { cursor: pointer }
 
-    [data-id="content"] {
+    li {
       padding: 20;
-  }
+    }
 
+    [data-id="content"] {
+      padding: 10;
+  }
 
     body {
           color: #325050;
