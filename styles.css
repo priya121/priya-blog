@@ -29,6 +29,7 @@ html, body {
 
     li {
       padding: 20;
+      list-style-type: none; 
     }
 
     [data-id="content"] {
@@ -39,7 +40,7 @@ html, body {
           color: #325050;
           background: #f0f8ff;
           font-family: 'Libre Baskerville', sans-serif;
-          Arial; font-size: 11pt;
+          Arial; font-size: 14pt;
           font-size: 70%;
     }
 
