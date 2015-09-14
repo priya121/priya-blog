@@ -29,6 +29,11 @@ html, body {
     
     a:hover span { cursor: pointer }
 
+    [data-id="content"] {
+      padding: 20;
+  }
+
+
     body {
           color: #325050;
           background: #f0f8ff;
