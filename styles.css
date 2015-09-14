@@ -10,3 +10,7 @@ html, body {
           font-size: 70%;
     }
 
+    [data-id="published-at"] {
+          Arial; font-size: 13pt;
+    }
+
