@@ -6,13 +6,30 @@
 </head>
 <body>
 <h1 data-id="blog-title">Priya’s Blog</h1>
-    <ul><li>
-        <h1><a data-id="page-link" href="../../category/uncategorized/index.html">uncategorized</a></h1>
+<ol data-id="page-list" data-max-pages="5">
+    <li>
+        <h1><a data-id="page-link" href="../../arrays_in_java.html">Arrays in Java</a></h1>
         <p data-id="published-at" data-format="dd MMMM yyyy">22 September 2015</p>
-        <section data-id="content"></section>
+        <section data-id="content"><p>Arrays in Ruby are incredibly useful and most of the tasks and programs that I built while I was learning Ruby had an array within them at some point or another. As I learn more Java I’m sure that arrays will be increasingly useful, (I have already used some briefly in some of the katas that I am practicing).</p><p>Arrays in Java must be created using an array creation expression. </p><p>e.g. new type[length] </p><p>The type must be explicitly set as everything must be in Java. Similar to Ruby different elements can be accessed using array[i] where i is the index number of the element trying to be accessed.</p><p>It is also possible to create multi-dimensional arrays by writing type [] [], type [] [] [] etc.</p><p>There are also no array constants, new arrays are created every time an array initialiser is evaluated. </p><p>Despite there being these restrictions on arrays in Java, by using class Arrays in java.util certain utility methods are available that allow you manipulate the array.</p></section>
+    </li><li>
+        <h1><a data-id="page-link" href="../../binary.html">Counting in Binary</a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">22 September 2015</p>
+        <section data-id="content"><p>Mathematics is not vital to knowing how to program, but it definitely helps if you are good at it. This is formal logic. If x then y is not the same as if y then x (a mistake people make all the time in everyday conversation). Counting in binary is simple if you imagine that all a computer has access to is 0 and 1 or on and off in an electrical circuit.</p><p>Because of this everything it reads has to be repreeneted in 0s and 1s. So this means that once it has used 0 and 1 to represent a number it can repetitively reuse 0 and 1 to add onto the end of a previous combination of 0 and 1. </p><p>This is best explained if you imagine that you can only count using the digits 0–10 and a–j once you have counted to 10 using the numbers in order to carry on 0a would represent 11 and 1a would be 21 etc. </p><p>In a similar way a computer uses 0s and 1s and combinations of these when it needs to add to a previous value.</p><p>The easiest way to calculate the binary value of a number is to divide a number by 2 and record the remainder value as part of the binary result until the number you are dividing is one.</p></section>
+    </li><li>
+        <h1><a data-id="page-link" href="../../design.html">OO Design</a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">22 September 2015</p>
+        <section data-id="content"><p>Object Oriented Design (OOD) is a phrase that gets thrown around a lot in software design and it is easy to think of it as an extra addition to add to code if you have the luxury of time. But actually good OOD saves a lot of pain if ever you need to change a program later on in time.</p><p>One of the main components of good OO design is the correct flow of dependencies. A dependency is when one class requires another to work or uses another class in order to work (the first class is said to depend on the second). A UML diagram often helps to figure out what the correct flow of dependencies should be. If you can control the flow of dependencies and recognise which direction the flow should be directed you have the basis of understanding good Object Oriented Design.</p></section>
+    </li><li>
+        <h1><a data-id="page-link" href="../../dotfiles.html">Dotfiles</a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">22 September 2015</p>
+        <section data-id="content"><p>Setting up a new machine can take time and it is always nice to take your time customizing the settings just how you like them. But this can take a long time if there are many settings you have to set manually. A useful way to speed up this process and cut down duplication time is to copy across your dotfiles from git.</p><p>I recently did this and now am able to quickly work on my projects on the new machine just as I did before. In order to clone across the files, it is also necessary to set up your new machine with an SSH key on git. There are many resources that help with this. One I used is: [https://help.github.com/articles/generating-ssh-keys/] and it is a simple process.</p><p>Now I can manage my settings across multiple devices and am more comfortable with adding to my dotfiles. Next step is to change my vim colours!</p></section>
+    </li><li>
+        <h1><a data-id="page-link" href="../../encapsulation.html">Encapsulation in Ruby </a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">22 September 2015</p>
+        <section data-id="content"><p>There are many useful components in Ruby as a language and one I looked into closer recently is Encapsulation.</p><p>Encapsulation reduces coupling as it hides the internal representation or data structure of a particular object. This makes it easier to make changes when they become necessary, as if there are changes that need to be made to the data within the class, it will handle these changes and they will not have to be made throughout the entire program or application. </p><p>Encapsulation makes more sense when programs get larger, but I am going to try and implement it as soon as possible and this will make things easier to change.</p></section>
     </li>
-
-</ul>
+</ol>
+<p data-id="if-exists" data-key="next"><a data-id="href" data-key="next" href="../../category/uncategorized/index-2.html">Next</a></p>
 
 </body>
 

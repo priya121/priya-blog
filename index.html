@@ -6,14 +6,30 @@
 </head>
 <body>
 <h1 data-id="blog-title">Priya’s Blog</h1>
-    <ul><li>
-        <h1><a data-id="page-link" href="index.html"></a></h1>
-        <ol data-id="page-list" data-max-pages="5">
-        <p data-id="published-at" data-format="dd MMMM yyyy">10 September 2015</p>
-        <section data-id="content"></section>
+<ol data-id="page-list" data-max-pages="5">
+    <li>
+        <h1><a data-id="page-link" href="binary.html">Counting in Binary</a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">22 September 2015</p>
+        <section data-id="content"><p>Mathematics is not vital to knowing how to program, but it definitely helps if you are good at it. This is formal logic. If x then y is not the same as if y then x (a mistake people make all the time in everyday conversation). Counting in binary is simple if you imagine that all a computer has access to is 0 and 1 or on and off in an electrical circuit.</p><p>Because of this everything it reads has to be repreeneted in 0s and 1s. So this means that once it has used 0 and 1 to represent a number it can repetitively reuse 0 and 1 to add onto the end of a previous combination of 0 and 1. </p><p>This is best explained if you imagine that you can only count using the digits 0–10 and a–j once you have counted to 10 using the numbers in order to carry on 0a would represent 11 and 1a would be 21 etc. </p><p>In a similar way a computer uses 0s and 1s and combinations of these when it needs to add to a previous value.</p><p>The easiest way to calculate the binary value of a number is to divide a number by 2 and record the remainder value as part of the binary result until the number you are dividing is one.</p></section>
+    </li><li>
+        <h1><a data-id="page-link" href="stacks.html">Stacks</a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">22 September 2015</p>
+        <section data-id="content"><p>Stacks are a pretty fundamental concept in CS. They represent how data is allocated to memory at a basic level. A stack area on computer memory is of a fixed origin and variable size. The two basic operations that are used most frequently on a stack is inserting an item and removing an item and a stack uses the concept of last in first out (LIFO). In Java it is possible to create a Stack and call certain predefined methods on it like push, pop, peek, search and size. Like most Java lists a stack has to contain matching objects within it that must be declared when it is first created.</p></section>
+    </li><li>
+        <h1><a data-id="page-link" href="method_signatures_in_java.html">Method Signatures in Java</a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">22 September 2015</p>
+        <section data-id="content"><p>The main class in java must be present in the application at least once for it to be able to run and has a pretty standard signature.</p><p>Methods in java have to have certain elements in order for the Java package to be able to collect the parts of the program togethr and process them in a logical way.</p><p>Firstly a method must be public or private. Public means that it is available across packages whereas private means it is only accessible within the current package. Then if a method is static(that is, it is not called by Objects within the class) this must also be part of the method signature.</p><p>These are followed by what the method signature will return (String, Integer, String[], void etc.) and the method name.</p><p>In Java if a method takes an arguement, the type of arguement must also be declared within parentheses, this is true even if the method takes no arguement with the parentheses being left blank.</p><p>Method signatures in Java seem complicated at first, but I have been told that this makes things clearer in the long term, so far most of my programs and tasks have been small, but I will report back when I know if this is true.</p></section>
+    </li><li>
+        <h1><a data-id="page-link" href="enums.html">Enums in Java</a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">22 September 2015</p>
+        <section data-id="content"><p>Enums in Java allow for a specific data type to be set as a list of predefined constants. Most of the time, these predefined constants represent constants in the real world, like days of the week or months in a year. These rarely change so can be set for the duration of a program and do not represent numeric values or textual data.</p><p>Enums in Java are type safe, meaning that they cannot be reassigned to another type once they have been set. It is also possible to set values for the enums and retrieve these by calling .values() on them.</p><p>They can be used somewhat recklessly when defining a type on a set of values, but used well can be useful.</p></section>
+    </li><li>
+        <h1><a data-id="page-link" href="types.html">Basics of the Java Memeory Model</a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">22 September 2015</p>
+        <section data-id="content"><p>Why Java functions the way it does becomes clearer once the way the Java memory model is understood. I’m sure I’ve only scratched the surface but here is a little of what I have learnt so far.</p><p>The memory model dictates how the virtual memory model interacts with the computer memory (RAM).</p><p>The Java memory model splits memory used by a Java application between thread stacks and the heap. Which of these is used depends on the type defined. Primitive types are stored on the thread stacks and objects or references to those objects are stored on the heap stack.</p><p>If there are multiple variables representing primitive types, these can be stored as separate items on different thread stacks as copies of the original type.</p><p>Using primitive types increases the speed of an application despite the fact that creating Objects references can be easier to use, so I am going to try and use primitive types when it makes sense to do so.</p></section>
     </li>
-
-</ul>
+</ol>
+<p data-id="if-exists" data-key="next"><a data-id="href" data-key="next" href="index-2.html">Next</a></p>
 
 </body>
 
