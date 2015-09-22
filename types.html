@@ -2,14 +2,18 @@
       <article>
           <header>
               <h1><a data-id="page-link" href="types.html">Basics of the Java Memeory Model</a></h1>
-              <p data-id="published-at" data-format="dd MMMM yyyy">14 September 2015</p>
+              <p data-id="published-at" data-format="dd MMMM yyyy">22 September 2015</p>
+
           </header>
           <section data-id="content"><p>Why Java functions the way it does becomes clearer once the way the Java memory model is understood. I’m sure I’ve only scratched the surface but here is a little of what I have learnt so far.</p><p>The memory model dictates how the virtual memory model interacts with the computer memory (RAM).</p><p>The Java memory model splits memory used by a Java application between thread stacks and the heap. Which of these is used depends on the type defined. Primitive types are stored on the thread stacks and objects or references to those objects are stored on the heap stack.</p><p>If there are multiple variables representing primitive types, these can be stored as separate items on different thread stacks as copies of the original type.</p><p>Using primitive types increases the speed of an application despite the fact that creating Objects references can be easier to use, so I am going to try and use primitive types when it makes sense to do so.</p></section>
           <footer>
-              <ol>
+          <ol>
+              <li data-id="tag-list">
+              
+                  </li>
               </ol>
-          </footer>
-      </article>
-  </body>
-
+              </footer>
+              </article>
+          </body>
+      
 </html>
