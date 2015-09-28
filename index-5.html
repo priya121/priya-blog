@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link type="text/css" rel="stylesheet" href="../../styles.css" />
+  <title data-id="blog-title">Priya’s Blog</title>
+</head>
+<body>
+<h1 data-id="blog-title">Priya’s Blog</h1>
+<ol data-id="page-list" data-max-pages="5">
+    <li>
+        <h1><a data-id="page-link" href="../../static_methods.html">Static Methods </a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        <section data-id="content"><p>Static methods in java are used when the method needs to be called without creating an object of the class.</p><p>An instance variable needs an object to be created for it to be called whereas a static method does not. That is why most main classes in java must be static.</p><p>Static methods typically take all their data from their parameters and create something from those parameters. They also typically have no reference to variables, so can handle generic calculations well.</p><p>It is possible to make many methods static, but this is bad practice as it is unclear as to what the responsibility of the class is when many methods can be called on it that are not necssarily related to what it does. A static method called on a class is also not polymorpic so this means that it is not possible to override the behavior set by a static method.</p><p>So it is important to think carefully when creating a static method and avoid using them unless necessary.</p></section>
+    </li><li>
+        <h1><a data-id="page-link" href="../../type_casting.html">Type Casting</a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">28 August 2015</p>
+        <section data-id="content"><p>Something I am getting used to while learning Java is Type Casting. Type Casting is the assignment of one type of variable to another type.</p><p>There are two different types of Type Casting in Java. The widening casting from byte up to double, including everything in between (these take up increasing amounts of memory) and narrowing casting (a decreasing amount of memory) from double down to byte, also including everything in between.</p><p>It is important that the type cast objects share the same type hierarchy, meaning that they have a parent child relationship between them. If this is not the case, the compiler will throw a ClassCastException. Narrowing casting needs to be explicitly set in that you need to be explicit in the type of casting required. </p><p>Type casting is mainly used to get access to fields and methods declared on a target type or class and I am sure I will be using more of them as I get more familiar with Java.</p></section>
+    </li><li>
+        <h1><a data-id="page-link" href="../../types.html">Basics of the Java Memeory Model</a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">14 September 2015</p>
+        <section data-id="content"><p>Why Java functions the way it does becomes clearer once the way the Java memory model is understood. I’m sure I’ve only scratched the surface but here is a little of what I have learnt so far.</p><p>The memory model dictates how the virtual memory model interacts with the computer memory (RAM).</p><p>The Java memory model splits memory used by a Java application between thread stacks and the heap. Which of these is used depends on the type defined. Primitive types are stored on the thread stacks and objects or references to those objects are stored on the heap stack.</p><p>If there are multiple variables representing primitive types, these can be stored as separate items on different thread stacks as copies of the original type.</p><p>Using primitive types increases the speed of an application despite the fact that creating Objects references can be easier to use, so I am going to try and use primitive types when it makes sense to do so.</p></section>
+    </li><li>
+        <h1><a data-id="page-link" href="../../UML.html">UML Diagrams</a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">09 September 2015</p>
+        <section data-id="content"><p>UML diagrams are commonly used when modelling for object oriented design programs. They are the graphical notation for drawing diagrams of software concepts.</p><p>Composite relationships are shown in a UML diagram by an arrow with one end a point and the other a diamond.</p><p>Inheritance is shown through a blank arrowhead and the arrows point in the direction that the inheritance flows from.</p><p>Class Icons are divided into three components, a class title, the variables and the functions and interfaces are shown by the &lt;&gt; notation.</p><p>It is always a good idea to draw up a UML before starting to write a program, and adjust it as you go.</p></section>
+    </li><li>
+        <h1><a data-id="page-link" href="../../UserStories.html">Creating Stories</a></h1>
+        <p data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        <section data-id="content"><p>Starting a program or application from scratch can be daunting, but it is also exciting. What helps clarify the direction of where you need to start is a series of stories. The first few stories are important as they can help guide the rest of the application. </p><p>It is important to start with the most degenerate case and then test the code from there. That is why it is not always useful to have too much planned out for the later stages of the code as it is quite likely that it will change. </p><p>I have started on some stories for a minesweeper game and the most degenerate case for that is the return of an exploded mine (that I will represent as a 1) when the relevant index (depicted by a coordinate) will change.</p><p>I have the next few stories written down and the later they get the more abstarct they become. But this is a useful exercise that I hope I will get better at, becuase so often once you have figured out how to do something, actually doing it and putting it into code is much easier.</p></section>
+    </li>
+</ol>
+
+<p data-id="if-exists" data-key="previous"><a data-id="href" data-key="previous" href="../../category/uncategorized/index-4.html">Previous</a></p>
+</body>
+
+</html>
