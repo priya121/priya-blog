@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="../../styles.css" />
+    <title data-id="blog-title">Priya’s Blog</title>
+  </head>
+<body>
+  <header id="top">
+    <h1><a href="../../index.html" data-id="blog-title">Priya’s Blog</a></h1>
+    <ul>
+        
+        
+    </ul>
+  </header>
+<main>
+<ol class="entries" data-id="page-list" data-max-pages="5">
+    <li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="../../UserStories.html">Creating Stories</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        </header>
+        <div data-id="content"><p>Starting a program or application from scratch can be daunting, but it is also exciting. What helps clarify the direction of where you need to start is a series of stories. The first few stories are important as they can help guide the rest of the application. </p><p>It is important to start with the most degenerate case and then test the code from there. That is why it is not always useful to have too much planned out for the later stages of the code as it is quite likely that it will change. </p><p>I have started on some stories for a minesweeper game and the most degenerate case for that is the return of an exploded mine (that I will represent as a 1) when the relevant index (depicted by a coordinate) will change.</p><p>I have the next few stories written down and the later they get the more abstarct they become. But this is a useful exercise that I hope I will get better at, becuase so often once you have figured out how to do something, actually doing it and putting it into code is much easier.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="../../ArrayLists.html">Arrays vs ArrayLists in Java</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        </header>
+        <div data-id="content"><p>Difference between an Array List and Array in Java</p><p>In Java Arrays and ArrayLists are differentiated in some important aspects:</p><ol><li><p>An Array is fixed in length, whereas the ArrayList can be added to and is dynamic in size.</p></li><li><p>ArrayLists cannot contain primitive data types whereas an Array can contain both Object references and primitive types.</p></li><li><p>.iterator can be used to iterate through an ArrayList, whereas a for or while loop can be used to iterate through an Array.</p></li><li><p>The length of an ArrayList is provided by the .size() method whereas .length is needed to determine the length of an array.</p></li><li><p>Elements can be added to an ArrayList using .add() and must be inserted using assignment for an Array.</p></li><li><p>An array can be multi-dimensional, but ArrayLists must always be one dimensional.</p></li></ol><p>This is another example of how careful consideration must be given to setting a type before it is declared in Java. Once it is clear what the requirements of the array are, which requires some foresight, a choice can be made between Array or ArrayList.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="../../static_methods.html">Static Methods </a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        </header>
+        <div data-id="content"><p>Static methods in java are used when the method needs to be called without creating an object of the class.</p><p>An instance variable needs an object to be created for it to be called whereas a static method does not. That is why most main classes in java must be static.</p><p>Static methods typically take all their data from their parameters and create something from those parameters. They also typically have no reference to variables, so can handle generic calculations well.</p><p>It is possible to make many methods static, but this is bad practice as it is unclear as to what the responsibility of the class is when many methods can be called on it that are not necssarily related to what it does. A static method called on a class is also not polymorpic so this means that it is not possible to override the behavior set by a static method.</p><p>So it is important to think carefully when creating a static method and avoid using them unless necessary.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="../../gitPullRequests.html">Pull Requests on Git</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        </header>
+        <div data-id="content"><p>Creating a git pull request allows a developer to ask others to review their code when a new feature has been added, a change has been made or they want other developers to review their code for any other reason. </p><p>In order to do this the following steps are necessary:</p><p>In order to work on an exisiting project, a fork of the exisiting project repository needs to be made. Once this is done a copy of the project will have been made.</p><p>Then a clone of the forked repository must be made, this will create a new working copy of the project on a local machine.</p><p>Before creating a new feature, a new branch for the feature has to be created and any changes must be added and commited to this branch.</p><p>Once these changes have been made it is possible to push these changes to the copy of the repository, (not the main repository) by a git push. </p><p>After this has been done, a pull request can be made through the relevant copied repository page. </p><p>Creating pull requests is useful when working in a team and it encourages collaboration.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="../../code_retreats.html">Code Retreat</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 October 2015</p>
+        </header>
+        <div data-id="content"><p>When I first heard about code retreats I thought a holiday or trip was involved at some point. I suppose that was the original idea, that people would go and meet each other at a specific location and code together.</p><p>I took part in my first code retreat today and it was really fun! The retrospectives about what has been learnt is particularly interesting, but the part I enjoyed was working with people and seeing how they approach the specific problem, especially when it is so different to mine.</p><p>I saw how some people communicate through narration, others let code do the talking and others ask questions. I was even exposed to a new language and had to be quiet for a full 20 minutes when trying to complete a specific task with my pair, which was a struggle.</p><p>We had 20 minute iterations, or pairing sessions with a specific constraint and this made the challenges difficult, but it was a great way to get some exposure to a code retreat in a short space of time.</p><p>I am looking forward to my next one!</p></div>
+      </article>
+    </li>
+</ol>
+<nav>
+<p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="../../category/post/index-6.html">&lt;&lt; Previous</a></p>
+<p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="../../category/post/index-4.html">Next &gt;&gt;</a></p>
+</nav>
+</main>
+<footer>
+  <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
+</footer>
+</body>
+
+</html>

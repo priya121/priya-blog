@@ -1,36 +1,70 @@
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link type="text/css" rel="stylesheet" href="styles.css" />
-  <title data-id="blog-title">Priya’s Blog</title>
-</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <title data-id="blog-title">Priya’s Blog</title>
+  </head>
 <body>
-<h1 data-id="blog-title">Priya’s Blog</h1>
-<ol data-id="page-list" data-max-pages="5">
-    <li>
-        <h1><a data-id="page-link" href="../../static_methods.html">Static Methods </a></h1>
-        <p data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
-        <section data-id="content"><p>Static methods in java are used when the method needs to be called without creating an object of the class.</p><p>An instance variable needs an object to be created for it to be called whereas a static method does not. That is why most main classes in java must be static.</p><p>Static methods typically take all their data from their parameters and create something from those parameters. They also typically have no reference to variables, so can handle generic calculations well.</p><p>It is possible to make many methods static, but this is bad practice as it is unclear as to what the responsibility of the class is when many methods can be called on it that are not necssarily related to what it does. A static method called on a class is also not polymorpic so this means that it is not possible to override the behavior set by a static method.</p><p>So it is important to think carefully when creating a static method and avoid using them unless necessary.</p></section>
-    </li><li>
-        <h1><a data-id="page-link" href="../../type_casting.html">Type Casting</a></h1>
-        <p data-id="published-at" data-format="dd MMMM yyyy">28 August 2015</p>
-        <section data-id="content"><p>Something I am getting used to while learning Java is Type Casting. Type Casting is the assignment of one type of variable to another type.</p><p>There are two different types of Type Casting in Java. The widening casting from byte up to double, including everything in between (these take up increasing amounts of memory) and narrowing casting (a decreasing amount of memory) from double down to byte, also including everything in between.</p><p>It is important that the type cast objects share the same type hierarchy, meaning that they have a parent child relationship between them. If this is not the case, the compiler will throw a ClassCastException. Narrowing casting needs to be explicitly set in that you need to be explicit in the type of casting required. </p><p>Type casting is mainly used to get access to fields and methods declared on a target type or class and I am sure I will be using more of them as I get more familiar with Java.</p></section>
-    </li><li>
-        <h1><a data-id="page-link" href="../../types.html">Basics of the Java Memeory Model</a></h1>
-        <p data-id="published-at" data-format="dd MMMM yyyy">14 September 2015</p>
-        <section data-id="content"><p>Why Java functions the way it does becomes clearer once the way the Java memory model is understood. I’m sure I’ve only scratched the surface but here is a little of what I have learnt so far.</p><p>The memory model dictates how the virtual memory model interacts with the computer memory (RAM).</p><p>The Java memory model splits memory used by a Java application between thread stacks and the heap. Which of these is used depends on the type defined. Primitive types are stored on the thread stacks and objects or references to those objects are stored on the heap stack.</p><p>If there are multiple variables representing primitive types, these can be stored as separate items on different thread stacks as copies of the original type.</p><p>Using primitive types increases the speed of an application despite the fact that creating Objects references can be easier to use, so I am going to try and use primitive types when it makes sense to do so.</p></section>
-    </li><li>
-        <h1><a data-id="page-link" href="../../UML.html">UML Diagrams</a></h1>
-        <p data-id="published-at" data-format="dd MMMM yyyy">09 September 2015</p>
-        <section data-id="content"><p>UML diagrams are commonly used when modelling for object oriented design programs. They are the graphical notation for drawing diagrams of software concepts.</p><p>Composite relationships are shown in a UML diagram by an arrow with one end a point and the other a diamond.</p><p>Inheritance is shown through a blank arrowhead and the arrows point in the direction that the inheritance flows from.</p><p>Class Icons are divided into three components, a class title, the variables and the functions and interfaces are shown by the &lt;&gt; notation.</p><p>It is always a good idea to draw up a UML before starting to write a program, and adjust it as you go.</p></section>
-    </li><li>
-        <h1><a data-id="page-link" href="../../UserStories.html">Creating Stories</a></h1>
-        <p data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
-        <section data-id="content"><p>Starting a program or application from scratch can be daunting, but it is also exciting. What helps clarify the direction of where you need to start is a series of stories. The first few stories are important as they can help guide the rest of the application. </p><p>It is important to start with the most degenerate case and then test the code from there. That is why it is not always useful to have too much planned out for the later stages of the code as it is quite likely that it will change. </p><p>I have started on some stories for a minesweeper game and the most degenerate case for that is the return of an exploded mine (that I will represent as a 1) when the relevant index (depicted by a coordinate) will change.</p><p>I have the next few stories written down and the later they get the more abstarct they become. But this is a useful exercise that I hope I will get better at, becuase so often once you have figured out how to do something, actually doing it and putting it into code is much easier.</p></section>
+  <header id="top">
+    <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
+    <ul>
+        
+        
+    </ul>
+  </header>
+<main>
+<ol class="entries" data-id="page-list" data-max-pages="5">
+    <li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="interfaces.html">Interfaces</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">10 September 2015</p>
+        </header>
+        <div data-id="content"><p>Interfaces are a set of classes that used to create an abstraction between two other related classes. They do not contain any new code but hold behaviours and method signatures and should be abstract classes with abstract names.</p><p>The advantage of using interfaces is that they help eliminate unnecessary dependencies that create rigid and fragile software. Adding interfaces hides the implementation of certain classes from others when they are not needed and allows for easier changes to the code later down the line.</p><p>Ruby and other dynamic languages do not need to have an explicit interface class, but it is necessary to define an interface class type explicitly for statically typed languages like Java.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="UML.html">UML Diagrams</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 September 2015</p>
+        </header>
+        <div data-id="content"><p>UML diagrams are commonly used when modelling for object oriented design programs. They are the graphical notation for drawing diagrams of software concepts.</p><p>Composite relationships are shown in a UML diagram by an arrow with one end a point and the other a diamond.</p><p>Inheritance is shown through a blank arrowhead and the arrows point in the direction that the inheritance flows from.</p><p>Class Icons are divided into three components, a class title, the variables and the functions and interfaces are shown by the &lt;&gt; notation.</p><p>It is always a good idea to draw up a UML before starting to write a program, and adjust it as you go.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="loops.html">Loops in Java</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">08 September 2015</p>
+        </header>
+        <div data-id="content"><p>Loops in Java are useful even in the most simple program and contain their contents within curly braces. The two most common ones I have used so far are the for loop;</p><p>eg. for( int i = 0; i &lt; 5; i++ )</p><p>and the while loop;</p><p>eg. while ( i &lt; number.length )</p><p>Keeping track of the variables and loops can again be clarified through the use of an instruction tab.</p><p>It is also possible to escape out of a loop if a certain condition is met using a label just before the beginning of the loop and a break after the end of the loop.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="single_responsibility_principle.html">The Single Responsibility Principle</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">07 September 2015</p>
+        </header>
+        <div data-id="content"><p>The single responsibility principle means that a class should only have one reason to change.</p><p>The idea is that each class should only have one role or handle one piece of behaviour. This does not mean that each class should contain one method, but if when describing a class behaviour, the word and is used then it is quite likely that the class is doing too much and the additional behaviour should be split out.</p><p>If the SRP is implemented well, then the design of the program will be more flexible and easier to change.</p><p>This is because if a class changes then only the class that handles that behaviour will have to change and the code will not be too coupled–meaning that one small change that must be made leads to numerous other things being forced to change.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="input_output.html">Input/Output</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 September 2015</p>
+        </header>
+        <div data-id="content"><p>Everything has to be explicitly declared in Java. I am starting to get used to it, even though the format looks different, the general structure of a class is not too different to Ruby, even though there are a lot of restrictions on what you can and cannot do.</p><p>In order to use Input Output in Java, the simplest way to do this is the InputStreamReader and OutputStreamReader.</p><p>The sytnax for these is System.in and System.out.print() respectively, but the format of these has to be changed accordingly when a certain type of display is needed.</p><p>It is also possible to use the Scanner class that parses primitive types and strings suing regular expressions.</p><p>There are so many tools and libraries that you can import in java that help you, it can be difficult to figure out which ones are best to use, but I am sure this is something that comes with practice and familiarity with the language.</p></div>
+      </article>
     </li>
 </ol>
-
-<p data-id="if-exists" data-key="previous"><a data-id="href" data-key="previous" href="../../category/uncategorized/index-4.html">Previous</a></p>
+<nav>
+<p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="index-6.html">&lt;&lt; Previous</a></p>
+<p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="index-4.html">Next &gt;&gt;</a></p>
+</nav>
+</main>
+<footer>
+  <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
+</footer>
 </body>
 
 </html>

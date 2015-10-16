@@ -1,36 +1,70 @@
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link type="text/css" rel="stylesheet" href="styles.css" />
-  <title data-id="blog-title">Priya’s Blog</title>
-</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <title data-id="blog-title">Priya’s Blog</title>
+  </head>
 <body>
-<h1 data-id="blog-title">Priya’s Blog</h1>
-<ol data-id="page-list" data-max-pages="5">
-    <li>
-        <h1><a data-id="page-link" href="../../gitPullRequests.html">Pull Requests on Git</a></h1>
-        <p data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
-        <section data-id="content"><p>Creating a git pull request allows a developer to ask others to review their code when a new feature has been added, a change has been made or they want other developers to review their code for any other reason. </p><p>In order to do this the following steps are necessary:</p><p>In order to work on an exisiting project, a fork of the exisiting project repository needs to be made. Once this is done a copy of the project will have been made.</p><p>Then a clone of the forked repository must be made, this will create a new working copy of the project on a local machine.</p><p>Before creating a new feature, a new branch for the feature has to be created and any changes must be added and commited to this branch.</p><p>Once these changes have been made it is possible to push these changes to the copy of the repository, (not the main repository) by a git push. </p><p>After this has been done, a pull request can be made through the relevant copied repository page. </p><p>Creating pull requests is useful when working in a team and it encourages collaboration.</p></section>
-    </li><li>
-        <h1><a data-id="page-link" href="../../index.html"></a></h1>
-        <p data-id="published-at" data-format="dd MMMM yyyy">10 September 2015</p>
-        <section data-id="content"></section>
-    </li><li>
-        <h1><a data-id="page-link" href="../../input_output.html">Input/Output</a></h1>
-        <p data-id="published-at" data-format="dd MMMM yyyy">04 September 2015</p>
-        <section data-id="content"><p>Everything has to be explicitly declared in Java. I am starting to get used to it, even though the format looks different, the general structure of a class is not too different to Ruby, even though there are a lot of restrictions on what you can and cannot do.</p><p>In order to use Input Output in Java, the simplest way to do this is the InputStreamReader and OutputStreamReader.</p><p>The sytnax for these is System.in and System.out.print() respectively, but the format of these has to be changed accordingly when a certain type of display is needed.</p><p>It is also possible to use the Scanner class that parses primitive types and strings suing regular expressions.</p><p>There are so many tools and libraries that you can import in java that help you, it can be difficult to figure out which ones are best to use, but I am sure this is something that comes with practice and familiarity with the language.</p></section>
-    </li><li>
-        <h1><a data-id="page-link" href="../../interfaces.html">Interfaces</a></h1>
-        <p data-id="published-at" data-format="dd MMMM yyyy">10 September 2015</p>
-        <section data-id="content"><p>Interfaces are a set of classes that used to create an abstraction between two other related classes. They do not contain any new code but hold behaviours and method signatures and should be abstract classes with abstract names.</p><p>The advantage of using interfaces is that they help eliminate unnecessary dependencies that create rigid and fragile software. Adding interfaces hides the implementation of certain classes from others when they are not needed and allows for easier changes to the code later down the line.</p><p>Ruby and other dynamic languages do not need to have an explicit interface class, but it is necessary to define an interface class type explicitly for statically typed languages like Java.</p></section>
-    </li><li>
-        <h1><a data-id="page-link" href="../../java.html">Java</a></h1>
-        <p data-id="published-at" data-format="dd MMMM yyyy">21 August 2015</p>
-        <section data-id="content"><p>Java is a statically typed language and it takes some getting used to when moving across from Ruby. This basically means that types have to be defined when you initially set them and cannot be changed at a later stage in an application or program. </p><p>This makes it more clear as to what is happening and provides more structure as less is hidden. The length of methods and simple statements are also therefore much longer than Ruby.</p><p>The Java koans are a good starting point and introduce basic Java tools (some used frequently and others not so much), but getting used to writing in a new language is the best way to learn it.</p></section>
+  <header id="top">
+    <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
+    <ul>
+        
+        
+    </ul>
+  </header>
+<main>
+<ol class="entries" data-id="page-list" data-max-pages="5">
+    <li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="gitPullRequests.html">Pull Requests on Git</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        </header>
+        <div data-id="content"><p>Creating a git pull request allows a developer to ask others to review their code when a new feature has been added, a change has been made or they want other developers to review their code for any other reason. </p><p>In order to do this the following steps are necessary:</p><p>In order to work on an exisiting project, a fork of the exisiting project repository needs to be made. Once this is done a copy of the project will have been made.</p><p>Then a clone of the forked repository must be made, this will create a new working copy of the project on a local machine.</p><p>Before creating a new feature, a new branch for the feature has to be created and any changes must be added and commited to this branch.</p><p>Once these changes have been made it is possible to push these changes to the copy of the repository, (not the main repository) by a git push. </p><p>After this has been done, a pull request can be made through the relevant copied repository page. </p><p>Creating pull requests is useful when working in a team and it encourages collaboration.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="static_methods.html">Static Methods </a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        </header>
+        <div data-id="content"><p>Static methods in java are used when the method needs to be called without creating an object of the class.</p><p>An instance variable needs an object to be created for it to be called whereas a static method does not. That is why most main classes in java must be static.</p><p>Static methods typically take all their data from their parameters and create something from those parameters. They also typically have no reference to variables, so can handle generic calculations well.</p><p>It is possible to make many methods static, but this is bad practice as it is unclear as to what the responsibility of the class is when many methods can be called on it that are not necssarily related to what it does. A static method called on a class is also not polymorpic so this means that it is not possible to override the behavior set by a static method.</p><p>So it is important to think carefully when creating a static method and avoid using them unless necessary.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="ArrayLists.html">Arrays vs ArrayLists in Java</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        </header>
+        <div data-id="content"><p>Difference between an Array List and Array in Java</p><p>In Java Arrays and ArrayLists are differentiated in some important aspects:</p><ol><li><p>An Array is fixed in length, whereas the ArrayList can be added to and is dynamic in size.</p></li><li><p>ArrayLists cannot contain primitive data types whereas an Array can contain both Object references and primitive types.</p></li><li><p>.iterator can be used to iterate through an ArrayList, whereas a for or while loop can be used to iterate through an Array.</p></li><li><p>The length of an ArrayList is provided by the .size() method whereas .length is needed to determine the length of an array.</p></li><li><p>Elements can be added to an ArrayList using .add() and must be inserted using assignment for an Array.</p></li><li><p>An array can be multi-dimensional, but ArrayLists must always be one dimensional.</p></li></ol><p>This is another example of how careful consideration must be given to setting a type before it is declared in Java. Once it is clear what the requirements of the array are, which requires some foresight, a choice can be made between Array or ArrayList.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="UserStories.html">Creating Stories</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        </header>
+        <div data-id="content"><p>Starting a program or application from scratch can be daunting, but it is also exciting. What helps clarify the direction of where you need to start is a series of stories. The first few stories are important as they can help guide the rest of the application. </p><p>It is important to start with the most degenerate case and then test the code from there. That is why it is not always useful to have too much planned out for the later stages of the code as it is quite likely that it will change. </p><p>I have started on some stories for a minesweeper game and the most degenerate case for that is the return of an exploded mine (that I will represent as a 1) when the relevant index (depicted by a coordinate) will change.</p><p>I have the next few stories written down and the later they get the more abstarct they become. But this is a useful exercise that I hope I will get better at, becuase so often once you have figured out how to do something, actually doing it and putting it into code is much easier.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="AutoBoxing.html">Primitive and Object Types in Java</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        </header>
+        <div data-id="content"><p>Java is a statically typed language, which means that every variable and every expression has a type that must be known at compile time.</p><p>Types limit the values a variable can hold or an expression can produce, but also help reduce errors in the long run.</p><p>So in Java, data is stored in the form of data types and every variable has a data type.</p><p>The data types in Java are split into two :-</p><p>primitive data types and object types/references</p><p>PRIMITIVE TYPES</p><p>The Java memory model specifies how the Java virtual machine works with the computer memory (RAM).</p><p>The value of a variable stored as a primitive type is typically stored in the memory location assigned to that variable on the thread stack</p><p>There are 8–predefined primitive by the language, here they are in order of increasing sizes and they are limited to those sizes:</p><p>“primitive” means a fundamental component that is used to create other, larger parts</p><p>When you create variable stored as a primitive type instead of creating an object on the heap, Java creates a kind of automatic variable that is not a reference. This variable holds the value directly and is placed on the stack making access more efficient.</p><p>int x = 3; &gt; this means at the memory location of x, 3 will be stored there</p><p>Primitive types also come in versions that are objects. Just capitalised and these have their own set of methods that can be called on them.</p><p>OBJECT TYPES</p><p>A variable of an object type is also called a reference. This is because the variable doesn’t contain the object, but contains a reference pointing to the object. These are stored in the heap.</p><p>The different object types in java are :</p><p>interface types, class types and array types</p><p>In order to create an object reference you must instantiate an object first so that you can manipulate it. So you don’t manipulate the object directly, but use a reference to the object. The reference to the object is like a remote control to the actual object the TV. So you can access the object by calling certain methods on the reference.</p><p>When you create an object in Java, it is stored on the heap. There is generally no limit to memory size in this area. To create an object on the heap, you would use the new keyword like this:-</p><p>eg. Integer myInteger = new Integer(45);</p><p>MEMORY MODEL</p><p>Primitive types and object types are stored within the Java Memory Model</p><p>A local variable (one not accessible by the class) may be of a primitive type, in which case it is kept on the thread stack.</p><p>A local variable may also be a reference to an object. In that case the reference (the local variable) is stored on the thread stack, but the object itself if stored on the heap.</p><p>An object may contain methods and these methods may contain local variables. These local variables are also stored on the thread stack.</p><p>The member variables of an object however, are stored on the heap along with the object itself. That is true both when the member variable is of a primitive type, and if it is a reference to an object. The heap contains all objects created in your Java application, regardless of what thread created the object.</p><p>AUTOBOXING</p><p>Before Java 5 you had to call a method on an object version of a primitive type in order to get the value</p><p>But with Java 5, Java automatically converts a primitive type like int into corresponding wrapper class object and unwraps an object if a primitive type is required</p><p>eg. ArrayList intList = new ArrayList(); intList.add(1); //autoboxing–primitive to object</p><p>int number = intList.get(0); // unboxing–object to primitive</p><p>Need to be careful, if you try to convert null to a primitive value you will get a NullPointerException</p><p>Integer myInteger = null; int myInt = myInteger;</p><p>Using operators and comparing values, and can also lead to unnecessary memory use.</p></div>
+      </article>
     </li>
 </ol>
-<p data-id="if-exists" data-key="next"><a data-id="href" data-key="next" href="../../category/uncategorized/index-4.html">Next</a></p>
-<p data-id="if-exists" data-key="previous"><a data-id="href" data-key="previous" href="../../category/uncategorized/index-2.html">Previous</a></p>
+<nav>
+<p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="index-4.html">&lt;&lt; Previous</a></p>
+<p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="index-2.html">Next &gt;&gt;</a></p>
+</nav>
+</main>
+<footer>
+  <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
+</footer>
 </body>
 
 </html>
