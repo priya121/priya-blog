@@ -18,42 +18,42 @@
     <li class="entries">
       <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="software_craftsmanship.html">Software Craftsmanship</a></h2>
+          <h2><a class="entries" data-id="page-link" href="BDD.html">BDD–Behaviour Driven Development</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 October 2015</p>
+        </header>
+        <div data-id="content"><p>I have been so focused on learning TDD and trying my best to stick to it I never really considered there were other ways of testing. BDD is a Clean Coders video I watched this week and it was interesting to think of the need for business to be able to write specifications that programmers can write in. Like so many industries it is the differences in terminology that really leads to miscommunication so finding words that are understood by all is important. Of course terminology is there for a reason, it is always more concise and saves time. But for something to be useful outside of an industry, it is important to at least be able to communicate something simply. I think that is why Einstein said: If you cannot explain it simply enough, you do not understand it well enough. It is similar to the idea that a problem must be broken down into its most basic components in order for any computation. If you want a person who is not in your industry, or a programmer you need to be able to break the words down into simple non-technical words for them to be able to understand, and this is only achievable through practice. </p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="moreOnPullRequests.html">More on Pull Requests</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 October 2015</p>
+        </header>
+        <div data-id="content"><p>So last time I wrote about Git Pull requests, I more or less covered the basics and had not really made any practical requests. I had just made one basic one without any messages or meaningful pieces of code. Something the other apprentices and I are trying to do more of is reviewing each others code and so I tried making some pull requests today. I created multiple branches and somehow managed to delete my master branch when trying to use git with Intellij, but I finally managed to make a pull request with a little piece of code and functionality that could be read easily by someone. And I was able to make changes that helped me a lot.</p><p>I am still making some formatting and whitespace errors that I am still working on, but I think I am getting the hang of it. I am going to try and use pull requests and make them as frequently as possible now, so I can maybe get some feedback as I go and not fall into bad habits.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="immutability.html">Keeping Track</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 October 2015</p>
+        </header>
+        <div data-id="content"><p>Something I was getting comfortable with in Ruby was deciding which objects should be separate and starting to sense what they should and should not be doing. This was probably because I had built a few games and was starting to see the pattern of what should be separated out. </p><p>It is strange that when the syntax for something is new even though the objects they represent might not be so different, it feels strange to think about how they should be separated out. Hopefully, with a bit of practice this will again start to become clear and the more I write, the clearer it will become.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="minimize_method_calls.html">Minimizing Method Calls</a></h2>
           <p class="date" data-id="published-at" data-format="dd MMMM yyyy">16 October 2015</p>
         </header>
-        <div data-id="content"><p>I have just started reading Software Craftsmanship, it helps to know a little of the history of something you try and practice everyday. I knew that software can be a craft and I understand the importance of it. Mainly after having learnt the hard way (through finding problems, doing the opposite). </p><p>So what does a craft entail exactly? It is the combination of art and utility. That means it not only has to function well, but also look aesthetically nice. The history of why software design is described as engineering is discussed in the first chapters of the book and I highly recommend it, it is a fascinating read. </p></div>
+        <div data-id="content"><p>Something I do not actively think about is the memory that a program takes up when it runs. This is something that I am aware of, but my main concern is that the code works. I am starting to see that unnecessary calls lead to slow running programs and this is probably a factor that I should start considering. The simplest way to do this is to reduce the method calls a class makes if at all possible. In my minesweeper game I had 3 calls to get input from the user when this could have been saved as a single variable and reused. So this is something I will try and keep in mind as I start extracting out classes and trying to speed up the code that I am writing. </p></div>
       </article>
     </li><li class="entries">
       <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="polymorphism.html">Polymorphism</a></h2>
+          <h2><a class="entries" data-id="page-link" href="extracting_classes.html">Extracting Classes</a></h2>
           <p class="date" data-id="published-at" data-format="dd MMMM yyyy">16 October 2015</p>
         </header>
-        <div data-id="content"><p>Polymorphism is one of the greatest advantages of OOP (object oriented desin). It basically means you can call different methods on an object and change its form.</p><p>This allows you to create many categories of an object. In Java all objects are polymorphic, because they are all part of the class Object.</p><p>A class can gave different underlying data, but can be presented in the same form as others due to polymorphism.</p><p>Polymorphism is a real advantage to OOP and even though I was not sure what the definition was, I have been using it a lot already.</p></div>
-      </article>
-    </li><li class="entries">
-      <article>
-        <header>
-          <h2><a class="entries" data-id="page-link" href="design_pattern_one.html">Decorator Pattern</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">07 October 2015</p>
-        </header>
-        <div data-id="content"><p>I have heard about design patterns and their uses, how they are just tools that you can use to possibly improve your code. That they have their uses, but also their limitations.</p><p>But I think it is important to be aware of them at the very least and then decide whether or not you want to or should use them.</p><p>The first one I have come across at the classroom sessions we have daily is the Decorator Pattern that handles common instances by wrapping them within one another. </p><p>This is done in Java through the use of interfaces which I have implemented in my Guess the Number game. </p><p>This allows for the addition of new instances with slight variations that do not impact the original instance and so many different variations can be created easily and this makes extra requirements cleaner and easier to implement.</p><p>I think this was a good design pattern to start with, I am going to work my way through the patterns and try and experiment with my code by adding them in.</p></div>
-      </article>
-    </li><li class="entries">
-      <article>
-        <header>
-          <h2><a class="entries" data-id="page-link" href="FindingPatterns.html">Finding The Pattern </a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">07 October 2015</p>
-        </header>
-        <div data-id="content"><p>One of the things I am trying to get better at is writing concise code and a great way to do this is by reducing duplication. Initially I find that I write a lot of if statements as these are the closest to real language that I use when describing the problem or visualizing it for the first time.</p><p>Sometimes this duplication is more subtle than I would like and an alorithm is hiding in there somewhere. This is difficult to do once you have started o write, but again I think an old pen and paper helps. Sometimes, it takes a little time to find the pattern and additional tests help with finding the commonalities for different combinations of input. </p></div>
-      </article>
-    </li><li class="entries">
-      <article>
-        <header>
-          <h2><a class="entries" data-id="page-link" href="fakes.html">Using Fakes in Java</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 October 2015</p>
-        </header>
-        <div data-id="content"><p>I am starting to really see the benefit of using fakes in my code. Working through a Guess the Number game and creating a fake that simulates the input and intermediate output is useful when writing tests because you need to be able to test behaviour that is not certain and can change each time a program is run.</p><p>The way this is done is through the use of an interface. An interface is essentially a class that contains the methods or behaviour that must be present for your class to work. The class that ultimately uses this behaviour is not aware of the behaviour of the object that implements the interface, provided that it contains the methods that the interface requires.</p><p>In the tests you can then create class that implements the methods or behaviour the interface requires, but set what they return to a value that is hardcoded. Then the actual console implementation can be passed in when the actual game is run so that the Fakes hardcoded returns can be replaced with a user input and the correct output.</p><p>Guess the number is a simple enough program to test this so this is a good way to start understanding IO and fakes in Java.</p></div>
+        <div data-id="content"><p>Something I have tried to do when writing a program, even when it is very small is not absracting out classes too early. However, I may fall into the trap of not extracting them out even when I need to. A sign that a class should be abstracted is that there is a variable being constructed in the class that should really only be a concern of a specific method. This is how the Single Responsibility Principle starts to apply and the questions that need to be asked–what is this class doing? comes in handy. </p></div>
       </article>
     </li>
 </ol>
