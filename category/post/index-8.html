@@ -4,56 +4,63 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="../../styles.css" />
     <title data-id="blog-title">Priya’s Blog</title>
+
   </head>
 <body>
   <header id="top">
     <h1><a href="../../index.html" data-id="blog-title">Priya’s Blog</a></h1>
     <ul>
-        
+        <li data-id="if-exists" data-key="twitter">
+          <a href="" data-id="href" data-key="twitter">
+              <img src="../../tw.png" width="24" height="20" />
+            </a>
+        </li>
         
     </ul>
   </header>
 <main>
+    <nav class="nav-primary" role="navigation">
+    </nav>
 <ol class="entries" data-id="page-list" data-max-pages="5">
     <li class="entries">
       <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="../../hashmaps.html">Hashmaps</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">16 October 2015</p>
-        </header>
-        <div data-id="content"><p>Because Java is so statically typed, it is useful to know what the right data structure to use before using it. In Ruby I used Arrays for almost all lists that I was creating. In Java, my go to is an ArrayList, but recently I used a HashMap when trying to build a Histogram for a simple Kata. Having restrictions on the data types you can use and what methods you can call on them is something I think will have more utility when I build larger programs. Something I probably should brush up on then is data structures and their uses. </p></div>
-      </article>
-    </li><li class="entries">
-      <article>
-        <header>
           <h2><a class="entries" data-id="page-link" href="../../extracting_classes.html">Extracting Classes</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">16 October 2015</p>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">14 October 2015</p>
         </header>
-        <div data-id="content"><p>Something I have tried to do when writing a program, even when it is very small is not absracting out classes too early. However, I may fall into the trap of not extracting them out even when I need to. A sign that a class should be abstracted is that there is a variable being constructed in the class that should really only be a concern of a specific method. This is how the Single Responsibility Principle starts to apply and the questions that need to be asked–what is this class doing? comes in handy. </p></div>
+        <div data-id="content"><p>I have tried to not extract classes out to early when writing a program, even when it is a very small program. However, I may fall into the trap of not extracting them out even when I need to. A sign that a class should be abstracted is that there is a variable being constructed in the class that should really only be a concern of a specific method. This is how the Single Responsibility Principle starts to apply and the question that need to be asked–what is this class doing? comes in handy. </p></div>
       </article>
     </li><li class="entries">
       <article>
         <header>
           <h2><a class="entries" data-id="page-link" href="../../minimize_method_calls.html">Minimizing Method Calls</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">16 October 2015</p>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">15 October 2015</p>
         </header>
-        <div data-id="content"><p>Something I do not actively think about is the memory that a program takes up when it runs. This is something that I am aware of, but my main concern is that the code works. I am starting to see that unnecessary calls lead to slow running programs and this is probably a factor that I should start considering. The simplest way to do this is to reduce the method calls a class makes if at all possible. In my minesweeper game I had 3 calls to get input from the user when this could have been saved as a single variable and reused. So this is something I will try and keep in mind as I start extracting out classes and trying to speed up the code that I am writing. </p></div>
+        <div data-id="content"><p>I do not actively think about the memory that a program takes up when it runs. This is something that I am aware of, but my main concern is that the code works. I am starting to see that unnecessary calls lead to slow running programs and this is probably a factor that I should start considering. The simplest way to do this is to reduce the method calls a class makes if at all possible. In my minesweeper game I had 3 calls to get input from the user when this could have been saved as a single variable and reused. So this is something I will try and keep in mind as I start extracting out classes and trying to speed up the code that I am writing. </p></div>
       </article>
     </li><li class="entries">
       <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="../../immutability.html">Keeping Track</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 October 2015</p>
+          <h2><a class="entries" data-id="page-link" href="../../AutoBoxing.html">Primitive and Object Types in Java</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">16 October 2015</p>
         </header>
-        <div data-id="content"><p>Something I was getting comfortable with in Ruby was deciding which objects should be separate and starting to sense what they should and should not be doing. This was probably because I had built a few games and was starting to see the pattern of what should be separated out. </p><p>It is strange that when the syntax for something is new even though the objects they represent might not be so different, it feels strange to think about how they should be separated out. Hopefully, with a bit of practice this will again start to become clear and the more I write, the clearer it will become.</p></div>
+        <div data-id="content"><p>Java is a statically typed language, which means that every variable and every expression has a type that must be known at compile time.</p><p>Types limit the values a variable can hold or an expression can produce, but also help reduce errors in the long run.</p><p>So in Java, data is stored in the form of data types and every variable has a data type.</p><p>The data types in Java are split into two :-</p><p>primitive data types and object types/references</p><p>PRIMITIVE TYPES</p><p>The Java memory model specifies how the Java virtual machine works with the computer memory (RAM).</p><p>The value of a variable stored as a primitive type is typically stored in the memory location assigned to that variable on the thread stack</p><p>There are 8–predefined primitive by the language, here they are in order of increasing sizes and they are limited to those sizes:</p><p>“primitive” means a fundamental component that is used to create other, larger parts</p><p>When you create variable stored as a primitive type instead of creating an object on the heap, Java creates a kind of automatic variable that is not a reference. This variable holds the value directly and is placed on the stack making access more efficient.</p><p>int x = 3; &gt; this means at the memory location of x, 3 will be stored there</p><p>Primitive types also come in versions that are objects. Just capitalised and these have their own set of methods that can be called on them.</p><p>OBJECT TYPES</p><p>A variable of an object type is also called a reference. This is because the variable doesn’t contain the object, but contains a reference pointing to the object. These are stored in the heap.</p><p>The different object types in java are :</p><p>interface types, class types and array types</p><p>In order to create an object reference you must instantiate an object first so that you can manipulate it. So you don’t manipulate the object directly, but use a reference to the object. The reference to the object is like a remote control to the actual object the TV. So you can access the object by calling certain methods on the reference.</p><p>When you create an object in Java, it is stored on the heap. There is generally no limit to memory size in this area. To create an object on the heap, you would use the new keyword like this:-</p><p>eg. Integer myInteger = new Integer(45);</p><p>MEMORY MODEL</p><p>Primitive types and object types are stored within the Java Memory Model</p><p>A local variable (one not accessible by the class) may be of a primitive type, in which case it is kept on the thread stack.</p><p>A local variable may also be a reference to an object. In that case the reference (the local variable) is stored on the thread stack, but the object itself if stored on the heap.</p><p>An object may contain methods and these methods may contain local variables. These local variables are also stored on the thread stack.</p><p>The member variables of an object however, are stored on the heap along with the object itself. That is true both when the member variable is of a primitive type, and if it is a reference to an object. The heap contains all objects created in your Java application, regardless of what thread created the object.</p><p>AUTOBOXING</p><p>Before Java 5 you had to call a method on an object version of a primitive type in order to get the value</p><p>But with Java 5, Java automatically converts a primitive type like int into corresponding wrapper class object and unwraps an object if a primitive type is required</p><p>eg. ArrayList intList = new ArrayList(); intList.add(1); //autoboxing–primitive to object</p><p>int number = intList.get(0); // unboxing–object to primitive</p><p>Need to be careful, if you try to convert null to a primitive value you will get a NullPointerException</p><p>Integer myInteger = null; int myInt = myInteger;</p><p>Using operators and comparing values, and can also lead to unnecessary memory use.</p></div>
       </article>
     </li><li class="entries">
       <article>
         <header>
           <h2><a class="entries" data-id="page-link" href="../../moreOnPullRequests.html">More on Pull Requests</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 October 2015</p>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">19 October 2015</p>
         </header>
-        <div data-id="content"><p>So last time I wrote about Git Pull requests, I more or less covered the basics and had not really made any practical requests. I had just made one basic one without any messages or meaningful pieces of code. Something the other apprentices and I are trying to do more of is reviewing each others code and so I tried making some pull requests today. I created multiple branches and somehow managed to delete my master branch when trying to use git with Intellij, but I finally managed to make a pull request with a little piece of code and functionality that could be read easily by someone. And I was able to make changes that helped me a lot.</p><p>I am still making some formatting and whitespace errors that I am still working on, but I think I am getting the hang of it. I am going to try and use pull requests and make them as frequently as possible now, so I can maybe get some feedback as I go and not fall into bad habits.</p></div>
+        <div data-id="content"><p>So last time I wrote about Git Pull requests, I more or less covered the basics and had not really made any practical requests. I had just made one basic one without any messages or meaningful pieces of code. Something the other apprentices and I are trying to do more of is reviewing each others code and so I tried making some pull requests today. I created multiple branches and somehow managed to delete my master branch when trying to use git with Intellij, but I finally managed to make a pull request with a little piece of code and functionality that could be read easily by someone. </p><p>I am still making some formatting and whitespace errors that I am still working on, but I think I am getting the hang of it. I am going to try and use pull requests and make them as frequently as possible now, so I can maybe get some feedback as I go and not fall into bad habits.</p></div>
+      </article>
+    </li><li class="entries">
+      <article>
+        <header>
+          <h2><a class="entries" data-id="page-link" href="../../BDD.html">BDD–Behaviour Driven Development</a></h2>
+          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">20 October 2015</p>
+        </header>
+        <div data-id="content"><p>I have been so focused on learning TDD and trying my best to stick to it I never really considered there were other ways of testing. BDD is the topic ofa Clean Coders video I watched this week and it was interesting to think of the need for business to be able to write specifications that programmers can write in. </p><p>Like so many industries it is the differences in terminology that really leads to miscommunication, so finding words that are understood by all is important. Of course terminology is there for a reason, it is always more concise and saves time. But for something to be useful outside of an industry, it is important to at least be able to communicate something simply. I think that is why Einstein said: If you cannot explain it simply enough, you do not understand it well enough. </p><p>It is similar to the idea that a problem must be broken down into its most basic components in order for any computation. If you want a person who is not in your industry, or a programmer you need to be able to break the words down into simple non-technical words for them to be able to understand, and this is only achievable through practice. </p></div>
       </article>
     </li>
 </ol>

@@ -9,7 +9,11 @@
     <header id="top">
       <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
       <ul>
-        
+        <li data-id="if-exists" data-key="twitter">
+          <a href="" data-id="href" data-key="twitter">
+            <img src="tw.png" width="24" height="20" />
+          </a>
+        </li>
         
       </ul>
     </header>
@@ -17,7 +21,7 @@
     <article>
       <header>
         <h2><a data-id="page-link" href="fakes.html">Using Fakes in Java</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 October 2015</p>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
       </header>
       <div data-id="content"><p>I am starting to really see the benefit of using fakes in my code. Working through a Guess the Number game and creating a fake that simulates the input and intermediate output is useful when writing tests because you need to be able to test behaviour that is not certain and can change each time a program is run.</p><p>The way this is done is through the use of an interface. An interface is essentially a class that contains the methods or behaviour that must be present for your class to work. The class that ultimately uses this behaviour is not aware of the behaviour of the object that implements the interface, provided that it contains the methods that the interface requires.</p><p>In the tests you can then create class that implements the methods or behaviour the interface requires, but set what they return to a value that is hardcoded. Then the actual console implementation can be passed in when the actual game is run so that the Fakes hardcoded returns can be replaced with a user input and the correct output.</p><p>Guess the number is a simple enough program to test this so this is a good way to start understanding IO and fakes in Java.</p></div>
       <footer>
@@ -27,8 +31,8 @@
       </footer>
     </article>
     <nav>
-      <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="open_close_principle.html">&lt;&lt; Previous</a></p>
-      <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="FindingPatterns.html">Next &gt;&gt;</a></p>
+      <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="do_while.html">&lt;&lt; Previous</a></p>
+      <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="open_close_principle.html">Next &gt;&gt;</a></p>
     </nav>
     </main>
     <footer>
