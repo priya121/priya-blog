@@ -4,74 +4,82 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
     <title data-id="blog-title">Priya’s Blog</title>
-
-  </head>
+</head>
 <body>
-  <header id="top">
+    <div class="nav">
+        <ul>
+            <li class="home"><a href="#">Home</a></li>
+            <li class="news"><a class="active" href="#">News</a></li>
+            <li class="about"><a href="#">About</a></li>
+            <li class="news"><a href="#">Newsletter</a></li>
+            <li class="contact"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <header id="top">
     <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
     <ul>
         <li data-id="if-exists" data-key="twitter">
-          <a href="https://twitter.com/priya104 " data-id="href" data-key="twitter">
-              <img src="tw.png" width="24" height="20" />
-            </a>
+        <a href="https://twitter.com/priya104 " data-id="href" data-key="twitter">
+            <img src="tw.png" width="24" height="20" />
+        </a>
         </li>
         
     </ul>
-  </header>
-<main>
+    </header>
+    <main>
     <nav class="nav-primary" role="navigation">
     </nav>
-<ol class="entries" data-id="page-list" data-max-pages="5">
-    <li class="entries">
-      <article>
+    <ol class="entries" data-id="page-list" data-max-pages="5">
+        <li class="entries">
+        <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="ArrayLists.html">Arrays vs ArrayLists in Java</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">11 September 2015</p>
+        <h2><a class="entries" data-id="page-link" href="method_signatures_in_java.html">Method Signatures in Java</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">15 September 2015</p>
+        </header>
+        <div data-id="content"><p>The main class in java must be present in the application at least once for it to be able to run and has a pretty standard signature.</p><p>Methods in java have to have certain elements in order for the Java package to be able to collect the parts of the program together and process them in a logical way.</p><p>Firstly a method must be public or private. Public means that it is available across packages whereas private means it is only accessible within the current package. Then if a method is static(that is, it is not called by Objects within the class) this must also be part of the method signature.</p><p>These are followed by what the method signature will return (String, Integer, String[], void etc.) and the method name.</p><p>In Java if a method takes an arguement, the type of arguement must also be declared within parentheses, this is true even if the method takes no arguement with the parentheses being left blank.</p><p>Method signatures in Java seem complicated at first, but I have been told that this makes things clearer in the long term, so far most of my programs and tasks have been small, but I will report back when I know if this is true.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="types.html">Basics of the Java Memeory Model</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">14 September 2015</p>
+        </header>
+        <div data-id="content"><p>Why Java functions the way it does becomes clearer once the way the Java memory model is understood. I’m sure I’ve only scratched the surface but here is a little of what I have learnt so far.</p><p>The memory model dictates how the virtual memory model interacts with the computer memory (RAM).</p><p>The Java memory model splits memory used by a Java application between thread stacks and the heap. Which of these is used depends on the type defined. Primitive types are stored on the thread stacks and objects or references to those objects are stored on the heap stack.</p><p>If there are multiple variables representing primitive types, these can be stored as separate items on different thread stacks as copies of the original type.</p><p>Using primitive types increases the speed of an application despite the fact that creating Objects references can be easier to use, so I am going to try and use primitive types when it makes sense to do so.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="ArrayLists.html">Arrays vs ArrayLists in Java</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">11 September 2015</p>
         </header>
         <div data-id="content"><p>Difference between an Array List and Array in Java</p><p>In Java Arrays and ArrayLists are differentiated in some important aspects:</p><ol><li><p>An Array is fixed in length, whereas the ArrayList can be added to and is dynamic in size.</p></li><li><p>ArrayLists cannot contain primitive data types whereas an Array can contain both Object references and primitive types.</p></li><li><p>.iterator can be used to iterate through an ArrayList, whereas a for or while loop can be used to iterate through an Array.</p></li><li><p>The length of an ArrayList is provided by the .size() method whereas .length is needed to determine the length of an array.</p></li><li><p>Elements can be added to an ArrayList using .add() and must be inserted using assignment for an Array.</p></li><li><p>An array can be multi-dimensional, but ArrayLists must always be one dimensional.</p></li></ol><p>This is another example of how careful consideration must be given to setting a type before it is declared in Java. Once it is clear what the requirements of the array are, which requires some foresight, a choice can be made between Array or ArrayList.</p></div>
-      </article>
-    </li><li class="entries">
-      <article>
+        </article>
+        </li><li class="entries">
+        <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="interfaces.html">Interfaces</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">10 September 2015</p>
+        <h2><a class="entries" data-id="page-link" href="interfaces.html">Interfaces</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">10 September 2015</p>
         </header>
         <div data-id="content"><p>Interfaces are a set of classes that used to create an abstraction between two other related classes. They do not contain any new code but hold behaviours and method signatures and should be abstract classes with abstract names.</p><p>The advantage of using interfaces is that they help eliminate unnecessary dependencies that create rigid and fragile software. Adding interfaces hides the implementation of certain classes from others when they are not needed and allows for easier changes to the code later down the line.</p><p>Ruby and other dynamic languages do not need to have an explicit interface class, but it is necessary to define an interface class type explicitly for statically typed languages like Java.</p></div>
-      </article>
-    </li><li class="entries">
-      <article>
+        </article>
+        </li><li class="entries">
+        <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="UML.html">UML Diagrams</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 September 2015</p>
+        <h2><a class="entries" data-id="page-link" href="UML.html">UML Diagrams</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 September 2015</p>
         </header>
         <div data-id="content"><p>UML diagrams are commonly used when modelling for object oriented design programs. They are the graphical notation for drawing diagrams of software concepts.</p><p>Composite relationships are shown in a UML diagram by an arrow with one end a point and the other a diamond.</p><p>Inheritance is shown through a blank arrowhead and the arrows point in the direction that the inheritance flows from.</p><p>Class icons are divided into three components, a class title, the variables and the functions and interfaces are shown by the &lt;&gt; notation.</p><p>It is always a good idea to draw up a UML before starting to write a program, and adjust it as you go.</p></div>
-      </article>
-    </li><li class="entries">
-      <article>
-        <header>
-          <h2><a class="entries" data-id="page-link" href="loops.html">Loops in Java</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">08 September 2015</p>
-        </header>
-        <div data-id="content"><p>Loops in Java are useful even in the most simple program and contain their contents within curly braces. The two most common ones I have used so far are the for loop;</p><p>eg. for( int i = 0; i &lt; 5; i++ )</p><p>and the while loop;</p><p>eg. while ( i &lt; number.length )</p><p>Keeping track of the variables and loops can again be clarified through the use of an instruction table.</p><p>It is also possible to escape out of a loop if a certain condition is met using a label just before the beginning of the loop and a break after the end of the loop.</p></div>
-      </article>
-    </li><li class="entries">
-      <article>
-        <header>
-          <h2><a class="entries" data-id="page-link" href="single_responsibility_principle.html">The Single Responsibility Principle</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">07 September 2015</p>
-        </header>
-        <div data-id="content"><p>The single responsibility principle means that a class should only have one reason to change.</p><p>The idea is that each class should only have one role or handle one piece of behaviour. This does not mean that each class should contain one method, but if when describing a class behaviour, if the word ‘and’ is used, it is quite likely that the class is doing too much and the additional behaviour should be split out.</p><p>If the SRP is implemented well, then the design of the program will be more flexible and easier to change.</p><p>This is because if a class changes then only the class that handles that behaviour will have to change and the code will not be too coupled–meaning that one small change that must be made leads to numerous other things being forced to change.</p></div>
-      </article>
-    </li>
-</ol>
-<nav>
-<p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="index-8.html">&lt;&lt; Previous</a></p>
-<p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="index-6.html">Next &gt;&gt;</a></p>
-</nav>
-</main>
-<footer>
-  <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
-</footer>
+        </article>
+        </li>
+    </ol>
+    <nav>
+    <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="index-8.html">&lt;&lt; Previous</a></p>
+    <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="index-6.html">Next &gt;&gt;</a></p>
+    </nav>
+    </main>
+    <footer>
+    <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
+    </footer>
 </body>
 
 </html>

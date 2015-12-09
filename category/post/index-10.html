@@ -4,42 +4,119 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="../../styles.css" />
     <title data-id="blog-title">Priya’s Blog</title>
-
-  </head>
+</head>
 <body>
-  <header id="top">
+    <div class="nav">
+        <ul>
+            <li class="home"><a href="../../#">Home</a></li>
+            <li class="news"><a class="active" href="../../#">News</a></li>
+            <li class="about"><a href="../../#">About</a></li>
+            <li class="news"><a href="../../#">Newsletter</a></li>
+            <li class="contact"><a href="../../#">Contact</a></li>
+        </ul>
+    </div>
+    <header id="top">
     <h1><a href="../../index.html" data-id="blog-title">Priya’s Blog</a></h1>
     <ul>
         <li data-id="if-exists" data-key="twitter">
-          <a href="" data-id="href" data-key="twitter">
-              <img src="../../tw.png" width="24" height="20" />
-            </a>
+        <a href="" data-id="href" data-key="twitter">
+            <img src="../../tw.png" width="24" height="20" />
+        </a>
         </li>
         
     </ul>
-  </header>
-<main>
+    </header>
+    <main>
     <nav class="nav-primary" role="navigation">
     </nav>
-<ol class="entries" data-id="page-list" data-max-pages="5">
-    <li class="entries">
-      <article>
+    <ol class="entries" data-id="page-list" data-max-pages="5">
+        <li class="entries">
+        <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="../../explaining_things.html">Explaining Things</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 October 2015</p>
+        <h2><a class="entries" data-id="page-link" href="../../explaining_things.html">Explaining Things</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 October 2015</p>
         </header>
         <div data-id="content"><p>I sometimes have a hard time communicating what I have done or want to do in code into simple easy to understand language. Something that I think helps most people is the use of an analogy. This allows people to assimilate the information within the context of something they understand. </p><p>This is assuming there is an appropriate analogy, which sometimes there is not. If you cannot explain it simply enough, you do not understand it well enough. This is why pair programming really helps, it can help solidify knowledge you already had and help you identify areas you need more clarity on. The other apprentices and I have been pretty good at pairing regularly and I think carrying on with this will definitely be useful in getting better at communicating out intentions in code.</p></div>
-      </article>
-    </li>
-</ol>
-<nav>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="../../yoga.html">Focus</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 November 2015</p>
+        </header>
+        <div data-id="content"><p>It is amazing how much of a difference keeping a calm and focused mind can make when you write code and try and solve a problem. Taking a break always helps, but doing yoga today reminded me of earlier this year when I did 20 days of yoga in a row and was never in better shape. I had more energy, more focus and was much more calm.</p><p>This is something that I also get from running which has an energizing effect on me. I am sure that I am happier, healthier and have more energy when I eat well and work out. So I am going to keep this up and see if this has a tangible effect on the code that I write.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="../../sorting_algorithms.html">Sorting Algorithms</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 November 2015</p>
+        </header>
+        <div data-id="content"><p>Sorting algorithms incredibly useful and underlie so many of the algorithms that we use for analysing complex data. Some are more efficient than others and all of them use the concept of nodes. A node is a way to represent a section of the data you would like to analyse. This node is compared with other nodes and its relative position is then decided. </p><p>The efficiency of sorting algorithms is determined by the O(log)n logarithm. This is more a measure of time, and has variations that explain how and how quickly an algorithm can perform its operations. I am due to perfrom a kata next week, so I will write up a detailed post on one of these sorting algorithms next week. </p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="../../file_copy_kata.html">File Copy Kata</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 November 2015</p>
+        </header>
+        <div data-id="content"><p>Last week, I worked on a file copy kata that transferred a file from one location to another. Looking at how bytes are transferred across is really interesting. I am enjoying looking at how hardware interelates with software, because before understanding this, it really seems like magic. It is amazing how you can use something so much and depend on it and not really know how it works. This of course isn’t unique to programming. I am sure most people do not have an indepth understanding of the human body or plumbing systems in their house, but I am enjoying looking at low level concepts, mainly because they are relatively new to me.</p><p>The file copy kata works by, taking a file path as a string and translating that string into a file format. This is then converted into an InputStream that has methods that allow it to read a stream of bytes from the stream of data.</p><p>There are two methods that can read a stream of bytes, there is .read() with no arguements that reads one byte at a time and .read(byte[]) that takes a byte array. There is also .read(byte[] b, int off, int len) that allaw a certain length of bytes to be read from an input stream. </p><p>In my code I used the .read that takes a byte array so I could specify how many bytes it should read across as an int every time it reads and writes the bytes across to the new file location. </p><p>Passing the byte array into String(byte[]) allows for the bytes to be translated in my case into their ASCII representation. This is to do with how Vim encodes the characters, and I will write another blog post about encoding after a bit more research.</p><p>Writing to the output stream effectively does the inverse of reading from the input stream and my transfer method combones the read and write functions into a loop that will read and write a certain amount of bytes from the original file in increments, until it reaches the end of the file at -1.</p><p>I originally forgot to close the stream, and even though this is a small enough program to ignore it. It is always good practice to do so.</p><p>Here is the code: </p><pre><code>
+public class FileCopyKata {
+    ReportProgress currentReport = new ReportProgress();
 
-<p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="../../category/post/index-9.html">Next &gt;&gt;</a></p>
-</nav>
-</main>
-<footer>
-  <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
-</footer>
+    public String read(String inputFilePath, int amountOfBytes) throws IOException {
+        File inputFile = new File(inputFilePath);
+        InputStream input = new FileInputStream(inputFile);
+        byte[] buffer = new byte[amountOfBytes];
+
+        input.read(buffer);
+
+        return new String(buffer);
+    }
+
+    public void write(String destinationFilePath, byte[] buffer) throws IOException {
+        File destinationFile =  new File(destinationFilePath);
+        OutputStream output = new FileOutputStream(destinationFile);
+
+        output.write(buffer);
+    }
+
+    public void transfer(String inputFilePath, String destinationFilePath, int amountOfBytes) throws IOException {
+        File inputFile = new File(inputFilePath);
+        InputStream input = new FileInputStream(inputFile);
+        OutputStream output = new FileOutputStream(new File(destinationFilePath));
+        byte[] buffer = new byte[amountOfBytes];
+
+        int data;
+        while ((data = input.read(buffer)) != -1) {
+            currentReport.progressReport(data, (int) inputFile.length());
+            output.write(buffer);
+        }
+        input.close();
+        System.out.print("Done!");
+    }
+}
+
+</code></pre></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="../../structuring_code.html"></a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 November 2015</p>
+        </header>
+        <div data-id="content"><p>As my minesweeper program is getting bigger and I am starting to think about the different classes that could emerge from the existing ones it already has, it is becoming increasingly important to think about <em>how</em> they should be separated. </p><p>I am currently reading Kent Beck’s Implementation Patterns and he describes the various categories of class separation and state. There are a lot of categories, and I think the only way to really fully understand their use is to actually use them in my code.</p><p>The ones I have come across already are Interfaces, and Superclasses to some extent. He also talks about specialization and the types of questions you should be asking if you want to think about how to separate out classes. Some patterns I have not really used yet are the Implementor pattern and the Inner Class.</p><p>Most of the state based patterns are concerned with how an object changes state. This is primarily done through the internals of the object, so all the methods it contains.</p><p>I am going to try and notice when I use these patterns in my code and write up how I am trying to use them.</p></div>
+        </article>
+        </li>
+    </ol>
+    <nav>
+    <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="../../category/post/index-11.html">&lt;&lt; Previous</a></p>
+    <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="../../category/post/index-9.html">Next &gt;&gt;</a></p>
+    </nav>
+    </main>
+    <footer>
+    <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
+    </footer>
 </body>
 
 </html>

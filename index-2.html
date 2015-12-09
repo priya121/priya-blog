@@ -4,74 +4,119 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
     <title data-id="blog-title">Priya’s Blog</title>
-
-  </head>
+</head>
 <body>
-  <header id="top">
+    <div class="nav">
+        <ul>
+            <li class="home"><a href="#">Home</a></li>
+            <li class="news"><a class="active" href="#">News</a></li>
+            <li class="about"><a href="#">About</a></li>
+            <li class="news"><a href="#">Newsletter</a></li>
+            <li class="contact"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <header id="top">
     <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
     <ul>
         <li data-id="if-exists" data-key="twitter">
-          <a href="https://twitter.com/priya104 " data-id="href" data-key="twitter">
-              <img src="tw.png" width="24" height="20" />
-            </a>
+        <a href="https://twitter.com/priya104 " data-id="href" data-key="twitter">
+            <img src="tw.png" width="24" height="20" />
+        </a>
         </li>
         
     </ul>
-  </header>
-<main>
+    </header>
+    <main>
     <nav class="nav-primary" role="navigation">
     </nav>
-<ol class="entries" data-id="page-list" data-max-pages="5">
-    <li class="entries">
-      <article>
+    <ol class="entries" data-id="page-list" data-max-pages="5">
+        <li class="entries">
+        <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="moreOnPullRequests.html">More on Pull Requests</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">19 October 2015</p>
+        <h2><a class="entries" data-id="page-link" href="liskov_principle.html">The Liskov Principle</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 November 2015</p>
         </header>
-        <div data-id="content"><p>So last time I wrote about Git Pull requests, I more or less covered the basics and had not really made any practical requests. I had just made one basic one without any messages or meaningful pieces of code. Something the other apprentices and I are trying to do more of is reviewing each others code and so I tried making some pull requests today. I created multiple branches and somehow managed to delete my master branch when trying to use git with Intellij, but I finally managed to make a pull request with a little piece of code and functionality that could be read easily by someone. </p><p>I am still making some formatting and whitespace errors that I am still working on, but I think I am getting the hang of it. I am going to try and use pull requests and make them as frequently as possible now, so I can maybe get some feedback as I go and not fall into bad habits.</p></div>
-      </article>
-    </li><li class="entries">
-      <article>
+        <div data-id="content"><p>The Liskov Principle was formulated by Barbara Liskov and Jeannette Wing in 1994. It was described by them as:</p><p>Let Φ(x) be a property provable about objects x of type T. Then Φ(y) should be true for objects y of type S where S is a subtype of T.</p><p>This essentially means that subtypes of a an object may replace the object itself, without totally changing the functioning of a program.</p><p>In java this is ususally implemented with the use of abstract classes and interfaces. </p><p>The typical example for this is the square and the rectangle, which I think does not illustrate the example very well. A much better expalination was given by one of the craftsmen during a Zagaku this week. Here is the link: <a href="https://github.com/8thlight/zagaku/blob/master/solid/lsp.md">Liskov</a>.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="AutoBoxing.html">Primitive and Object Types in Java</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">16 October 2015</p>
+        <h2><a class="entries" data-id="page-link" href="structuring_code.html"></a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 November 2015</p>
         </header>
-        <div data-id="content"><p>Java is a statically typed language, which means that every variable and every expression has a type that must be known at compile time.</p><p>Types limit the values a variable can hold or an expression can produce, but also help reduce errors in the long run.</p><p>So in Java, data is stored in the form of data types and every variable has a data type.</p><p>The data types in Java are split into two :-</p><p>primitive data types and object types/references</p><p>PRIMITIVE TYPES</p><p>The Java memory model specifies how the Java virtual machine works with the computer memory (RAM).</p><p>The value of a variable stored as a primitive type is typically stored in the memory location assigned to that variable on the thread stack</p><p>There are 8–predefined primitive by the language, here they are in order of increasing sizes and they are limited to those sizes:</p><p>“primitive” means a fundamental component that is used to create other, larger parts</p><p>When you create variable stored as a primitive type instead of creating an object on the heap, Java creates a kind of automatic variable that is not a reference. This variable holds the value directly and is placed on the stack making access more efficient.</p><p>int x = 3; &gt; this means at the memory location of x, 3 will be stored there</p><p>Primitive types also come in versions that are objects. Just capitalised and these have their own set of methods that can be called on them.</p><p>OBJECT TYPES</p><p>A variable of an object type is also called a reference. This is because the variable doesn’t contain the object, but contains a reference pointing to the object. These are stored in the heap.</p><p>The different object types in java are :</p><p>interface types, class types and array types</p><p>In order to create an object reference you must instantiate an object first so that you can manipulate it. So you don’t manipulate the object directly, but use a reference to the object. The reference to the object is like a remote control to the actual object the TV. So you can access the object by calling certain methods on the reference.</p><p>When you create an object in Java, it is stored on the heap. There is generally no limit to memory size in this area. To create an object on the heap, you would use the new keyword like this:-</p><p>eg. Integer myInteger = new Integer(45);</p><p>MEMORY MODEL</p><p>Primitive types and object types are stored within the Java Memory Model</p><p>A local variable (one not accessible by the class) may be of a primitive type, in which case it is kept on the thread stack.</p><p>A local variable may also be a reference to an object. In that case the reference (the local variable) is stored on the thread stack, but the object itself if stored on the heap.</p><p>An object may contain methods and these methods may contain local variables. These local variables are also stored on the thread stack.</p><p>The member variables of an object however, are stored on the heap along with the object itself. That is true both when the member variable is of a primitive type, and if it is a reference to an object. The heap contains all objects created in your Java application, regardless of what thread created the object.</p><p>AUTOBOXING</p><p>Before Java 5 you had to call a method on an object version of a primitive type in order to get the value</p><p>But with Java 5, Java automatically converts a primitive type like int into corresponding wrapper class object and unwraps an object if a primitive type is required</p><p>eg. ArrayList intList = new ArrayList(); intList.add(1); //autoboxing–primitive to object</p><p>int number = intList.get(0); // unboxing–object to primitive</p><p>Need to be careful, if you try to convert null to a primitive value you will get a NullPointerException</p><p>Integer myInteger = null; int myInt = myInteger;</p><p>Using operators and comparing values, and can also lead to unnecessary memory use.</p></div>
-      </article>
-    </li><li class="entries">
-      <article>
+        <div data-id="content"><p>As my minesweeper program is getting bigger and I am starting to think about the different classes that could emerge from the existing ones it already has, it is becoming increasingly important to think about <em>how</em> they should be separated. </p><p>I am currently reading Kent Beck’s Implementation Patterns and he describes the various categories of class separation and state. There are a lot of categories, and I think the only way to really fully understand their use is to actually use them in my code.</p><p>The ones I have come across already are Interfaces, and Superclasses to some extent. He also talks about specialization and the types of questions you should be asking if you want to think about how to separate out classes. Some patterns I have not really used yet are the Implementor pattern and the Inner Class.</p><p>Most of the state based patterns are concerned with how an object changes state. This is primarily done through the internals of the object, so all the methods it contains.</p><p>I am going to try and notice when I use these patterns in my code and write up how I am trying to use them.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="minimize_method_calls.html">Minimizing Method Calls</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">15 October 2015</p>
+        <h2><a class="entries" data-id="page-link" href="file_copy_kata.html">File Copy Kata</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 November 2015</p>
         </header>
-        <div data-id="content"><p>I do not actively think about the memory that a program takes up when it runs. This is something that I am aware of, but my main concern is that the code works. I am starting to see that unnecessary calls lead to slow running programs and this is probably a factor that I should start considering. The simplest way to do this is to reduce the method calls a class makes if at all possible. In my minesweeper game I had 3 calls to get input from the user when this could have been saved as a single variable and reused. So this is something I will try and keep in mind as I start extracting out classes and trying to speed up the code that I am writing. </p></div>
-      </article>
-    </li><li class="entries">
-      <article>
+        <div data-id="content"><p>Last week, I worked on a file copy kata that transferred a file from one location to another. Looking at how bytes are transferred across is really interesting. I am enjoying looking at how hardware interelates with software, because before understanding this, it really seems like magic. It is amazing how you can use something so much and depend on it and not really know how it works. This of course isn’t unique to programming. I am sure most people do not have an indepth understanding of the human body or plumbing systems in their house, but I am enjoying looking at low level concepts, mainly because they are relatively new to me.</p><p>The file copy kata works by, taking a file path as a string and translating that string into a file format. This is then converted into an InputStream that has methods that allow it to read a stream of bytes from the stream of data.</p><p>There are two methods that can read a stream of bytes, there is .read() with no arguements that reads one byte at a time and .read(byte[]) that takes a byte array. There is also .read(byte[] b, int off, int len) that allaw a certain length of bytes to be read from an input stream. </p><p>In my code I used the .read that takes a byte array so I could specify how many bytes it should read across as an int every time it reads and writes the bytes across to the new file location. </p><p>Passing the byte array into String(byte[]) allows for the bytes to be translated in my case into their ASCII representation. This is to do with how Vim encodes the characters, and I will write another blog post about encoding after a bit more research.</p><p>Writing to the output stream effectively does the inverse of reading from the input stream and my transfer method combones the read and write functions into a loop that will read and write a certain amount of bytes from the original file in increments, until it reaches the end of the file at -1.</p><p>I originally forgot to close the stream, and even though this is a small enough program to ignore it. It is always good practice to do so.</p><p>Here is the code: </p><pre><code>
+public class FileCopyKata {
+    ReportProgress currentReport = new ReportProgress();
+
+    public String read(String inputFilePath, int amountOfBytes) throws IOException {
+        File inputFile = new File(inputFilePath);
+        InputStream input = new FileInputStream(inputFile);
+        byte[] buffer = new byte[amountOfBytes];
+
+        input.read(buffer);
+
+        return new String(buffer);
+    }
+
+    public void write(String destinationFilePath, byte[] buffer) throws IOException {
+        File destinationFile =  new File(destinationFilePath);
+        OutputStream output = new FileOutputStream(destinationFile);
+
+        output.write(buffer);
+    }
+
+    public void transfer(String inputFilePath, String destinationFilePath, int amountOfBytes) throws IOException {
+        File inputFile = new File(inputFilePath);
+        InputStream input = new FileInputStream(inputFile);
+        OutputStream output = new FileOutputStream(new File(destinationFilePath));
+        byte[] buffer = new byte[amountOfBytes];
+
+        int data;
+        while ((data = input.read(buffer)) != -1) {
+            currentReport.progressReport(data, (int) inputFile.length());
+            output.write(buffer);
+        }
+        input.close();
+        System.out.print("Done!");
+    }
+}
+
+</code></pre></div>
+        </article>
+        </li><li class="entries">
+        <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="extracting_classes.html">Extracting Classes</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">14 October 2015</p>
+        <h2><a class="entries" data-id="page-link" href="sorting_algorithms.html">Sorting Algorithms</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 November 2015</p>
         </header>
-        <div data-id="content"><p>I have tried to not extract classes out to early when writing a program, even when it is a very small program. However, I may fall into the trap of not extracting them out even when I need to. A sign that a class should be abstracted is that there is a variable being constructed in the class that should really only be a concern of a specific method. This is how the Single Responsibility Principle starts to apply and the question that need to be asked–what is this class doing? comes in handy. </p></div>
-      </article>
-    </li><li class="entries">
-      <article>
+        <div data-id="content"><p>Sorting algorithms incredibly useful and underlie so many of the algorithms that we use for analysing complex data. Some are more efficient than others and all of them use the concept of nodes. A node is a way to represent a section of the data you would like to analyse. This node is compared with other nodes and its relative position is then decided. </p><p>The efficiency of sorting algorithms is determined by the O(log)n logarithm. This is more a measure of time, and has variations that explain how and how quickly an algorithm can perform its operations. I am due to perfrom a kata next week, so I will write up a detailed post on one of these sorting algorithms next week. </p></div>
+        </article>
+        </li><li class="entries">
+        <article>
         <header>
-          <h2><a class="entries" data-id="page-link" href="working_in_a_team.html">Git</a></h2>
-          <p class="date" data-id="published-at" data-format="dd MMMM yyyy">13 October 2015</p>
+        <h2><a class="entries" data-id="page-link" href="yoga.html">Focus</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 November 2015</p>
         </header>
-        <div data-id="content"><p>Something I have done little of is looking at code written by other people. Yesterday I paired with another apprentice and looked at code written by someone else. This would have been quite difficult to do alone and was the first time I tried to understand some code written by someone else. It was good that I had someone who had done it before to guide me and we could look and discuss it together. I did make some mistakes with git and had to repeat a few things, but this actually made me learn the process a bit better. </p><p>Another learning point was to maybe look at the whole code/ class before we started to make changes as this would have made our lives easier in the long term (if we understood how the different methods interelated). I also saw that my naming was not very good, and that I should communicate what changes that I am making with clear messages. I suppose it was the first time I considered other people would be reading my git who were not completely aware of what I was working on. So I am going to try and redo my GuessTheNumber game in Java using frequent pull requests and commit to Git regularly. </p></div>
-      </article>
-    </li>
-</ol>
-<nav>
-<p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="index-3.html">&lt;&lt; Previous</a></p>
-<p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="index.html">Next &gt;&gt;</a></p>
-</nav>
-</main>
-<footer>
-  <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
-</footer>
+        <div data-id="content"><p>It is amazing how much of a difference keeping a calm and focused mind can make when you write code and try and solve a problem. Taking a break always helps, but doing yoga today reminded me of earlier this year when I did 20 days of yoga in a row and was never in better shape. I had more energy, more focus and was much more calm.</p><p>This is something that I also get from running which has an energizing effect on me. I am sure that I am happier, healthier and have more energy when I eat well and work out. So I am going to keep this up and see if this has a tangible effect on the code that I write.</p></div>
+        </article>
+        </li>
+    </ol>
+    <nav>
+    <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="index-3.html">&lt;&lt; Previous</a></p>
+    <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="index.html">Next &gt;&gt;</a></p>
+    </nav>
+    </main>
+    <footer>
+    <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
+    </footer>
 </body>
 
 </html>
