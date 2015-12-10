@@ -33,55 +33,42 @@
         <li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="pair_programming.html">Pair Programming</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
+        <h2><a class="entries" data-id="page-link" href="black_box_tests.html">Black Box Tests</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">10 December 2015</p>
         </header>
-        <div data-id="content"><p>Pair programming can be a lot of fun. I am quite a social person and enjoy sitting with someone to solve a problem. The thing with code is that it can be tackled in so many different ways and it takes some level of compromise to work with someone as they might not think in the same way you do.</p><p>This can be quite tiring, and pair programming is tiring, but incredibly useful. You can learn new things in a practical way and learn how to think laterally.</p><p>Typically there is a driver (who handles the tactical/typing part of the coding) and a navigator (who thinks about the overall strategy). These roles of course switch regularly when ping pong programming.</p><p>Some tips that are useful to think about when pair programming that we covered in our Zagaku lesson today were:</p><ol><li><p>Set the ground rules before you start. (If checking phones or emails is alright, when you both agree to take breaks, how long you want to pair etc.)</p></li><li><p>Decide on the type of pair programming style you would like to adopt. The style we tend to practice the most at 8th light is ping pong. This is where one person writes a test, then the next writes code to make the test pass. Finally, the first person again has to refactor if possible to make the code better.</p></li><li><p>Ensure you have a comfortable set up, ideally with one screen and one or two keyboards.</p></li><li><p>Communication is the key factor, make sure you communicate clearly for the duration of your pair programming session.</p></li></ol><p>Pairing can seem daunting when you are inexperienced, but I think everyone hopefully gets something out of it, so I am going to try and pair daily and really recommend you do to!</p></div>
+        <div data-id="content"><p>Testing and knowing what to test can be tough when you begin to code. Starting with a degenerate case is a good approach but sometimes this can lead to testing implementation details that can change as your code evolves. This is where black box testing comes in. Here you only test the public methods that handle the overall functionality and behaviour you want from a piece of code. White box testing is where you test the internals of a class or individual methods that handle small pieces of behaviour that you eventually want to hide as private methods.</p><p>I know I am guilty of writing simple and small tests that test individual functions and I tend not to change these to black box tests even when I know I no longer need them. I am going to keep in mind the advantages of black box testing and try and think of the overall functionality I want to test more going forward.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="habit.html">Habit</a></h2>
+        <h2><a class="entries" data-id="page-link" href="intellij.html">Intellij</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
         </header>
-        <div data-id="content"><p>Writing code definitely becomes muscle memory the more you write and type. That is probably why going through a kata becomes so much easier the more you practice it. That is also why the best way to learn a new language is just to practice it and get a feel for what the best practices and style conventions for it are.</p><p>I suppose it is not groundbreaking that the more you practice something the easier it becomes. I have found this is especially true and measurable with exercise, which I definitely have fallen out of practice with.</p><p>Like committing to building something in order to ensure you learn a new language, I think I’ll sign up to a race in order to get back into the habit of exercise.</p></div>
+        <div data-id="content"><p>Starting to learn Java, Intellij is really a great tool. I have just migrated to using vim and it is clear I was really using Intellij for a lot of things I took for granted. Despite occassionally being stuck in CAPS LOCK it allowed me to learn how to set up a java project very quickly.</p><p>Java is really verbose and Intellij imports a lot of dependencies and autocompletes a lot and this was really useful, but hid a lot of what was going on and what Java requires to run.</p><p>I am still exploring the benefits of learning how to write Java in pure vim and feel like I am learning a lot. I will report back after I get more comfortable with Java in vim and can properly weigh up the benefits and drawbacks, but if you are starting to learn Java for the first time, I can’t recommend Intellij enough.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="clean_as_you_go.html">Clean as you go</a></h2>
+        <h2><a class="entries" data-id="page-link" href="functionalprogramming.html">Functional Programming</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
         </header>
-        <div data-id="content"><p>Writing clean code definitley becomes easier as you get better at writing code and your knowledge of what is possible grows. But making sure you write cleanly as you go is more about discipline. I have to reduce all the methods in my Minesweeper down to three methods which is quite tricky and is getting trickier as I am putting it off. I think it would actually have been better to start with small methods, refactoring at every possible stage and keep everything cleanly separated. So going forward, I am definitely going to start by keeping my methods short and saving myself the pain of refactoring so that I keep my code as clean as possible from the start.</p></div>
+        <div data-id="content"><p>I thought I knew what functional programming was but I was wrong! I suppose I need to take one step at a time and I am sure during my apprenticeship I will eventually come to learn a functional language, but there is no harm in knowing the basics. So I thought I would share what I came across.</p><p>A functional language is a language that avoid mutating or changing data. It really helps break a problem down into its component parts. So you would just create new data structures instead of changing ones that already exist.</p><p>Functional programs are required to also be stateless, that is they should perform every task as if they were performing them for the first time. This is a pretty different way of thinking and I have just got my head around object oriented (OO) programming so am glad I will tackle functional programming once I have a bit more practice at writing OO languages.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="CreatingObjects.html">Creating Objects</a></h2>
+        <h2><a class="entries" data-id="page-link" href="recursionagain.html">More Recursion</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
         </header>
-        <div data-id="content"><p>As Java documentation explains, a class is like a blueprint that can be used to create an object. Each time an object is created by calling new ObjectName an object constructed with the relevant constructors. </p><pre><code>Square square = new Square(50,50);
-</code></pre><p>A class can have multiple constructors, and it is possible to create variations of an object by using these different constructors (if teh constructors are different they must have different signatures. A constructor has the same name as the class and has no return type.</p><pre><code>
-public class Shape {
-
-    public Shape(int width, int height) {
-        this.width = width;
-        this.height = height;
-    }
-
-    public void areaOfSquare() {
-        return width * height;
-    }
-
-</code></pre></div>
+        <div data-id="content"><p>Recursion can be a tricky concept and I know I definitely struggled with it when I first started learning how to code. But it is simply a method calling itself with changing parameters that causes it to recurse. This can often be accomplished by a while loop which actually creates fewer stack frames, but can be a less elegant way of tackling a simple problem.</p><p>So the main driving factor as far as I can see is the clarity of your code and the length of your program (including how much data it needs to analyze and compute).</p><p>This is a great <a href="http://roman01la.github.io/recursion-exercises/">webiste</a> that has a lot of great mini examples and ways to practice recursion.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="how_to_write_tests.html">Writing tests</a></h2>
+        <h2><a class="entries" data-id="page-link" href="opensource.html">Open Source</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
         </header>
-        <div data-id="content"><p>Constructing tests and deciding where to start is difficult, especially at the very beginning. A useful place to start is the most basic use case, an empty array or string representing the final construction you want to start building. This is a good entry point and from there you can start building out what you want to construct step by step, closer to the final product.</p><p>A good practice, that is difficult to adpot, is to think about what your code would ideally look like on execution and write a test that reflects this. This is of course more difficult than you would imagine. Most of the time, even before a test has been written you have some idea of how you want to di this in code. I think it is a good idea to try and detach and try on just focus on the tests and go from there. This is something I know I definitely need to work on.</p></div>
+        <div data-id="content"><p>Git is actually quite an amazing tool. I am aware I use it to a fraction of its capacity, but even the idea that so much code is open for anyone to see is inspired.</p><p>I recently helped organize an open source workshop to encourage others to learn how to collaborate with others and create pull requests. It was called @24pullrequests and the idea behind @24pullrequests is that everyday in December leading up to Christmas you submit a pull request on an open source project that has some issues.</p><p>There was even a table of new Java developers who could not find a project to contribute to so I helped them create a pull request for my Minesweeper game! I hope I can create more pull requests and get other people to contribute to my issues. I suppose the first step to this however would be to have small and regular commits so that anyone who actually wants to find certain functionality won’t have to wade through my code so they can help. So this a reminder to myself and others, make regular commits and make pull requests!</p></div>
         </article>
         </li>
     </ol>

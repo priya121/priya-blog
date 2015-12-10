@@ -33,42 +33,55 @@
         <li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="extracting_classes.html">Extracting Classes</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">14 October 2015</p>
+        <h2><a class="entries" data-id="page-link" href="CreatingObjects.html">Creating Objects</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
         </header>
-        <div data-id="content"><p>I have tried to not extract classes out to early when writing a program, even when it is a very small program. However, I may fall into the trap of not extracting them out even when I need to. A sign that a class should be abstracted is that there is a variable being constructed in the class that should really only be a concern of a specific method. This is how the Single Responsibility Principle starts to apply and the question that need to be asked–what is this class doing? comes in handy. </p></div>
+        <div data-id="content"><p>As Java documentation explains, a class is like a blueprint that can be used to create an object. Each time an object is created by calling new ObjectName an object constructed with the relevant constructors. </p><pre><code>Square square = new Square(50,50);
+</code></pre><p>A class can have multiple constructors, and it is possible to create variations of an object by using these different constructors (if the constructors are different they must have different signatures. A constructor has the same name as the class and has no return type.</p><pre><code>
+public class Shape {
+
+    public Shape(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public void areaOfSquare() {
+        return width * height;
+    }
+
+</code></pre></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="working_in_a_team.html">Git</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">13 October 2015</p>
+        <h2><a class="entries" data-id="page-link" href="how_to_write_tests.html">Writing tests</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
         </header>
-        <div data-id="content"><p>Something I have done little of is looking at code written by other people. Yesterday I paired with another apprentice and looked at code written by someone else. This would have been quite difficult to do alone and was the first time I tried to understand some code written by someone else. It was good that I had someone who had done it before to guide me and we could look and discuss it together. I did make some mistakes with git and had to repeat a few things, but this actually made me learn the process a bit better. </p><p>Another learning point was to maybe look at the whole code/ class before we started to make changes as this would have made our lives easier in the long term (if we understood how the different methods interelated). I also saw that my naming was not very good, and that I should communicate what changes that I am making with clear messages. I suppose it was the first time I considered other people would be reading my git who were not completely aware of what I was working on. So I am going to try and redo my GuessTheNumber game in Java using frequent pull requests and commit to Git regularly. </p></div>
+        <div data-id="content"><p>Constructing tests and deciding where to start is difficult, especially at the very beginning. A useful place to start is the most basic use case, an empty array or string representing the final construction you want to start building. This is a good entry point and from there you can start building out what you want to construct step by step, closer to the final product.</p><p>A good practice, that is difficult to adpot, is to think about what your code would ideally look like on execution and write a test that reflects this. This is of course more difficult than you would imagine. Most of the time, even before a test has been written you have some idea of how you want to di this in code. I think it is a good idea to try and detach and try on just focus on the tests and go from there. This is something I know I definitely need to work on.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="hashmaps.html">Hashmaps</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">12 October 2015</p>
+        <h2><a class="entries" data-id="page-link" href="goals.html">Leadership Workshop</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">02 December 2015</p>
         </header>
-        <div data-id="content"><p>Because Java is so statically typed, it is useful to know what the right data structure to use before using it. In Ruby I used Arrays for almost all lists that I was creating. In Java, my go to is an ArrayList, but recently I used a HashMap when trying to build a Histogram for a simple kata. Having restrictions on the data types you can use and what methods you can call on them is something I think will have more utility when I build larger programs. Something I probably should brush up on then is data structures and their uses. </p></div>
+        <div data-id="content"><p>Today all the Apprentices and Craftsmen of the 8th Light London office attended a Leadership workshop and spent a few hours discussing what values we hold dear and which ones we would like to improve upon.</p><p>There was quite a bit of introspection involved, which was good. Sometimes when you are so busy it is difficult to find the time to pause and reflect. I usually use the time I run and exercise to do this, but I have fallen out of practice with it and am not running as regularly as I used to. So it was nice to have time dedicated to think about what I would like to personally aim for.</p><p>Something that came up for me quite frequently was quality, but really if you looked carefully at most of the results that came up frequently there was quite some room for interpretation. Quality to me can be applied to most areas of life. To me quality just means putting time and care into something, that leads to better results naturally. This can mean quality time with friends and family, quality in cooking a meal, quality in building a house, quality in a performance. It is again the aggregation of marginal gains and doing things with purpose. I am quite an excitable person, which definitely has its time and place but I would like to sometimes slow down and pay even more attention to detail which I am sure will help my work.</p><p>So this is what I personally got out of the workshop, I am going to take time to pause and reflect more and strive for quality and consideration in everything (well most things anyway!) that I do.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="thinking_operationally.html">Thinking Operationally </a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 October 2015</p>
+        <h2><a class="entries" data-id="page-link" href="liskov_principle.html">The Liskov Principle</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 November 2015</p>
         </header>
-        <div data-id="content"><p>When I started to write a Battleship game earlier this year, I started with how I imagine I would build an actual game board if it was a physical object. Board does not really concern itself with the rules of the game and so even though this seems like a good place to start, it is better to first think about what the rules and operations of the game are and go from there.</p><p>It’s easy to approach most games/katas by thinking about a board or any of the physical parts of a task, as these seem like the obvious places to start building, but by doing it this way much more code needs to be written and it actually complicates a task. I am going to start thinking more operationally and hopefully this will force a better approach to writing more concise code.</p></div>
+        <div data-id="content"><p>The Liskov Principle was formulated by Barbara Liskov and Jeannette Wing in 1994. It was described by them as:</p><p>Let Φ(x) be a property provable about objects x of type T. Then Φ(y) should be true for objects y of type S where S is a subtype of T.</p><p>This essentially means that subtypes of a an object may replace the object itself, without totally changing the functioning of a program.</p><p>In java this is ususally implemented with the use of abstract classes and interfaces. </p><p>The typical example for this is the square and the rectangle, which I think does not illustrate the example very well. A much better expalination was given by one of the craftsmen during a Zagaku this week. Here is the link: <a href="https://github.com/8thlight/zagaku/blob/master/solid/lsp.md">Liskov</a>.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="polymorphism.html">Polymorphism</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">08 October 2015</p>
+        <h2><a class="entries" data-id="page-link" href="structuring_code.html"></a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 November 2015</p>
         </header>
-        <div data-id="content"><p>Polymorphism is one of the greatest advantages of OOP (object oriented design). It basically means you can call different methods on an object and change its form.</p><p>This allows you to create many categories of an object. In Java all objects are polymorphic, because they are all part of the class Object.</p><p>A class can gave different underlying data, but can be presented in the same form as others due to polymorphism.</p><p>Polymorphism is a real advantage to OOP and even though I was not sure what the definition was, I have been using it a lot already.</p></div>
+        <div data-id="content"><p>As my minesweeper program is getting bigger and I am starting to think about the different classes that could emerge from the existing ones it already has, it is becoming increasingly important to think about <em>how</em> they should be separated. </p><p>I am currently reading Kent Beck’s Implementation Patterns and he describes the various categories of class separation and state. There are a lot of categories, and I think the only way to really fully understand their use is to actually use them in my code.</p><p>The ones I have come across already are Interfaces, and Superclasses to some extent. He also talks about specialization and the types of questions you should be asking if you want to think about how to separate out classes. Some patterns I have not really used yet are the Implementor pattern and the Inner Class.</p><p>Most of the state based patterns are concerned with how an object changes state. This is primarily done through the internals of the object, so all the methods it contains.</p><p>I am going to try and notice when I use these patterns in my code and write up how I am trying to use them.</p></div>
         </article>
         </li>
     </ol>
