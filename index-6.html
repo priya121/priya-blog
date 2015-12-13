@@ -8,11 +8,11 @@
 <body>
     <div class="nav">
         <ul>
-            <li class="home"><a href="#">Home</a></li>
+            <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
             <li class="news"><a href="#">Newsletter</a></li>
-            <li class="contact"><a href="#">Contact</a></li>
+            <li class="contact"><a href="www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
     <header id="top">
@@ -33,42 +33,42 @@
         <li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="gitPullRequests.html">Pull Requests on Git</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">24 September 2015</p>
+        <h2><a class="entries" data-id="page-link" href="recursion.html">Recursion</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">27 October 2015</p>
         </header>
-        <div data-id="content"><p>Creating a git pull request allows a developer to ask others to review their code when a new feature has been added, a change has been made or they want other developers to review their code for any other reason. </p><p>In order to do this the following steps are necessary:</p><p>If you want to work on an exisiting project, a fork of the exisiting project repository needs to be made. Once this is done a copy of the project will have been made.</p><p>Then a clone of the forked repository must be made, this will create a new working copy of the project on a local machine.</p><p>Before creating a new feature, a new branch for the feature has to be created and any changes must be added and commited to this branch.</p><p>Once these changes have been made it is possible to push these to the copy of the repository, (not the main repository) by a git push. </p><p>After this has been done, a pull request can be made through the relevant copied repository page. </p><p>Creating pull requests is useful when working in a team and it encourages collaboration. I am going to try and make one pull request a day.</p></div>
+        <div data-id="content"><p>Recursion is one of the most useful things I learnt when I first began how to code. </p><p>Recursion is simply when a method or function calls itself with changing data being assessed.</p><p>It is a good example of how a simple algorithm can handle complexity by analyzing data. It is similar to a loop, but instead of being given a finite termination condition or number of times to execute, it is able to assess itself when the condition has been met and this can be an extremely powerful tool.</p><p>It is best to see how recursion works by looking at a simple algorithm. I have found that this is actually the best way to learn most new concepts. Applying them one at a time to a simple problem helps as there is less to distract you from the actual use of the tool. I remember the first time I tried to apply it was with a prime factors kata and it was also well explained with a Towers of Hanoi kata. I usually use a while loop, but I am going to try and remember to use recursion if it makes more sense or makes my code easier to read.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="static_methods.html">Static Methods </a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 September 2015</p>
+        <h2><a class="entries" data-id="page-link" href="console_testing.html">Testing I/O</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 October 2015</p>
         </header>
-        <div data-id="content"><p>Static methods in Java are used when the method needs to be called without creating an object of the class.</p><p>An instance variable needs an object to be created for it to be called whereas a static method does not. That is why most main classes in Java must be static.</p><p>Static methods typically take all their data from their parameters and create something from those parameters. They also typically have no reference to variables.</p><p>It is possible to make many methods static, but this is bad practice as it is unclear as to what the responsibility of the class is when many methods can be called on it that are not necssarily related to what it does. A static method called on a class is also not polymorpic so this means that it is not possible to override the behavior set by a static method.</p><p>So it is important to think carefully when creating a static method and avoid using them unless necessary.</p></div>
+        <div data-id="content"><p>Testing a randomised output can be difficult, as if an actual random number is returned, the result will be different every time. In order to tackle this I have used interfaces that swap in for certain tests and then also allow for simulated input to be tested. </p><p>In Java the simplest way to test input and output is to use a ByteArrayInputStream and ByteArrayOutputStream. These can then be easily swapped out for System.in and System.out when used in the main method and the program is run.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="binary.html">Counting in Binary</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">21 September 2015</p>
+        <h2><a class="entries" data-id="page-link" href="enums.html">Enums in Java</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">22 October 2015</p>
         </header>
-        <div data-id="content"><p>Mathematics is not vital to knowing how to program, but it definitely helps if you are good at it. This is formal logic. If x then y is not the same as if y then x (a mistake people make all the time in everyday conversation). Counting in binary is simple if you imagine that all a computer has access to is 0 and 1 or on and off in an electrical circuit.</p><p>Because of this, everything it reads has to be represented in 0s and 1s. So this means that once it has used 0 and 1 to represent a number it can repetitively reuse 0 and 1 to add onto the end of a previous combination of 0 and 1. </p><p>This is similar to the use of hexadecimal numbers. If you imagine that you can only count using the digits 0–10 and a–j once you have counted to 10 using the numbers in order to carry on 0a would represent 11 and 1a would be 21 etc. </p><p>In a similar way a computer uses 0s and 1s and combinations of these when it needs to add to a previous value.</p><p>The easiest way to calculate the binary value of a number is to divide a number by 2 and record the remainder value as part of the binary result until the number you are dividing is one.</p></div>
+        <div data-id="content"><p>Enums in Java allow for a specific data type to be set as a list of predefined constants. Most of the time, these predefined constants represent constants in the real world, like days of the week or months in a year. These rarely change so can be set for the duration of a program and do not represent numeric values or textual data.</p><p>Enums in Java are type safe, meaning that they cannot be reassigned to another type once they have been set. It is also possible to set values for the enums and retrieve these by calling .values() on them.</p><p>They can be used somewhat recklessly when defining a type on a set of values, but used well they can be useful.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="stacks.html">Stacks</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">18 September 2015</p>
+        <h2><a class="entries" data-id="page-link" href="BDD.html">BDD–Behaviour Driven Development</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">20 October 2015</p>
         </header>
-        <div data-id="content"><p>Stacks are a pretty fundamental concept in CS. They represent how data is allocated to memory at a basic level. A stack area on computer memory is of a fixed origin and variable size. The two basic operations that are used most frequently on a stack are inserting an item and removing an item. A stack uses the concept of last in first out (LIFO) as opposed to a queue which uses the concept of (FIFO). In Java it is possible to create a stack and call certain predefined methods on it like push, pop, peek, search and size. Like most Java lists a stack has to contain matching objects within it that must be declared when it is first created.</p></div>
+        <div data-id="content"><p>I have been so focused on learning TDD and trying my best to stick to it I never really considered there were other ways of testing. BDD is the topic ofa Clean Coders video I watched this week and it was interesting to think of the need for business to be able to write specifications that programmers can write in. </p><p>Like so many industries it is the differences in terminology that really leads to miscommunication, so finding words that are understood by all is important. Of course terminology is there for a reason, it is always more concise and saves time. But for something to be useful outside of an industry, it is important to at least be able to communicate something simply. I think that is why Einstein said: If you cannot explain it simply enough, you do not understand it well enough. </p><p>It is similar to the idea that a problem must be broken down into its most basic components in order for any computation. If you want a person who is not in your industry, or a programmer you need to be able to break the words down into simple non-technical words for them to be able to understand, and this is only achievable through practice. </p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="UserStories.html">Creating Stories</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">17 September 2015</p>
+        <h2><a class="entries" data-id="page-link" href="moreOnPullRequests.html">More on Pull Requests</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">19 October 2015</p>
         </header>
-        <div data-id="content"><p>Starting a program or application from scratch can be daunting, but it is also exciting. What helps clarify the direction of where you need to start is a series of stories. The first few stories are important as they can help guide the rest of the application. </p><p>It is important to start with the most degenerate case and then test the code from there. That is why it is not always useful to have too much planned out for the later stages of the code as it is quite likely that it will change. </p><p>I have started on some stories for a minesweeper game and the most degenerate case for that is the return of an exploded mine (that I will represent as a 1) when the relevant index (depicted by a coordinate) will change.</p><p>I have the next few stories written down and the later they get the more abstarct they become. But this is a useful exercise that I hope I will get better at, because most of the time, once you have figured out how to do something, actually doing it and putting it into code is much easier.</p></div>
+        <div data-id="content"><p>So last time I wrote about Git Pull requests, I more or less covered the basics and had not really made any practical requests. I had just made one basic one without any messages or meaningful pieces of code. Something the other apprentices and I are trying to do more of is reviewing each others code and so I tried making some pull requests today. I created multiple branches and somehow managed to delete my master branch when trying to use git with Intellij, but I finally managed to make a pull request with a little piece of code and functionality that could be read easily by someone. </p><p>I am still making some formatting and whitespace errors that I am still working on, but I think I am getting the hang of it. I am going to try and use pull requests and make them as frequently as possible now, so I can maybe get some feedback as I go and not fall into bad habits.</p></div>
         </article>
         </li>
     </ol>

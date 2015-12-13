@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <title data-id="blog-title">Priya’s Blog</title>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
+            <li class="news"><a class="active" href="#">News</a></li>
+            <li class="about"><a href="#">About</a></li>
+            <li class="news"><a href="#">Newsletter</a></li>
+            <li class="contact"><a href="www.twitter.com/priya104">Contact</a></li>
+        </ul>
+    </div>
+    <header id="top">
+    <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
+    <ul>
+        <li data-id="if-exists" data-key="twitter">
+        <a href="https://twitter.com/priya104 " data-id="href" data-key="twitter">
+            <img src="tw.png" width="24" height="20" />
+        </a>
+        </li>
+        
+    </ul>
+    </header>
+    <main>
+    <nav class="nav-primary" role="navigation">
+    </nav>
+    <ol class="entries" data-id="page-list" data-max-pages="5">
+        <li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="exceptions.html"> Throwing Exceptions</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">02 September 2015</p>
+        </header>
+        <div data-id="content"><p>Throwing an exception is a way of handling an error that a method may produce for a specific reason that was expected by the programmer who wrote it.</p><p>In Java, a complier will not let you compile a method if an exception is written that has not been handled or specifically declared.</p><p>Even though it is possible to declare that the main method throws the exception, it is always nicer to pass the declaration to another method and print a message to the user after another method has caught the exception. It is also good practice to tell the user how to address the error if at all possible.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="arrays_in_java.html">Arrays in Java</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">01 September 2015</p>
+        </header>
+        <div data-id="content"><p>Arrays in Ruby are incredibly useful and most of the tasks and programs that I built while I was learning Ruby had an array within them at some point or another. As I learn more Java I’m sure that arrays will be increasingly useful, (I have already used some briefly in some of the katas that I am practicing).</p><p>Arrays in Java must be created using an array creation expression. </p><p>e.g. new type[length] </p><p>The type must be explicitly set just like all data structures must be in Java. Similar to Ruby different elements can be accessed using array[i] where i is the index number of the element trying to be accessed.</p><p>It is also possible to create multi-dimensional arrays by writing type [] [], type [] [] [] etc.</p><p>There are also no array constants, new arrays are created every time an array initialiser is evaluated. </p><p>Despite there being these restrictions on arrays in Java, by using class Arrays in java.util certain utility methods are available that allow you manipulate the array.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="katas.html">Katas</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">31 August 2015</p>
+        </header>
+        <div data-id="content"><p>Coding Katas are a way of practicing muscle memory and approaching a simple problem in the simplest way possible. I have not attempted too many katas so far, but intend to do as many as I can going forwards. Two that I have approached are the roman numerals kata and the coin changer kata. The more you practice them the easier they become.</p><p>I am going to attempt to at least start one every morning. <a href="http://exercism.io/">This</a> is a great website that has a long list of different katas in different languages and the well-known <a href="http://www.codewars.com/about">CodeWars</a> is another that is fun and easy to use.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="encapsulation.html">Encapsulation in Ruby </a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 August 2015</p>
+        </header>
+        <div data-id="content"><p>There are many useful components in Ruby as a language and one I looked into closer recently is Encapsulation.</p><p>Encapsulation reduces coupling as it hides the internal representation or data structure of a particular object. This makes it easier to make changes when they become necessary, as if there are changes that need to be made to the data within the class, it will handle these changes and they will not have to be made throughout the entire program or application. </p><p>Encapsulation makes more sense when programs get larger, but I am going to try and implement it as soon as possible and this will make things easier to change.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="dotfiles.html">Dotfiles</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 August 2015</p>
+        </header>
+        <div data-id="content"><p>Setting up a new machine can take time and it is always nice to take your time customizing the settings just how you like them. But this can take a really long time if there are many settings you have to set manually. A useful way to speed up this process and cut down duplication time is to copy across your dotfiles from git.</p><p>I recently did this and now am able to quickly work on my projects on the new machine just as I did before. In order to clone across the files, it is also necessary to set up your new machine with an SSH key on git. There are many resources that help with this. One I used is: [https://help.github.com/articles/generating-ssh-keys/] and it is a simple process.</p><p>Now I can manage my settings across multiple devices and am more comfortable with adding to my dotfiles. Next step is to change my vim colours!</p></div>
+        </article>
+        </li>
+    </ol>
+    <nav>
+    <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="index-14.html">&lt;&lt; Previous</a></p>
+    <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="index-12.html">Next &gt;&gt;</a></p>
+    </nav>
+    </main>
+    <footer>
+    <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
+    </footer>
+</body>
+
+</html>
