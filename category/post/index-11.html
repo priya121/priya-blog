@@ -33,32 +33,40 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="../../sorting_algorithms.html">Sorting Algorithms</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">10 November 2015</p>
+        </header>
+        <div data-id="content"><p>Sorting algorithms incredibly useful and underlie so many of the algorithms that we use for analysing complex data. Some are more efficient than others and all of them use the concept of nodes. A node is a way to represent a section of the data you would like to analyse. This node is compared with other nodes and its relative position is then decided. </p><p>The efficiency of sorting algorithms is determined by the O(log)n logarithm. This is more a measure of time, and has variations that explain how and how quickly an algorithm can perform its operations. I am due to perfrom a kata next week, so I will write up a detailed post on one of these sorting algorithms next week. </p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="../../explaining_things.html">Explaining Things</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">11 November 2015</p>
+        </header>
+        <div data-id="content"><p>I sometimes have a hard time communicating what I have done or want to do in code into simple easy to understand language. Something that I think helps most people is the use of an analogy. This allows people to assimilate the information within the context of something they understand. </p><p>This is assuming there is an appropriate analogy, which sometimes there is not. If you cannot explain it simply enough, you do not understand it well enough. This is why pair programming really helps, it can help solidify knowledge you already had and help you identify areas you need more clarity on. The other apprentices and I have been pretty good at pairing regularly and I think carrying on with this will definitely be useful in getting better at communicating out intentions in code.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="../../music.html">Music While Coding</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 November 2015</p>
+        </header>
+        <div data-id="content"><p>I have always litened to music while I work. I always found it fun and eaiser to concentrate when I hd my headphones in and music on. I even remember holding a math statistics experiment (probably in an attempt to liten to more music whie I studied) that measured if I was more productive while working and listening to music. Now this probably was not the most scientific experiment and I am sure the results were skewed. But I found I was more productive when I listened to music. Of course the only way that I anyone can completely focus is in silence. There are times when I need this, but most of the time if I have some music on I find I can tune out my surroundings and focus.</p><p>I am going to try and spend some time listening to music and coding and spend some other dedicated time trying to code without music and see in which setting I am more productive. I suppose that eventually, there will be times when listening to music to focus is necessary and other times when I should try and refrain and not plug in.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="../../liskov_principle.html">The Liskov Principle</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 November 2015</p>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 November 2015</p>
         </header>
         <div data-id="content"><p>The Liskov Principle was formulated by Barbara Liskov and Jeannette Wing in 1994. It was described by them as:</p><p>Let Φ(x) be a property provable about objects x of type T. Then Φ(y) should be true for objects y of type S where S is a subtype of T.</p><p>This essentially means that subtypes of a an object may replace the object itself, without totally changing the functioning of a program.</p><p>In java this is ususally implemented with the use of abstract classes and interfaces. </p><p>The typical example for this is the square and the rectangle, which I think does not illustrate the example very well. A much better expalination was given by one of the craftsmen during a Zagaku this week. Here is the link: <a href="https://github.com/8thlight/zagaku/blob/master/solid/lsp.md">Liskov</a>.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="../../goals.html">Leadership Workshop</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">02 December 2015</p>
-        </header>
-        <div data-id="content"><p>Today all the Apprentices and Craftsmen of the 8th Light London office attended a Leadership workshop and spent a few hours discussing what values we hold dear and which ones we would like to improve upon.</p><p>There was quite a bit of introspection involved, which was good. Sometimes when you are so busy it is difficult to find the time to pause and reflect. I usually use the time I run and exercise to do this, but I have fallen out of practice with it and am not running as regularly as I used to. So it was nice to have time dedicated to think about what I would like to personally aim for.</p><p>Something that came up for me quite frequently was quality, but really if you looked carefully at most of the results that came up frequently there was quite some room for interpretation. Quality to me can be applied to most areas of life. To me quality just means putting time and care into something, that leads to better results naturally. This can mean quality time with friends and family, quality in cooking a meal, quality in building a house, quality in a performance. It is again the aggregation of marginal gains and doing things with purpose. I am quite an excitable person, which definitely has its time and place but I would like to sometimes slow down and pay even more attention to detail which I am sure will help my work.</p><p>So this is what I personally got out of the workshop, I am going to take time to pause and reflect more and strive for quality and consideration in everything (well most things anyway!) that I do.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="../../how_to_write_tests.html">Writing tests</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
-        </header>
-        <div data-id="content"><p>Constructing tests and deciding where to start is difficult, especially at the very beginning. A useful place to start is the most basic use case, an empty array or string representing the final construction you want to start building. This is a good entry point and from there you can start building out what you want to construct step by step, closer to the final product.</p><p>A good practice, that is difficult to adpot, is to think about what your code would ideally look like on execution and write a test that reflects this. This is of course more difficult than you would imagine. Most of the time, even before a test has been written you have some idea of how you want to di this in code. I think it is a good idea to try and detach and try on just focus on the tests and go from there. This is something I know I definitely need to work on.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
         <h2><a class="entries" data-id="page-link" href="../../CreatingObjects.html">Creating Objects</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">24 November 2015</p>
         </header>
         <div data-id="content"><p>As Java documentation explains, a class is like a blueprint that can be used to create an object. Each time an object is created by calling new ObjectName an object constructed with the relevant constructors. </p><pre><code>Square square = new Square(50,50);
 </code></pre><p>A class can have multiple constructors, and it is possible to create variations of an object by using these different constructors (if the constructors are different they must have different signatures. A constructor has the same name as the class and has no return type.</p><pre><code>
@@ -74,14 +82,6 @@ public class Shape {
     }
 
 </code></pre></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="../../clean_as_you_go.html">Clean as you go</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
-        </header>
-        <div data-id="content"><p>Writing clean code definitley becomes easier as you get better at writing code and your knowledge of what is possible grows. But making sure you write cleanly as you go is more about discipline. I have to reduce all the methods in my Minesweeper down to three methods which is quite tricky and is getting trickier as I am putting it off. I think it would actually have been better to start with small methods, refactoring at every possible stage and keep everything cleanly separated. So going forward, I am definitely going to start by keeping my methods short and saving myself the pain of refactoring so that I keep my code as clean as possible from the start.</p></div>
         </article>
         </li>
     </ol>

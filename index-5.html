@@ -33,45 +33,42 @@
         <li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="breaking_down_problems.html">Breaking It Down</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">01 October 2015</p>
+        <h2><a class="entries" data-id="page-link" href="yoga.html">Focus</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">06 November 2015</p>
         </header>
-        <div data-id="content"><p>I am still learning the optimal way to break a problem down. This is something I think I will gain a huge benefit from. I realised that there is a level of granularity that I am not used to with some problems, but I am getting better at it. I need to not only know the steps of the general problem, but also the best way of breaking these down into methods and the best data structures for what I am trying to do.</p><p>I am going to slow down to speed up, and go back to pen and paper whenever I need to think about the best way to break a problem down.</p></div>
+        <div data-id="content"><p>It is amazing how much of a difference keeping a calm and focused mind can make when you write code and try and solve a problem. Taking a break always helps, but doing yoga today reminded me of earlier this year when I did 20 days of yoga in a row and was never in better shape. I had more energy, more focus and was much more calm.</p><p>This is something that I also get from running which has an energizing effect on me. I am sure that I am happier, healthier and have more energy when I eat well and work out. So I am going to keep this up and see if this has a tangible effect on the code that I write.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="open_close_principle.html">Open Close Principle</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">29 September 2015</p>
+        <h2><a class="entries" data-id="page-link" href="IOStreams.html">Java IO Streams</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 November 2015</p>
         </header>
-        <div data-id="content"><p>I am still getting familiar with the SOLID principles and am trying to assess their value. It is often only when I see them in bad code that I have written or problems that I come up against after not implementing them that I can spot them.</p><p>But I think reading through them at this stage is a good exercise. The Open Close Principle is the next one I am looking at, which states, that software entities should be closed for modification but open for extension.</p><p>That is, that it should be possible to make changes to the exisiting code and extend its behaviour without breaking the exisiting functionality of the code. Interfaces help with this as they allow you to extend the code more easily and help create compact classes that hold the required behaviour.</p><p>I am using this principle to a certain degree without realising it, but will try and be more concious of when I am using it and make sure I do so when required.</p></div>
+        <div data-id="content"><p>Java Input Output streams abstract different ways in which you can input and output data. The stream can be sent to or taken from any source, it does not matter. It is really a stream or flow of bytes from one destination to another.</p><p>Java divides streams into bytes or character based categories. The character unit of a character based stream is a Unicode or ASCII character and transfers input and output of 8-bit bytes at a time.</p><p>This is in contrast to FileReader and FileWriter, which even though they internally use FileInputStream and FileOutputStream, read and write two bytes at a time. This can slow down your program and so it can be an advantage to use FileInputStream and FileOutputStream directly to transfer the data across sources.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="fakes.html">Using Fakes in Java</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        <h2><a class="entries" data-id="page-link" href="structuring_code.html">Implementation Patterns</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 November 2015</p>
         </header>
-        <div data-id="content"><p>I am starting to really see the benefit of using fakes in my code. Working through a Guess the Number game and creating a fake that simulates the input and intermediate output is useful when writing tests because you need to be able to test behaviour that is not certain and can change each time a program is run.</p><p>The way this is done is through the use of an interface. An interface is essentially a class that contains the methods or behaviour that must be present for your class to work. The class that ultimately uses this behaviour is not aware of the behaviour of the object that implements the interface, provided that it contains the methods that the interface requires.</p><p>In the tests you can then create class that implements the methods or behaviour the interface requires, but set what they return to a value that is hardcoded. Then the actual console implementation can be passed in when the actual game is run so that the Fakes hardcoded returns can be replaced with a user input and the correct output.</p><p>Guess the number is a simple enough program to test this so this is a good way to start understanding IO and fakes in Java.</p></div>
+        <div data-id="content"><p>As my minesweeper program is getting bigger and I am starting to think about the different classes that could emerge from the existing ones it already has, it is becoming increasingly important to think about <em>how</em> they should be separated. </p><p>I am currently reading Kent Beck’s Implementation Patterns and he describes the various categories of class separation and state. There are a lot of categories, and I think the only way to really fully understand their use is to actually use them in my code.</p><p>The ones I have come across already are Interfaces, and Superclasses to some extent. He also talks about specialization and the types of questions you should be asking if you want to think about how to separate out classes. Some patterns I have not really used yet are the Implementor pattern and the Inner Class.</p><p>Most of the state based patterns are concerned with how an object changes state. This is primarily done through the internals of the object, so all the methods it contains.</p><p>I am going to try and notice when I use these patterns in my code and write up how I am trying to use them.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="do_while.html">do-while loops</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">25 September 2015</p>
+        <h2><a class="entries" data-id="page-link" href="clean_as_you_go.html">Clean as you go</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 November 2015</p>
         </header>
-        <div data-id="content"><p>While and Do While loops are two of the most common loops and they exist across most languages. A normal while loop executes the code inside it provided the boolean expression it evaluates is true.</p><p>It is easy to enter a never ending while loop accidently if you forget to include a terminating condition. So it is important to always consider if the condition that you want to exit the loop on is ever met. If it is not your program will never exit the loop or go past that point.</p><p>eg.</p><pre><code>while (true) 
-    do (something)
- until (terminating condition)
-</code></pre><p>A do while loop however, is that the code is always executed at least once, because the condition or expression is evaluated at the bottom of the loop. </p><p>This is an advantage in certain circumstances eg. if you need to make sure an output is printed at least once even if the condition within the while loop is not true.</p></div>
+        <div data-id="content"><p>Writing clean code definitley becomes easier as you get better at writing code and your knowledge of what is possible grows. But making sure you write cleanly as you go is more about discipline. I have to reduce all the methods in my Minesweeper down to three methods which is quite tricky and is getting trickier as I am putting it off. I think it would actually have been better to start with small methods, refactoring at every possible stage and keep everything cleanly separated. So going forward, I am definitely going to start by keeping my methods short and saving myself the pain of refactoring so that I keep my code as clean as possible from the start.</p></div>
         </article>
         </li><li class="entries">
         <article>
         <header>
-        <h2><a class="entries" data-id="page-link" href="FindingPatterns.html">Finding The Pattern </a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">25 September 2015</p>
+        <h2><a class="entries" data-id="page-link" href="immutability.html">Keeping Track</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">03 November 2015</p>
         </header>
-        <div data-id="content"><p>One of the things I am trying to get better at is writing concise code and a great way to do this is by reducing duplication. Initially I find that I write a lot of if statements, as these are the closest to real language that I use when describing the problem or visualizing it for the first time.</p><p>Sometimes this duplication is more subtle than I would like and an alorithm is hiding in there somewhere. It is more difficult to find once you have started to write, but again I think an old pen and paper helps. Sometimes, it takes a little time to find the pattern and additional tests can help to find the common patterns.</p></div>
+        <div data-id="content"><p>I was getting comfortable with deciding which objects should be separate in Ruby and starting to sense what they should and should not be doing. This was probably because I had built a few games and was starting to see the pattern of what should be separated out. </p><p>It is strange that when the syntax for something is new, even though the objects it represents might not be so different from another language, it feels different to think about how these objects should be separated out. Hopefully, with a bit of practice this will again start to become clear and the more I write, the easier it will become.</p></div>
         </article>
         </li>
     </ol>

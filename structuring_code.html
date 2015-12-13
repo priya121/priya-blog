@@ -3,7 +3,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
-    <title data-id="title">post</title>
+    <title data-id="title">Implementation Patterns</title>
   </head>
   <body>
     <header id="top">
@@ -20,7 +20,7 @@
     <main>
     <article>
       <header>
-        <h2><a data-id="page-link" href="structuring_code.html"></a></h2>
+        <h2><a data-id="page-link" href="structuring_code.html">Implementation Patterns</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 November 2015</p>
       </header>
       <div data-id="content"><p>As my minesweeper program is getting bigger and I am starting to think about the different classes that could emerge from the existing ones it already has, it is becoming increasingly important to think about <em>how</em> they should be separated. </p><p>I am currently reading Kent Beck’s Implementation Patterns and he describes the various categories of class separation and state. There are a lot of categories, and I think the only way to really fully understand their use is to actually use them in my code.</p><p>The ones I have come across already are Interfaces, and Superclasses to some extent. He also talks about specialization and the types of questions you should be asking if you want to think about how to separate out classes. Some patterns I have not really used yet are the Implementor pattern and the Inner Class.</p><p>Most of the state based patterns are concerned with how an object changes state. This is primarily done through the internals of the object, so all the methods it contains.</p><p>I am going to try and notice when I use these patterns in my code and write up how I am trying to use them.</p></div>
@@ -31,8 +31,8 @@
       </footer>
     </article>
     <nav>
-      <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="file_copy_kata.html">&lt;&lt; Previous</a></p>
-      <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="liskov_principle.html">Next &gt;&gt;</a></p>
+      <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="clean_as_you_go.html">&lt;&lt; Previous</a></p>
+      <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="IOStreams.html">Next &gt;&gt;</a></p>
     </nav>
     </main>
     <footer>

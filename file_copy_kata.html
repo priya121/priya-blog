@@ -21,7 +21,7 @@
     <article>
       <header>
         <h2><a data-id="page-link" href="file_copy_kata.html">File Copy Kata</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 November 2015</p>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 November 2015</p>
       </header>
       <div data-id="content"><p>Last week, I worked on a file copy kata that transferred a file from one location to another. Looking at how bytes are transferred across is really interesting. I am enjoying looking at how hardware interelates with software, because before understanding this, it really seems like magic. It is amazing how you can use something so much and depend on it and not really know how it works. This of course isn’t unique to programming. I am sure most people do not have an indepth understanding of the human body or plumbing systems in their house, but I am enjoying looking at low level concepts, mainly because they are relatively new to me.</p><p>The file copy kata works by, taking a file path as a string and translating that string into a file format. This is then converted into an InputStream that has methods that allow it to read a stream of bytes from the stream of data.</p><p>There are two methods that can read a stream of bytes, there is .read() with no arguements that reads one byte at a time and .read(byte[]) that takes a byte array. There is also .read(byte[] b, int off, int len) that allaw a certain length of bytes to be read from an input stream. </p><p>In my code I used the .read that takes a byte array so I could specify how many bytes it should read across as an int every time it reads and writes the bytes across to the new file location. </p><p>Passing the byte array into String(byte[]) allows for the bytes to be translated in my case into their ASCII representation. This is to do with how Vim encodes the characters, and I will write another blog post about encoding after a bit more research.</p><p>Writing to the output stream effectively does the inverse of reading from the input stream and my transfer method combones the read and write functions into a loop that will read and write a certain amount of bytes from the original file in increments, until it reaches the end of the file at -1.</p><p>I originally forgot to close the stream, and even though this is a small enough program to ignore it. It is always good practice to do so.</p><p>Here is the code: </p><pre><code>
 public class FileCopyKata {
@@ -68,8 +68,8 @@ public class FileCopyKata {
       </footer>
     </article>
     <nav>
-      <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="sorting_algorithms.html">&lt;&lt; Previous</a></p>
-      <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="structuring_code.html">Next &gt;&gt;</a></p>
+      <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="functionalprogramming.html">&lt;&lt; Previous</a></p>
+      <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="sorting_algorithms.html">Next &gt;&gt;</a></p>
     </nav>
     </main>
     <footer>
