@@ -62,6 +62,43 @@
         </header>
         <div data-id="content"><p>When I first started to learn Ruby, I started with Vim, an advanced text editor that was difficult to navigate at first. My mentor sent me the Vim Adventures game, which is an easy introduction into learning how to navigate using Vim. It was <em>really slow</em> to begin with and I always reverted to using my arrow keys, so these were disabled to force me to use shortcuts. It was annoying and slow at first, but after a while I was noticably faster at writing code.</p><p>When I started to learn Java however, I moved on to the beautiful Intellij which I really enjoyed using. I was able to get started pretty quickly and there are so many autocomplete suggestions and eror checkers in Intellij, it really helped me with my syntax and refactoring. But there is a lot that Intellij does for you that you can take for granted. This is why I think my next task was to use gradle to set up my Human vs Human Tic Tac Toe. Luckily one of the other Apprentices, Georgina, had used gradle before and talked me through her build file and style configurations that I cloned and used to get started.</p><p>Checkstyle and PMD really ensure that your code has the correct format and at times when one of them would pass the other would break, which is quite frustrating. There are a <em>lot</em> of syntax issues that I needed to work on with my Java and I definitely disabled some of the style check suggestions that were too stringent, but slowly I have stared to get used to running tests and setting up my Human vs Human tic tac toe with gradle.</p><p>There have been advantages and disagvantages to using vim and gradle for this iteration (instead of Intellij). I will write up a longer post on this topic after a little more research. So far there seems to be quite good reasons to use both, or at least know how to use both.</p></div>
         </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="../../maven.html">Maven</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">15 December 2015</p>
+        </header>
+        <div data-id="content"><p>A lot of the building of a Java project is hidden when you are using Intellij. In order to get a project running from the command line it is necessary to use a build tool and Maven is one of these tools. It can build projects in Ruby, Scala and C# but is mainly used to build Java.</p><p>When a language is built, this simply means to compile the program into an executable format (taking the source files and compiling them into object files.) A compiler takes the source code written in a language and converts it into another computer language (often binary).</p><p>Maven works by using an XML file that describes the project and all the dependencies, build order and plug-ins.</p><p>Maven projects are configured using a POM or Project Object Model and these are stroed in a pom.xml fie. Here is the wikipedia example:</p><pre><code>&lt;project&gt;
+&lt;!-- model version is always 4.0.0 for Maven 2.x POMs --&gt;
+&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+&lt;!-- project coordinates, i.e. a group of values which
+uniquely identify this project --&gt;
+
+&lt;groupId&gt;com.mycompany.app&lt;/groupId&gt;
+&lt;artifactId&gt;my-app&lt;/artifactId&gt;
+&lt;version&gt;1.0&lt;/version&gt;
+
+&lt;!-- library dependencies --&gt;
+
+&lt;dependencies&gt;
+&lt;dependency&gt;
+
+&lt;!-- coordinates of the required library --&gt;
+
+&lt;groupId&gt;junit&lt;/groupId&gt;
+&lt;artifactId&gt;junit&lt;/artifactId&gt;
+&lt;version&gt;3.8.1&lt;/version&gt;
+
+&lt;!-- this dependency is only used for running and compiling tests --&gt;
+
+&lt;scope&gt;test&lt;/scope&gt;
+
+&lt;/dependency&gt;
+&lt;/dependencies&gt;
+&lt;/project&gt;
+</code></pre><p>When you write a Maven project the structure you need is:</p><p>//<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Maven_CoC.svg/150px-Maven_CoC.svg.png" alt="Smaller icon" /></p><p>By running the command: mvn package all the java files are compiled, all tests run and it packages all deliverable code and resources into target/my-app-1.0.jar.</p><p>The command I used to run my maven project (MineSweeper) was: mvn exec:java -Dexec.mainClass=”com.example.Main” in which com.expample are packages you may have introduced in your class structure.</p></div>
+        </article>
         </li>
     </ol>
     <nav>

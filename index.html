@@ -33,6 +33,43 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="maven.html">Maven</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">15 December 2015</p>
+        </header>
+        <div data-id="content"><p>A lot of the building of a Java project is hidden when you are using Intellij. In order to get a project running from the command line it is necessary to use a build tool and Maven is one of these tools. It can build projects in Ruby, Scala and C# but is mainly used to build Java.</p><p>When a language is built, this simply means to compile the program into an executable format (taking the source files and compiling them into object files.) A compiler takes the source code written in a language and converts it into another computer language (often binary).</p><p>Maven works by using an XML file that describes the project and all the dependencies, build order and plug-ins.</p><p>Maven projects are configured using a POM or Project Object Model and these are stroed in a pom.xml fie. Here is the wikipedia example:</p><pre><code>&lt;project&gt;
+&lt;!-- model version is always 4.0.0 for Maven 2.x POMs --&gt;
+&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+&lt;!-- project coordinates, i.e. a group of values which
+uniquely identify this project --&gt;
+
+&lt;groupId&gt;com.mycompany.app&lt;/groupId&gt;
+&lt;artifactId&gt;my-app&lt;/artifactId&gt;
+&lt;version&gt;1.0&lt;/version&gt;
+
+&lt;!-- library dependencies --&gt;
+
+&lt;dependencies&gt;
+&lt;dependency&gt;
+
+&lt;!-- coordinates of the required library --&gt;
+
+&lt;groupId&gt;junit&lt;/groupId&gt;
+&lt;artifactId&gt;junit&lt;/artifactId&gt;
+&lt;version&gt;3.8.1&lt;/version&gt;
+
+&lt;!-- this dependency is only used for running and compiling tests --&gt;
+
+&lt;scope&gt;test&lt;/scope&gt;
+
+&lt;/dependency&gt;
+&lt;/dependencies&gt;
+&lt;/project&gt;
+</code></pre><p>When you write a Maven project the structure you need is:</p><p>//<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Maven_CoC.svg/150px-Maven_CoC.svg.png" alt="Smaller icon" /></p><p>By running the command: mvn package all the java files are compiled, all tests run and it packages all deliverable code and resources into target/my-app-1.0.jar.</p><p>The command I used to run my maven project (MineSweeper) was: mvn exec:java -Dexec.mainClass=”com.example.Main” in which com.expample are packages you may have introduced in your class structure.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="vim.html">Vim</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">14 December 2015</p>
         </header>
@@ -61,14 +98,6 @@
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
         </header>
         <div data-id="content"><p>Pair programming can be a lot of fun. I am quite a social person and enjoy sitting with someone to solve a problem. The thing with code is that it can be tackled in so many different ways and it takes some level of compromise to work with someone as they might not think in the same way you do.</p><p>This can be quite tiring, and pair programming is tiring, but incredibly useful. You can learn new things in a practical way and learn how to think laterally.</p><p>Typically there is a driver (who handles the tactical/typing part of the coding) and a navigator (who thinks about the overall strategy). These roles of course switch regularly when ping pong programming.</p><p>Some tips that are useful to think about when pair programming that we covered in our Zagaku lesson today were:</p><ol><li><p>Set the ground rules before you start. (If checking phones or emails is alright, when you both agree to take breaks, how long you want to pair etc.)</p></li><li><p>Decide on the type of pair programming style you would like to adopt. The style we tend to practice the most at 8th light is ping pong. This is where one person writes a test, then the next writes code to make the test pass. Finally, the first person again has to refactor if possible to make the code better.</p></li><li><p>Ensure you have a comfortable set up, ideally with one screen and one or two keyboards.</p></li><li><p>Communication is the key factor, make sure you communicate clearly for the duration of your pair programming session.</p></li></ol><p>Pairing can seem daunting when you are inexperienced, but I think everyone hopefully gets something out of it, so I am going to try and pair daily and recommend you do to!</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="recursionagain.html">More Recursion</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">08 December 2015</p>
-        </header>
-        <div data-id="content"><p>Recursion can be a tricky concept and I know I definitely struggled with it when I first started learning how to code. But it is simply a method calling itself with changing parameters that causes it to recurse. This can often be accomplished by a while loop which actually creates fewer stack frames, but can be a less elegant way of tackling a simple problem.</p><p>So the main driving factor as far as I can see is the clarity of your code and the length of your program (including how much data it needs to analyze and compute).</p><p>This is a great <a href="http://roman01la.github.io/recursion-exercises/">webiste</a> that has a lot of great mini examples and ways to practice recursion.</p></div>
         </article>
         </li>
     </ol>
