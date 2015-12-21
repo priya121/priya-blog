@@ -1,20 +1,26 @@
 <html>
-  <head>
+    <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link href="prism.css" rel="stylesheet" />
     <title data-id="blog-title">Priya’s Blog</title>
 </head>
+
 <body>
+
     <div class="nav">
         <ul>
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
-            <li class="news"><a href="#">Newsletter</a></li>
-            <li class="contact"><a href="www.twitter.com/priya104">Contact</a></li>
+            <li class="news"><a href="#">News</a></li>
+            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
+
+
     <header id="top">
     <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
     <ul>
@@ -26,11 +32,28 @@
         
     </ul>
     </header>
+
+
     <main>
-    <nav class="nav-primary" role="navigation">
-    </nav>
+
     <ol class="entries" data-id="page-list" data-max-pages="5">
         <li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="black_box_tests.html">Black Box Tests</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">10 December 2015</p>
+        </header>
+        <div data-id="content"><p>Testing and knowing what to test can be tough when you begin to code. Starting with a degenerate case is a good approach, but sometimes this can lead to testing implementation details that can change as your code evolves. This is where black box testing comes in. Here you only test the public methods that handle the overall functionality and behaviour you want from a piece of code. White box testing is where you test the internals of a class or individual methods that handle small pieces of behaviour that you eventually want to hide as private methods.</p><p>I know I am guilty of writing simple and small tests that test individual functions and I tend not to change these to black box tests even when I know I no longer need them. I am going to keep in mind the advantages of black box testing and try and think of the overall functionality I want to test more going forward.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="pair_programming.html">Pair Programming</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
+        </header>
+        <div data-id="content"><p>Pair programming can be a lot of fun. I am quite a social person and enjoy sitting with someone to solve a problem. The thing with code is that it can be tackled in so many different ways and it takes some level of compromise to work with someone as they might not think in the same way you do.</p><p>This can be quite tiring, and pair programming is tiring, but incredibly useful. You can learn new things in a practical way and learn how to think laterally.</p><p>Typically there is a driver (who handles the tactical/typing part of the coding) and a navigator (who thinks about the overall strategy). These roles of course switch regularly when ping pong programming.</p><p>Some tips that are useful to think about when pair programming that we covered in our Zagaku lesson today were:</p><ol><li><p>Set the ground rules before you start. (If checking phones or emails is alright, when you both agree to take breaks, how long you want to pair etc.)</p></li><li><p>Decide on the type of pair programming style you would like to adopt. The style we tend to practice the most at 8th light is ping pong. This is where one person writes a test, then the next writes code to make the test pass. Finally, the first person again has to refactor if possible to make the code better.</p></li><li><p>Ensure you have a comfortable set up, ideally with one screen and one or two keyboards.</p></li><li><p>Communication is the key factor, make sure you communicate clearly for the duration of your pair programming session.</p></li></ol><p>Pairing can seem daunting when you are inexperienced, but I think everyone hopefully gets something out of it, so I am going to try and pair daily and recommend you do to!</p></div>
+        </article>
+        </li><li class="entries">
         <article>
         <header>
         <h2><a class="entries" data-id="page-link" href="recursionagain.html">More Recursion</a></h2>
@@ -54,22 +77,6 @@
         </header>
         <div data-id="content"><p>One of the rules in Corey Haines’s book Four Rules of Simple Design is to express intent and one of the first ways he proposes to adhere to this rule is to have good names within your code.</p><p>This is easier said than done. I tend to have longer more descriptive names that will at least allow me to remember what they represent. But this often clutters up my code and I sometimes do not come back to change it. So it probably makes sense to spend that extra time thinking of a good representative name that anyone reading the code will be able to decipher.</p><p>This is as true of tests as it is of actual code. Tests should also be clear in their intent. Like everything in code, (much like everything in life!) it is all about trade offs, sometimes a more verbose name is neccessary, but can take up space, other times it is better to have concise names that do not capture the whole explanation of what the name represents. It is always good however, to take that little bit of extra time and think of the best name you can at that moment.</p></div>
         </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="empathy.html">Empathy</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">03 December 2015</p>
-        </header>
-        <div data-id="content"><p>It really is amazing how humans can empathize with each other and even some other animals to an extent.</p><p>Like anything though, empathy is something that comes with practise. There is an element of imagination involved. JK Rowling, captures it well in <a href="https://www.youtube.com/watch?v=wHGqp8lz36c">this</a> commencement speech she gave.</p><p>Empathy not only makes communicating with other people much easier, it allows you to learn so much more than you would otherwise. This is something that is especially handy when you are in a learning environment, and even when people say things you do not agree with. Most of the time, they do not intentionally mean to be malicious, they are just drawing on the sum of their experiences. That is not to say sometimes it can still be annoying! But it is easier to handle if you know <em>why</em> they think this way.</p><p>I know I was fortunate to meet a variety of people being born and living abroad for some time, having parents of a different culture and attending an international school, but it is easy, especially in a city like London, to meet people from a huge range of places.</p><p>Travel, must be one of the best ways to meet people from a background different to yours nand develop empathy. This of course is not the only way to develop empathy. Some people who have never travelled can be more empathetic than the most avid traveller, but if you are open-minded, meeting people whose upbringings and views are different to yours can only add to your knowledge and make your life much more interesting. I mean imagine a world where everyone was the same, what a beige and boring place to be.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="goals.html">Leadership Workshop</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">02 December 2015</p>
-        </header>
-        <div data-id="content"><p>Today all the Apprentices and Craftsmen of the 8th Light London office attended a Leadership workshop and spent a few hours discussing what values we hold dear and which ones we would like to improve upon.</p><p>There was quite a bit of introspection involved, which was good. Sometimes when you are so busy it is difficult to find the time to pause and reflect. I usually use the time I run and exercise to do this, but I have fallen out of practice with it and am not running as regularly as I used to. So it was nice to have time dedicated to think about what I would like to personally aim for.</p><p>Something that came up for me quite frequently was quality, but really if you looked carefully at most of the results that came up frequently there was quite some room for interpretation. Quality to me can be applied to most areas of life. To me quality just means putting time and care into something, that leads to better results naturally. This can mean quality time with friends and family, quality in cooking a meal, quality in building a house, quality in a performance. It is again the aggregation of marginal gains and doing things with purpose. I am quite an excitable person, which definitely has its time and place but I would like to sometimes slow down and pay even more attention to detail which I am sure will help my work.</p><p>So this is what I personally got out of the workshop, I am going to take time to pause and reflect more and strive for quality and consideration in everything (well most things anyway!) that I do.</p></div>
-        </article>
         </li>
     </ol>
     <nav>
@@ -80,6 +87,7 @@
     <footer>
     <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
     </footer>
+    <script src="prism.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,4 @@
+lein generate -s ../Pages/ -d generated/ -t sample_themes/diary
+cd generated/
+open index.html
+

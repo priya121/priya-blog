@@ -1,6 +1,6 @@
 p { font-family: 'PT Serif', serif; font-size: 12pt; line-height: 130%; text-align: justify;}
 p.date { font-size: 10pt; text-align: center; margin-bottom: 40px;}
-body { vertical-align: middle; text-align: center; margin: 2;}
+body { vertical-align: middle; text-align: center; margin: 0;}
 a { color: #444; }
 main { max-width: 600px; margin: 0 auto; }
 
@@ -29,8 +29,16 @@ article {
   margin-bottom: 50px;
 }
 
+h1 {
+  font-weight: 700;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 30pt;
+  margin-bottom: 0px;
+}
+
 h2 {
-  font-family: 'Chewy', cursive;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
   font-size: 26pt;
   margin-bottom: 0px;
 }
@@ -44,7 +52,8 @@ a.entries { text-decoration: none; color: black; }
   background: #66A3FF;
   padding-top: 100px;
   padding-bottom: 100px;
-  font-family: 'Chewy', cursive;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
   color: #000099;
   z-index: 2;
   vertical-align: middle;
@@ -103,67 +112,55 @@ nav p {
   width: 100%:
 }
 
-nav-primary a {
-    color: blue;
-    display: inline;
-    float: left;
-    display: block;
-    width: 120px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background-color: #98bf21;
-    text-align: center;
-    padding: 4px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-
     .nav ul {
     list-style: none;
-    background-color: #444;
+    background-color: #a3b3cc;
     text-align: center;
     padding: 0;
     margin: 0;
     }
-        
-    .nav li {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.2em;
-            line-height: 40px;
-            height: 40px;
-            border-bottom: 1px solid #888;
-    }
 
-    .nav a {
+    .nav li {
+        font-family: 'Syncopate', sans-serif;
+        font-weight: 200;
+        font-size: 1.2em;
+        line-height: 40px;
+        height: 40px;
+        border-bottom: 1px solid #888;
+}
+
+.nav a {
     text-decoration: none;
     color: #fff;
     display: block;
     transition: .3s background-color;
-                }
+            }
 
-    .nav a:hover {
-        background-color: #005f5f;
-    }
+            .nav a:hover {
+                background-color: #005f5f;
+}
 
-    .nav a.active {
-                  background-color: #fff;
-                  color: #444;
-                  cursor: default;
-    }
+.nav a.active {
+    background-color: #fff;
+    color: #444;
+    cursor: default;
+}
 
-    @media screen and (min-width: 600px) {
-                        .nav li {
-                            width: 120px;
-                            border-bottom: none;
-                            height: 50px;
-                            line-height: 50px;
-                            font-size: 1.4em;
-    }
-
-
+@media screen and (min-width: 600px) {
     .nav li {
-        display: inline-block;
-        margin-right: -4px;
-    }
+        width: 120px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+}
 
+
+.nav li {
+    display: inline-block;
+    margin-right: -4px;
+}
+code[class*="language-"],
+pre[class*="language-"] {
+font-size: 0.9em;
+}

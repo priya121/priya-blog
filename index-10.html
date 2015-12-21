@@ -1,20 +1,26 @@
 <html>
-  <head>
+    <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link href="prism.css" rel="stylesheet" />
     <title data-id="blog-title">Priya’s Blog</title>
 </head>
+
 <body>
+
     <div class="nav">
         <ul>
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
-            <li class="news"><a href="#">Newsletter</a></li>
-            <li class="contact"><a href="www.twitter.com/priya104">Contact</a></li>
+            <li class="news"><a href="#">News</a></li>
+            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
+
+
     <header id="top">
     <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
     <ul>
@@ -26,11 +32,28 @@
         
     </ul>
     </header>
+
+
     <main>
-    <nav class="nav-primary" role="navigation">
-    </nav>
+
     <ol class="entries" data-id="page-list" data-max-pages="5">
         <li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="reviewing_code.html">Reviewing Code &amp; Pull Requests</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">02 October 2015</p>
+        </header>
+        <div data-id="content"><p>Something I am working on is writing easier to read code. Previously I was so focused on getting my code to work as quickly as possible, I did not spend as much time as I should have naming as best as I could. </p><p>I am also working on separating out methods that only handle one piece of behaviour. Some of the other apprentices and I are going to start reviewing each others code and making regular pull requests so the readability of the code is going to be increasingly important.</p><p>Of all the various components of good clean code, naming is probably the most important so I am going to do my best to make mine as easy to decipher as possible.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="breaking_down_problems.html">Breaking It Down</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">01 October 2015</p>
+        </header>
+        <div data-id="content"><p>I am still learning the optimal way to break a problem down. This is something I think I will gain a huge benefit from. I realised that there is a level of granularity that I am not used to with some problems, but I am getting better at it. I need to not only know the steps of the general problem, but also the best way of breaking these down into methods and the best data structures for what I am trying to do.</p><p>I am going to slow down to speed up, and go back to pen and paper whenever I need to think about the best way to break a problem down.</p></div>
+        </article>
+        </li><li class="entries">
         <article>
         <header>
         <h2><a class="entries" data-id="page-link" href="open_close_principle.html">Open Close Principle</a></h2>
@@ -57,22 +80,6 @@
  until (terminating condition)
 </code></pre><p>A do while loop however, is that the code is always executed at least once, because the condition or expression is evaluated at the bottom of the loop. </p><p>This is an advantage in certain circumstances eg. if you need to make sure an output is printed at least once even if the condition within the while loop is not true.</p></div>
         </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="FindingPatterns.html">Finding The Pattern </a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">25 September 2015</p>
-        </header>
-        <div data-id="content"><p>One of the things I am trying to get better at is writing concise code and a great way to do this is by reducing duplication. Initially I find that I write a lot of if statements, as these are the closest to real language that I use when describing the problem or visualizing it for the first time.</p><p>Sometimes this duplication is more subtle than I would like and an alorithm is hiding in there somewhere. It is more difficult to find once you have started to write, but again I think an old pen and paper helps. Sometimes, it takes a little time to find the pattern and additional tests can help to find the common patterns.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="gitPullRequests.html">Pull Requests on Git</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">24 September 2015</p>
-        </header>
-        <div data-id="content"><p>Creating a git pull request allows a developer to ask others to review their code when a new feature has been added, a change has been made or they want other developers to review their code for any other reason. </p><p>In order to do this the following steps are necessary:</p><p>If you want to work on an exisiting project, a fork of the exisiting project repository needs to be made. Once this is done a copy of the project will have been made.</p><p>Then a clone of the forked repository must be made, this will create a new working copy of the project on a local machine.</p><p>Before creating a new feature, a new branch for the feature has to be created and any changes must be added and commited to this branch.</p><p>Once these changes have been made it is possible to push these to the copy of the repository, (not the main repository) by a git push. </p><p>After this has been done, a pull request can be made through the relevant copied repository page. </p><p>Creating pull requests is useful when working in a team and it encourages collaboration. I am going to try and make one pull request a day.</p></div>
-        </article>
         </li>
     </ol>
     <nav>
@@ -83,6 +90,7 @@
     <footer>
     <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
     </footer>
+    <script src="prism.js"></script>
 </body>
 
 </html>

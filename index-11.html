@@ -1,20 +1,26 @@
 <html>
-  <head>
+    <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link href="prism.css" rel="stylesheet" />
     <title data-id="blog-title">Priya’s Blog</title>
 </head>
+
 <body>
+
     <div class="nav">
         <ul>
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
-            <li class="news"><a href="#">Newsletter</a></li>
-            <li class="contact"><a href="www.twitter.com/priya104">Contact</a></li>
+            <li class="news"><a href="#">News</a></li>
+            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
+
+
     <header id="top">
     <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
     <ul>
@@ -26,11 +32,28 @@
         
     </ul>
     </header>
+
+
     <main>
-    <nav class="nav-primary" role="navigation">
-    </nav>
+
     <ol class="entries" data-id="page-list" data-max-pages="5">
         <li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="FindingPatterns.html">Finding The Pattern </a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">25 September 2015</p>
+        </header>
+        <div data-id="content"><p>One of the things I am trying to get better at is writing concise code and a great way to do this is by reducing duplication. Initially I find that I write a lot of if statements, as these are the closest to real language that I use when describing the problem or visualizing it for the first time.</p><p>Sometimes this duplication is more subtle than I would like and an alorithm is hiding in there somewhere. It is more difficult to find once you have started to write, but again I think an old pen and paper helps. Sometimes, it takes a little time to find the pattern and additional tests can help to find the common patterns.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="gitPullRequests.html">Pull Requests on Git</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">24 September 2015</p>
+        </header>
+        <div data-id="content"><p>Creating a git pull request allows a developer to ask others to review their code when a new feature has been added, a change has been made or they want other developers to review their code for any other reason. </p><p>In order to do this the following steps are necessary:</p><p>If you want to work on an exisiting project, a fork of the exisiting project repository needs to be made. Once this is done a copy of the project will have been made.</p><p>Then a clone of the forked repository must be made, this will create a new working copy of the project on a local machine.</p><p>Before creating a new feature, a new branch for the feature has to be created and any changes must be added and commited to this branch.</p><p>Once these changes have been made it is possible to push these to the copy of the repository, (not the main repository) by a git push. </p><p>After this has been done, a pull request can be made through the relevant copied repository page. </p><p>Creating pull requests is useful when working in a team and it encourages collaboration. I am going to try and make one pull request a day.</p></div>
+        </article>
+        </li><li class="entries">
         <article>
         <header>
         <h2><a class="entries" data-id="page-link" href="static_methods.html">Static Methods </a></h2>
@@ -54,22 +77,6 @@
         </header>
         <div data-id="content"><p>Stacks are a pretty fundamental concept in CS. They represent how data is allocated to memory at a basic level. A stack area on computer memory is of a fixed origin and variable size. The two basic operations that are used most frequently on a stack are inserting an item and removing an item. A stack uses the concept of last in first out (LIFO) as opposed to a queue which uses the concept of (FIFO). In Java it is possible to create a stack and call certain predefined methods on it like push, pop, peek, search and size. Like most Java lists a stack has to contain matching objects within it that must be declared when it is first created.</p></div>
         </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="UserStories.html">Creating Stories</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">17 September 2015</p>
-        </header>
-        <div data-id="content"><p>Starting a program or application from scratch can be daunting, but it is also exciting. What helps clarify the direction of where you need to start is a series of stories. The first few stories are important as they can help guide the rest of the application. </p><p>It is important to start with the most degenerate case and then test the code from there. That is why it is not always useful to have too much planned out for the later stages of the code as it is quite likely that it will change. </p><p>I have started on some stories for a minesweeper game and the most degenerate case for that is the return of an exploded mine (that I will represent as a 1) when the relevant index (depicted by a coordinate) will change.</p><p>I have the next few stories written down and the later they get the more abstarct they become. But this is a useful exercise that I hope I will get better at, because most of the time, once you have figured out how to do something, actually doing it and putting it into code is much easier.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="method_signatures_in_java.html">Method Signatures in Java</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">15 September 2015</p>
-        </header>
-        <div data-id="content"><p>The main class in java must be present in the application at least once for it to be able to run and has a pretty standard signature.</p><p>Methods in java have to have certain elements in order for the Java package to be able to collect the parts of the program together and process them in a logical way.</p><p>Firstly a method must be public or private. Public means that it is available across packages whereas private means it is only accessible within the current package. Then if a method is static(that is, it is not called by Objects within the class) this must also be part of the method signature.</p><p>These are followed by what the method signature will return (String, Integer, String[], void etc.) and the method name.</p><p>In Java if a method takes an arguement, the type of arguement must also be declared within parentheses, this is true even if the method takes no arguement with the parentheses being left blank.</p><p>Method signatures in Java seem complicated at first, but I have been told that this makes things clearer in the long term, so far most of my programs and tasks have been small, but I will report back when I know if this is true.</p></div>
-        </article>
         </li>
     </ol>
     <nav>
@@ -80,6 +87,7 @@
     <footer>
     <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
     </footer>
+    <script src="prism.js"></script>
 </body>
 
 </html>

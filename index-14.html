@@ -1,20 +1,26 @@
 <html>
-  <head>
+    <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link href="prism.css" rel="stylesheet" />
     <title data-id="blog-title">Priya’s Blog</title>
 </head>
+
 <body>
+
     <div class="nav">
         <ul>
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
-            <li class="news"><a href="#">Newsletter</a></li>
-            <li class="contact"><a href="www.twitter.com/priya104">Contact</a></li>
+            <li class="news"><a href="#">News</a></li>
+            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
+
+
     <header id="top">
     <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
     <ul>
@@ -26,11 +32,28 @@
         
     </ul>
     </header>
+
+
     <main>
-    <nav class="nav-primary" role="navigation">
-    </nav>
+
     <ol class="entries" data-id="page-list" data-max-pages="5">
         <li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="arrays_in_java.html">Arrays in Java</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">01 September 2015</p>
+        </header>
+        <div data-id="content"><p>Arrays in Ruby are incredibly useful and most of the tasks and programs that I built while I was learning Ruby had an array within them at some point or another. As I learn more Java I’m sure that arrays will be increasingly useful, (I have already used some briefly in some of the katas that I am practicing).</p><p>Arrays in Java must be created using an array creation expression. </p><p>e.g. new type[length] </p><p>The type must be explicitly set just like all data structures must be in Java. Similar to Ruby different elements can be accessed using array[i] where i is the index number of the element trying to be accessed.</p><p>It is also possible to create multi-dimensional arrays by writing type [] [], type [] [] [] etc.</p><p>There are also no array constants, new arrays are created every time an array initialiser is evaluated. </p><p>Despite there being these restrictions on arrays in Java, by using class Arrays in java.util certain utility methods are available that allow you manipulate the array.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="katas.html">Katas</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">31 August 2015</p>
+        </header>
+        <div data-id="content"><p>Coding Katas are a way of practicing muscle memory and approaching a simple problem in the simplest way possible. I have not attempted too many katas so far, but intend to do as many as I can going forwards. Two that I have approached are the roman numerals kata and the coin changer kata. The more you practice them the easier they become.</p><p>I am going to attempt to at least start one every morning. <a href="http://exercism.io/">This</a> is a great website that has a long list of different katas in different languages and the well-known <a href="http://www.codewars.com/about">CodeWars</a> is another that is fun and easy to use.</p></div>
+        </article>
+        </li><li class="entries">
         <article>
         <header>
         <h2><a class="entries" data-id="page-link" href="encapsulation.html">Encapsulation in Ruby </a></h2>
@@ -54,32 +77,17 @@
         </header>
         <div data-id="content"><p>Java is a statically typed language and it takes some getting used to when moving across from a dynamic language like Ruby. This basically means that types have to be defined when you initially set them and there are restrictions on what they can be converted to at a later stage in an application or program. </p><p>This makes it more clear as to what is happening with data and provides for a clearer structure as less is hidden. The length of methods and simple statements are also therefore much longer than Ruby.</p><p>The Java koans are a good starting point and introduce basic Java tools (some used frequently and others not so much), but getting used to writing in a new language is the best way to learn it, so I better get writing.</p></div>
         </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="design.html">OO Design</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">25 August 2015</p>
-        </header>
-        <div data-id="content"><p>Object Oriented Design (OOD) is a phrase that gets thrown around a lot in software design and it is easy to think of it as an extra addition to add to code if you have the luxury of time. But actually good OOD saves a lot of pain if ever you need to change a program later on in time.</p><p>One of the main components of good OO design is the correct flow of dependencies. A dependency is when one class requires another to work or uses another class in order to work (the first class is said to depend on the second). A UML diagram often helps to figure out what the correct flow of dependencies should be. If you can control the flow of dependencies and recognise which direction the flow should be directed you have the basis of understanding good Object Oriented Design.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="type_casting.html">Type Casting</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">01 August 2015</p>
-        </header>
-        <div data-id="content"><p>Something I am getting used to while learning Java is Type Casting. Type Casting is the assignment of one type of variable to another type.</p><p>There are two different types of Type Casting in Java. The widening casting from byte up to double, including everything in between (these take up increasing amounts of memory) and narrowing casting (a decreasing amount of memory) from double down to byte, also including everything in between.</p><p>It is important that the type cast objects share the same type hierarchy, meaning that they have a parent child relationship between them. If this is not the case, the compiler will throw a ClassCastException. Narrowing casting needs to be explicitly set in that you need to be explicit in the type of casting required. </p><p>Type casting is mainly used to get access to fields and methods declared on a target type or class and I am sure I will be using more of them as I get more familiar with Java.</p></div>
-        </article>
         </li>
     </ol>
     <nav>
-    
+    <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="index-15.html">&lt;&lt; Previous</a></p>
     <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="index-13.html">Next &gt;&gt;</a></p>
     </nav>
     </main>
     <footer>
     <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
     </footer>
+    <script src="prism.js"></script>
 </body>
 
 </html>

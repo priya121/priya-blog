@@ -1,20 +1,26 @@
 <html>
-  <head>
+    <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link href="prism.css" rel="stylesheet" />
     <title data-id="blog-title">Priya’s Blog</title>
 </head>
+
 <body>
+
     <div class="nav">
         <ul>
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
-            <li class="news"><a href="#">Newsletter</a></li>
-            <li class="contact"><a href="www.twitter.com/priya104">Contact</a></li>
+            <li class="news"><a href="#">News</a></li>
+            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
+
+
     <header id="top">
     <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
     <ul>
@@ -26,11 +32,28 @@
         
     </ul>
     </header>
+
+
     <main>
-    <nav class="nav-primary" role="navigation">
-    </nav>
+
     <ol class="entries" data-id="page-list" data-max-pages="5">
         <li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="minimize_method_calls.html">Minimizing Method Calls</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">15 October 2015</p>
+        </header>
+        <div data-id="content"><p>I do not actively think about the memory that a program takes up when it runs. This is something that I am aware of, but my main concern is that the code works. I am starting to see that unnecessary calls lead to slow running programs and this is probably a factor that I should start considering. The simplest way to do this is to reduce the method calls a class makes if at all possible. In my minesweeper game I had 3 calls to get input from the user when this could have been saved as a single variable and reused. So this is something I will try and keep in mind as I start extracting out classes and trying to speed up the code that I am writing. </p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="extracting_classes.html">Extracting Classes</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">14 October 2015</p>
+        </header>
+        <div data-id="content"><p>I have tried to not extract classes out to early when writing a program, even when it is a very small program. However, I may fall into the trap of not extracting them out even when I need to. A sign that a class should be abstracted is that there is a variable being constructed in the class that should really only be a concern of a specific method. This is how the Single Responsibility Principle starts to apply and the question that need to be asked–what is this class doing? comes in handy. </p></div>
+        </article>
+        </li><li class="entries">
         <article>
         <header>
         <h2><a class="entries" data-id="page-link" href="working_in_a_team.html">Git</a></h2>
@@ -54,22 +77,6 @@
         </header>
         <div data-id="content"><p>When I started to write a Battleship game earlier this year, I started with how I imagine I would build an actual game board if it was a physical object. Board does not really concern itself with the rules of the game and so even though this seems like a good place to start, it is better to first think about what the rules and operations of the game are and go from there.</p><p>It’s easy to approach most games/katas by thinking about a board or any of the physical parts of a task, as these seem like the obvious places to start building, but by doing it this way much more code needs to be written and it actually complicates a task. I am going to start thinking more operationally and hopefully this will force a better approach to writing more concise code.</p></div>
         </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="polymorphism.html">Polymorphism</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">08 October 2015</p>
-        </header>
-        <div data-id="content"><p>Polymorphism is one of the greatest advantages of OOP (object oriented design). It basically means you can call different methods on an object and change its form.</p><p>This allows you to create many categories of an object. In Java all objects are polymorphic, because they are all part of the class Object.</p><p>A class can gave different underlying data, but can be presented in the same form as others due to polymorphism.</p><p>Polymorphism is a real advantage to OOP and even though I was not sure what the definition was, I have been using it a lot already.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="software_craftsmanship.html">Software Craftsmanship</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">07 October 2015</p>
-        </header>
-        <div data-id="content"><p>I have just started reading Software Craftsmanship, it helps to know a little of the history of something you try and practice everyday. I knew that software can be a craft and I understand the importance of it. Mainly after having learnt the hard way (through encountering problems doing the opposite). </p><p>So what does a craft entail exactly? It is the combination of art and utility. That means it not only has to function well, but also look aesthetically beautiful. The history of why software design is described as engineering is discussed in the first chapters of the book and I highly recommend it, it is a fascinating read. </p></div>
-        </article>
         </li>
     </ol>
     <nav>
@@ -80,6 +87,7 @@
     <footer>
     <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
     </footer>
+    <script src="prism.js"></script>
 </body>
 
 </html>

@@ -1,20 +1,26 @@
 <html>
-  <head>
+    <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link href="prism.css" rel="stylesheet" />
     <title data-id="blog-title">Priya’s Blog</title>
 </head>
+
 <body>
+
     <div class="nav">
         <ul>
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
-            <li class="news"><a href="#">Newsletter</a></li>
-            <li class="contact"><a href="www.twitter.com/priya104">Contact</a></li>
+            <li class="news"><a href="#">News</a></li>
+            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
+
+
     <header id="top">
     <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
     <ul>
@@ -26,11 +32,28 @@
         
     </ul>
     </header>
+
+
     <main>
-    <nav class="nav-primary" role="navigation">
-    </nav>
+
     <ol class="entries" data-id="page-list" data-max-pages="5">
         <li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="polymorphism.html">Polymorphism</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">08 October 2015</p>
+        </header>
+        <div data-id="content"><p>Polymorphism is one of the greatest advantages of OOP (object oriented design). It basically means you can call different methods on an object and change its form.</p><p>This allows you to create many categories of an object. In Java all objects are polymorphic, because they are all part of the class Object.</p><p>A class can gave different underlying data, but can be presented in the same form as others due to polymorphism.</p><p>Polymorphism is a real advantage to OOP and even though I was not sure what the definition was, I have been using it a lot already.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="software_craftsmanship.html">Software Craftsmanship</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">07 October 2015</p>
+        </header>
+        <div data-id="content"><p>I have just started reading Software Craftsmanship, it helps to know a little of the history of something you try and practice everyday. I knew that software can be a craft and I understand the importance of it. Mainly after having learnt the hard way (through encountering problems doing the opposite). </p><p>So what does a craft entail exactly? It is the combination of art and utility. That means it not only has to function well, but also look aesthetically beautiful. The history of why software design is described as engineering is discussed in the first chapters of the book and I highly recommend it, it is a fascinating read. </p></div>
+        </article>
+        </li><li class="entries">
         <article>
         <header>
         <h2><a class="entries" data-id="page-link" href="design_pattern_one.html">Decorator Pattern</a></h2>
@@ -54,22 +77,6 @@
         </header>
         <div data-id="content"><p>I was talking to someone at a workshop who used the comparison of TDD with a religion. The reason given for this was that there is no definitive study that shows code written using TDD is better than that not using it. So it is mainly faith that causes people to use TDD. Now I have researched this a little and I know it is not true. There are scientific studies that prove the benefits so I mist remember to show him.</p><p>The idea of TDD is to write a test for some behaviour you expect, run the test to see it fail, write as little code as possible to see the test pass and then refactor if possible when the test is green. The next steps are to repeat this process until all the behaviour you want in your program has been tested effectively. </p><p>I feel the benefit of using TDD even in the small katas and programs that I am writing as I learn more. So I am going to keep using tests before I write, even though I have some way to go in learning which tests to start with for some problems. Hopefully this will come with practice. </p></div>
         </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="reviewing_code.html">Reviewing Code &amp; Pull Requests</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">02 October 2015</p>
-        </header>
-        <div data-id="content"><p>Something I am working on is writing easier to read code. Previously I was so focused on getting my code to work as quickly as possible, I did not spend as much time as I should have naming as best as I could. </p><p>I am also working on separating out methods that only handle one piece of behaviour. Some of the other apprentices and I are going to start reviewing each others code and making regular pull requests so the readability of the code is going to be increasingly important.</p><p>Of all the various components of good clean code, naming is probably the most important so I am going to do my best to make mine as easy to decipher as possible.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="breaking_down_problems.html">Breaking It Down</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">01 October 2015</p>
-        </header>
-        <div data-id="content"><p>I am still learning the optimal way to break a problem down. This is something I think I will gain a huge benefit from. I realised that there is a level of granularity that I am not used to with some problems, but I am getting better at it. I need to not only know the steps of the general problem, but also the best way of breaking these down into methods and the best data structures for what I am trying to do.</p><p>I am going to slow down to speed up, and go back to pen and paper whenever I need to think about the best way to break a problem down.</p></div>
-        </article>
         </li>
     </ol>
     <nav>
@@ -80,6 +87,7 @@
     <footer>
     <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
     </footer>
+    <script src="prism.js"></script>
 </body>
 
 </html>

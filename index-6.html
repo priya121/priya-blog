@@ -1,20 +1,26 @@
 <html>
-  <head>
+    <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link href="prism.css" rel="stylesheet" />
     <title data-id="blog-title">Priya’s Blog</title>
 </head>
+
 <body>
+
     <div class="nav">
         <ul>
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
-            <li class="news"><a href="#">Newsletter</a></li>
-            <li class="contact"><a href="www.twitter.com/priya104">Contact</a></li>
+            <li class="news"><a href="#">News</a></li>
+            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
+
+
     <header id="top">
     <h1><a href="index.html" data-id="blog-title">Priya’s Blog</a></h1>
     <ul>
@@ -26,11 +32,28 @@
         
     </ul>
     </header>
+
+
     <main>
-    <nav class="nav-primary" role="navigation">
-    </nav>
+
     <ol class="entries" data-id="page-list" data-max-pages="5">
         <li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="IOStreams.html">Java IO Streams</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 November 2015</p>
+        </header>
+        <div data-id="content"><p>Java Input Output streams abstract different ways in which you can input and output data. The stream can be sent to or taken from any source, it does not matter. It is really a stream or flow of bytes from one destination to another.</p><p>Java divides streams into bytes or character based categories. The character unit of a character based stream is a Unicode or ASCII character and transfers input and output of 8-bit bytes at a time.</p><p>This is in contrast to FileReader and FileWriter, which even though they internally use FileInputStream and FileOutputStream, read and write two bytes at a time. This can slow down your program and so it can be an advantage to use FileInputStream and FileOutputStream directly to transfer the data across sources.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="structuring_code.html">Implementation Patterns</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 November 2015</p>
+        </header>
+        <div data-id="content"><p>As my minesweeper program is getting bigger and I am starting to think about the different classes that could emerge from the existing ones it already has, it is becoming increasingly important to think about <em>how</em> they should be separated. </p><p>I am currently reading Kent Beck’s Implementation Patterns and he describes the various categories of class separation and state. There are a lot of categories, and I think the only way to really fully understand their use is to actually use them in my code.</p><p>The ones I have come across already are Interfaces, and Superclasses to some extent. He also talks about specialization and the types of questions you should be asking if you want to think about how to separate out classes. Some patterns I have not really used yet are the Implementor pattern and the Inner Class.</p><p>Most of the state based patterns are concerned with how an object changes state. This is primarily done through the internals of the object, so all the methods it contains.</p><p>I am going to try and notice when I use these patterns in my code and write up how I am trying to use them.</p></div>
+        </article>
+        </li><li class="entries">
         <article>
         <header>
         <h2><a class="entries" data-id="page-link" href="clean_as_you_go.html">Clean as you go</a></h2>
@@ -54,22 +77,6 @@
         </header>
         <div data-id="content"><p>Recursion is one of the most useful things I learnt when I first began how to code. </p><p>Recursion is simply when a method or function calls itself with changing data being assessed.</p><p>It is a good example of how a simple algorithm can handle complexity by analyzing data. It is similar to a loop, but instead of being given a finite termination condition or number of times to execute, it is able to assess itself when the condition has been met and this can be an extremely powerful tool.</p><p>It is best to see how recursion works by looking at a simple algorithm. I have found that this is actually the best way to learn most new concepts. Applying them one at a time to a simple problem helps as there is less to distract you from the actual use of the tool. I remember the first time I tried to apply it was with a prime factors kata and it was also well explained with a Towers of Hanoi kata. I usually use a while loop, but I am going to try and remember to use recursion if it makes more sense or makes my code easier to read.</p></div>
         </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="console_testing.html">Testing I/O</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 October 2015</p>
-        </header>
-        <div data-id="content"><p>Testing a randomised output can be difficult, as if an actual random number is returned, the result will be different every time. In order to tackle this I have used interfaces that swap in for certain tests and then also allow for simulated input to be tested. </p><p>In Java the simplest way to test input and output is to use a ByteArrayInputStream and ByteArrayOutputStream. These can then be easily swapped out for System.in and System.out when used in the main method and the program is run.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="enums.html">Enums in Java</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">22 October 2015</p>
-        </header>
-        <div data-id="content"><p>Enums in Java allow for a specific data type to be set as a list of predefined constants. Most of the time, these predefined constants represent constants in the real world, like days of the week or months in a year. These rarely change so can be set for the duration of a program and do not represent numeric values or textual data.</p><p>Enums in Java are type safe, meaning that they cannot be reassigned to another type once they have been set. It is also possible to set values for the enums and retrieve these by calling .values() on them.</p><p>They can be used somewhat recklessly when defining a type on a set of values, but used well they can be useful.</p></div>
-        </article>
         </li>
     </ol>
     <nav>
@@ -80,6 +87,7 @@
     <footer>
     <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
     </footer>
+    <script src="prism.js"></script>
 </body>
 
 </html>

@@ -1,20 +1,26 @@
 <html>
-  <head>
+    <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Chewy" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="../../styles.css" />
+    <link href="../../prism.css" rel="stylesheet" />
     <title data-id="blog-title">Priya’s Blog</title>
 </head>
+
 <body>
+
     <div class="nav">
         <ul>
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="../../#">News</a></li>
             <li class="about"><a href="../../#">About</a></li>
-            <li class="news"><a href="../../#">Newsletter</a></li>
-            <li class="contact"><a href="../../www.twitter.com/priya104">Contact</a></li>
+            <li class="news"><a href="../../#">News</a></li>
+            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
+
+
     <header id="top">
     <h1><a href="../../index.html" data-id="blog-title">Priya’s Blog</a></h1>
     <ul>
@@ -26,9 +32,10 @@
         
     </ul>
     </header>
+
+
     <main>
-    <nav class="nav-primary" role="navigation">
-    </nav>
+
     <ol class="entries" data-id="page-list" data-max-pages="5">
         <li class="entries">
         <article>
@@ -68,36 +75,7 @@
         <h2><a class="entries" data-id="page-link" href="../../maven.html">Maven</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">15 December 2015</p>
         </header>
-        <div data-id="content"><p>A lot of the building of a Java project is hidden when you are using Intellij. In order to get a project running from the command line it is necessary to use a build tool and Maven is one of these tools. It can build projects in Ruby, Scala and C# but is mainly used to build Java.</p><p>When a language is built, this simply means to compile the program into an executable format (taking the source files and compiling them into object files.) A compiler takes the source code written in a language and converts it into another computer language (often binary).</p><p>Maven works by using an XML file that describes the project and all the dependencies, build order and plug-ins.</p><p>Maven projects are configured using a POM or Project Object Model and these are stroed in a pom.xml fie. Here is the wikipedia example:</p><pre><code>&lt;project&gt;
-&lt;!-- model version is always 4.0.0 for Maven 2.x POMs --&gt;
-&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-
-&lt;!-- project coordinates, i.e. a group of values which
-uniquely identify this project --&gt;
-
-&lt;groupId&gt;com.mycompany.app&lt;/groupId&gt;
-&lt;artifactId&gt;my-app&lt;/artifactId&gt;
-&lt;version&gt;1.0&lt;/version&gt;
-
-&lt;!-- library dependencies --&gt;
-
-&lt;dependencies&gt;
-&lt;dependency&gt;
-
-&lt;!-- coordinates of the required library --&gt;
-
-&lt;groupId&gt;junit&lt;/groupId&gt;
-&lt;artifactId&gt;junit&lt;/artifactId&gt;
-&lt;version&gt;3.8.1&lt;/version&gt;
-
-&lt;!-- this dependency is only used for running and compiling tests --&gt;
-
-&lt;scope&gt;test&lt;/scope&gt;
-
-&lt;/dependency&gt;
-&lt;/dependencies&gt;
-&lt;/project&gt;
-</code></pre><p>When you write a Maven project the structure you need is:</p><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Maven_CoC.svg/150px-Maven_CoC.svg.png" alt="Smaller icon" /></p><p>By running the command: mvn package all the java files are compiled, all tests run and it packages all deliverable code and resources into target/my-app-1.0.jar.</p><p>The command I used to run my maven project (MineSweeper) was: mvn exec:java -Dexec.mainClass=”com.example.Main” in which com.example are packages you may have introduced in your class structure.</p></div>
+        <div data-id="content"><p>A lot of the building of a Java project is hidden when you are using Intellij. In order to get a project running from the command line it is necessary to use a build tool and Maven is one of these tools. It can build projects in Ruby, Scala and C# but is mainly used to build Java.</p><p>When a language is built, this simply means to compile the program into an executable format (taking the source files and compiling them into object files.) A compiler takes the source code written in a language and converts it into another computer language (often binary).</p><p>Maven works by using an XML file that describes the project and all the dependencies, build order and plug-ins.</p><p>Maven projects are configured using a POM or Project Object Model and these are stored in a pom.xml fie. <a href="https://en.wikipedia.org/wiki/Apache_Maven#Project_Object_Model">Here</a> is the wikipedia example.</p><p>When you write a Maven project the structure you need is:</p><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Maven_CoC.svg/150px-Maven_CoC.svg.png" alt="Smaller icon" /></p><p>By running the command: mvn package all the java files are compiled, all tests run and it packages all deliverable code and resources into target/my-app-1.0.jar.</p><p>The command I used to run my maven project (MineSweeper) was: mvn exec:java -Dexec.mainClass=”com.example.Main” in which com.example are packages you may have introduced in your class structure.</p></div>
         </article>
         </li>
     </ol>
@@ -109,6 +87,7 @@ uniquely identify this project --&gt;
     <footer>
     <p>Site generated by <a href="http://www.pinaclj.com/">Pinaclj</a>.</p>
     </footer>
+    <script src="../../prism.js"></script>
 </body>
 
 </html>
