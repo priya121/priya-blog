@@ -15,8 +15,6 @@
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="../../#">News</a></li>
             <li class="about"><a href="../../#">About</a></li>
-            <li class="news"><a href="../../#">News</a></li>
-            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
 
@@ -87,10 +85,26 @@ public class AntSparring {
         </header>
         <div data-id="content"><p>Today Micah, the founder of 8th Light held his second day of the mastery cohort and all of us were kindly given an Arduino starter kit. I had wanted one for a while and it felt like an early Christmas present. </p><p>Arduino is a company that designs, manufactures and sells micro-contollers and micro-controller accessories. These allow you to connect to your computer and program various circuits and components. It was interesting to read through the introductory book that came with the starter kit and it reminded me of my GCSE Physics classes. </p><p>The first exercise was to build a simple series circuit and write up code that would cause a LED bulb to light up. We then connected a paralell circuit and made flashing lights that were supposed to look like a spaceship. It was cool to see how simple code would cause the electrical components to do what we wanted them to do. Well, most of the time anyway!</p><p>After lunch we attempted a Love Machine exercise that used a thermometer component to tell how “hot” you were, and also managed to get the keyboard exercise working with 3 simple musical notes. </p><p>It was a great introduction to how software connects to simple hardware and I am excited to try some more of the exercises out in my own time. One I have my eye on is the Crystal Ball, which looks more complex as there are many more connections that must align with specific parts of the digital display. Hopefully, I’ll manage to get it working and will be able to build on it once I do.</p></div>
         </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="../../heaps_and_stacks.html">Memory Management in Java</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 January 2016</p>
+        </header>
+        <div data-id="content"><p>Memory is something that seems pretty abstract before you face a real problem with it. Objects and data are stored on the Java Virtual Machine and when writing simple small programs, when and how these are created is not that important.</p><p>It becomes more important when lots of different classes interact and the order objects are created and destroyed affects the efficiency of a program.</p><p>Java has two areas of memory. The stack and the heap.</p><p>The stack is where variables live and they live on the stack frame where the method they belong to is stored. Object reference variables also are stored in this way.</p><p>All objects however, live on the heap so that they can be destroyed by the garbage collector when they are no longer needed (when there are no longer any live references to them). If your program starts to run low on memory, the garbage collector destroys the objects that are no longer needed and memory will not run out.</p><p>I am working on a longer blog post about testing in Vim for Java using Gradle and even though I’m sure I’ve just scratched the surface, hopefully understanding memory management will make understanding how threads and sockets work more clear.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="../../trade-offs.html">trade offs</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 January 2016</p>
+        </header>
+        <div data-id="content"><p>So much in coding (and in life really!)is about trade offs. There are so many ways to do the same thing when you write code that most of the time there are a lot of advantages and disadvantage to doing the same thing. </p><p>I suppose that is why everyone in the coding community seems to be so opinionated about what they believe is the optimal way to do something. I am still forming my opinions about the tools and approaches I am learning. </p><p>I am sure once I learn the restrictions and frustrations of using a tool in a real world environment I’ll form some stronger opinions about what I prefer but right now I can see the trade offs for most approaches and think you can probably find a use for most tools depending on the job.</p></div>
+        </article>
         </li>
     </ol>
     <nav>
-    
+    <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="../../category/post/index-16.html">&lt;&lt; Previous</a></p>
     <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="../../category/post/index-14.html">Next &gt;&gt;</a></p>
     </nav>
     </main>

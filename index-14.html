@@ -15,8 +15,6 @@
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
-            <li class="news"><a href="#">News</a></li>
-            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
 
@@ -40,6 +38,22 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="input_output.html">Input/Output</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 September 2015</p>
+        </header>
+        <div data-id="content"><p>Everything has to be explicitly declared in Java. I am starting to get used to it, even though the format looks different, the general structure of a class is not too different to Ruby. However, in Java there are a lot more restrictions on what you can and cannot do compared to a dynamic language.</p><p>In order to use Input Output in Java, the simplest way to do this is the InputStreamReader and OutputStreamReader.</p><p>The sytnax for these is System.in and System.out.print() respectively, but the format of these has to be changed accordingly when a certain type of display is needed.</p><p>It is also possible to use the Scanner class that parses primitive types and strings suing regular expressions.</p><p>There are so many tools and libraries that you can import in java that help you, it can be difficult to figure out which ones are best to use, but I am sure this is something that comes with practice and familiarity with the language. At the moment, I am avoiding using these until I get comfortable with what the standard Java Library contains.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="exceptions.html"> Throwing Exceptions</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">02 September 2015</p>
+        </header>
+        <div data-id="content"><p>Throwing an exception is a way of handling an error that a method may produce for a specific reason that was expected by the programmer who wrote it.</p><p>In Java, a complier will not let you compile a method if an exception is written that has not been handled or specifically declared.</p><p>Even though it is possible to declare that the main method throws the exception, it is always nicer to pass the declaration to another method and print a message to the user after another method has caught the exception. It is also good practice to tell the user how to address the error if at all possible.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="arrays_in_java.html">Arrays in Java</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">01 September 2015</p>
         </header>
@@ -60,22 +74,6 @@
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 August 2015</p>
         </header>
         <div data-id="content"><p>There are many useful components in Ruby as a language and one I looked into closer recently is Encapsulation.</p><p>Encapsulation reduces coupling as it hides the internal representation or data structure of a particular object. This makes it easier to make changes when they become necessary, as if there are changes that need to be made to the data within the class, it will handle these changes and they will not have to be made throughout the entire program or application. </p><p>Encapsulation makes more sense when programs get larger, but I am going to try and implement it as soon as possible and this will make things easier to change.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="dotfiles.html">Dotfiles</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 August 2015</p>
-        </header>
-        <div data-id="content"><p>Setting up a new machine can take time and it is always nice to take your time customizing the settings just how you like them. But this can take a really long time if there are many settings you have to set manually. A useful way to speed up this process and cut down duplication time is to copy across your dotfiles from git.</p><p>I recently did this and now am able to quickly work on my projects on the new machine just as I did before. In order to clone across the files, it is also necessary to set up your new machine with an SSH key on git. There are many resources that help with this. One I used is: [https://help.github.com/articles/generating-ssh-keys/] and it is a simple process.</p><p>Now I can manage my settings across multiple devices and am more comfortable with adding to my dotfiles. Next step is to change my vim colours!</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="java.html">Java</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">27 August 2015</p>
-        </header>
-        <div data-id="content"><p>Java is a statically typed language and it takes some getting used to when moving across from a dynamic language like Ruby. This basically means that types have to be defined when you initially set them and there are restrictions on what they can be converted to at a later stage in an application or program. </p><p>This makes it more clear as to what is happening with data and provides for a clearer structure as less is hidden. The length of methods and simple statements are also therefore much longer than Ruby.</p><p>The Java koans are a good starting point and introduce basic Java tools (some used frequently and others not so much), but getting used to writing in a new language is the best way to learn it, so I better get writing.</p></div>
         </article>
         </li>
     </ol>

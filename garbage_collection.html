@@ -21,10 +21,10 @@
     <main>
     <article>
       <header>
-        <h2><a data-id="page-link" href="console_testing.html">Testing I/O</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 October 2015</p>
+        <h2><a data-id="page-link" href="garbage_collection.html">Garbage Collection</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">21 December 2016</p>
       </header>
-      <div data-id="content"><p>Testing a randomised output can be difficult, as if an actual random number is returned, the result will be different every time. In order to tackle this I have used interfaces that swap in for certain tests and then also allow for simulated input to be tested. </p><p>In Java the simplest way to test input and output is to use a ByteArrayInputStream and ByteArrayOutputStream. These can then be easily swapped out for System.in and System.out when used in the main method and the program is run.</p></div>
+      <div data-id="content"><p>When an object is created it takes up memory. Memory is not infinite and the more that is used up, the less there is for allocation. This is why memory that is no longer being used must be cleaned up so it can be re-used.</p><p>Garbage collection looks for things stored in memory that is no longer necessary and frees that space. There is a distinction between Garbage Collection and <em>Compaction</em> in which allocated objects are moved together in the memory and empty spaces are left together. Object creation and memory allocation can get much more complex, and the basics of these require a better understanding of the stack and heap, which I will write up on in another post.</p></div>
       <footer>
         <ul id="tags" data-id="tag-list">
           
@@ -32,8 +32,8 @@
       </footer>
     </article>
     <nav>
-      <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="enums.html">&lt;&lt; Previous</a></p>
-      <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="recursion.html">Next &gt;&gt;</a></p>
+      <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="arduino.html">&lt;&lt; Previous</a></p>
+      
     </nav>
     </main>
     <footer>

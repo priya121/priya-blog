@@ -15,8 +15,6 @@
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
-            <li class="news"><a href="#">News</a></li>
-            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
 
@@ -40,6 +38,22 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="vim.html">Vim</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">14 December 2015</p>
+        </header>
+        <div data-id="content"><p>When I first started to learn Ruby, I started with Vim, an advanced text editor that was difficult to navigate at first. My mentor sent me the Vim Adventures game, which is an easy introduction into learning how to navigate using Vim. It was <em>really slow</em> to begin with and I always reverted to using my arrow keys, so these were disabled to force me to use shortcuts. It was annoying and slow at first, but after a while I was noticably faster at writing code.</p><p>When I started to learn Java however, I moved on to the beautiful Intellij which I really enjoyed using. I was able to get started pretty quickly and there are so many autocomplete suggestions and eror checkers in Intellij, it really helped me with my syntax and refactoring. But there is a lot that Intellij does for you that you can take for granted. This is why I think my next task was to use gradle to set up my Human vs Human Tic Tac Toe. Luckily one of the other Apprentices, Georgina, had used gradle before and talked me through her build file and style configurations that I cloned and used to get started.</p><p>Checkstyle and PMD really ensure that your code has the correct format and at times when one of them would pass the other would break, which is quite frustrating. There are a <em>lot</em> of syntax issues that I needed to work on with my Java and I definitely disabled some of the style check suggestions that were too stringent, but slowly I have stared to get used to running tests and setting up my Human vs Human tic tac toe with gradle.</p><p>There have been advantages and disagvantages to using vim and gradle for this iteration (instead of Intellij). I will write up a longer post on this topic after a little more research. So far there seems to be quite good reasons to use both, or at least know how to use both.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="client_retro_day.html">Retros</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">11 December 2015</p>
+        </header>
+        <div data-id="content"><p>Today I spent the day at a client site and helped facilitate a retrospective in which the participants talked about all the things they learnt over the five weeks during which they built their product.</p><p>It was fun and it was great to see them able to demo their product well. It was also interesting that at one point they mentioned that they were concerned with how the final product looked more than the code underlying it. This can happen quite easily when you want to show something to people who do not understand code very well. But to people who know what lies beneath the user interface the structure and quality of the code is equally if not more important.</p><p>I got the impression that the 8th Light effect rubbed off on them, and they all seemed to really get along well and enjoy what they were doing. The fact that it was their final day might have been a contributing factor, but I hope they can carry their enthusiasm with them when they go on to their new projects and new teams.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="black_box_tests.html">Black Box Tests</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">10 December 2015</p>
         </header>
@@ -60,22 +74,6 @@
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">08 December 2015</p>
         </header>
         <div data-id="content"><p>Recursion can be a tricky concept and I know I definitely struggled with it when I first started learning how to code. But it is simply a method calling itself with changing parameters that causes it to recurse. This can often be accomplished by a while loop which actually creates fewer stack frames, but can be a less elegant way of tackling a simple problem.</p><p>So the main driving factor as far as I can see is the clarity of your code and the length of your program (including how much data it needs to analyze and compute).</p><p>This is a great <a href="http://roman01la.github.io/recursion-exercises/">webiste</a> that has a lot of great mini examples and ways to practice recursion.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="opensource.html">Open Source</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">07 December 2015</p>
-        </header>
-        <div data-id="content"><p>Git is actually quite an amazing tool. I am aware I use it to a fraction of its capacity, but even the idea that so much code is open for anyone to see is inspired.</p><p>I recently helped organize an open source workshop to encourage others to learn how to collaborate with others and create pull requests. It was called @24pullrequests and the idea behind @24pullrequests is that everyday in December leading up to Christmas you submit a pull request on an open source project that has some issues.</p><p>There was even a table of new Java developers who could not find a project to contribute to so I helped them create a pull request for my Minesweeper game! I hope I can create more pull requests and get other people to contribute to my issues. I suppose the first step to this however would be to have small and regular commits so that anyone who actually wants to find certain functionality won’t have to wade through my code so they can help. So this a reminder to myself and others, make regular commits and make pull requests!</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="naming.html">Naming</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 December 2015</p>
-        </header>
-        <div data-id="content"><p>One of the rules in Corey Haines’s book Four Rules of Simple Design is to express intent and one of the first ways he proposes to adhere to this rule is to have good names within your code.</p><p>This is easier said than done. I tend to have longer more descriptive names that will at least allow me to remember what they represent. But this often clutters up my code and I sometimes do not come back to change it. So it probably makes sense to spend that extra time thinking of a good representative name that anyone reading the code will be able to decipher.</p><p>This is as true of tests as it is of actual code. Tests should also be clear in their intent. Like everything in code, (much like everything in life!) it is all about trade offs, sometimes a more verbose name is neccessary, but can take up space, other times it is better to have concise names that do not capture the whole explanation of what the name represents. It is always good however, to take that little bit of extra time and think of the best name you can at that moment.</p></div>
         </article>
         </li>
     </ol>

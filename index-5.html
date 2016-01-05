@@ -15,8 +15,6 @@
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
-            <li class="news"><a href="#">News</a></li>
-            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
 
@@ -38,6 +36,22 @@
 
     <ol class="entries" data-id="page-list" data-max-pages="5">
         <li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="liskov_principle.html">The Liskov Principle</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 November 2015</p>
+        </header>
+        <div data-id="content"><p>The Liskov Principle was formulated by Barbara Liskov and Jeannette Wing in 1994. It was described by them as:</p><p>Let Φ(x) be a property provable about objects x of type T. Then Φ(y) should be true for objects y of type S where S is a subtype of T.</p><p>This essentially means that subtypes of a an object may replace the object itself, without totally changing the functioning of a program.</p><p>In java this is ususally implemented with the use of abstract classes and interfaces. </p><p>The typical example for this is the square and the rectangle, which I think does not illustrate the example very well. A much better expalination was given by one of the craftsmen during a Zagaku this week. Here is the link: <a href="https://github.com/8thlight/zagaku/blob/master/solid/lsp.md">Liskov</a>.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="music.html">Music While Coding</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 November 2015</p>
+        </header>
+        <div data-id="content"><p>I have always listened to music while I work. I always found it fun and eaiser to concentrate when I hd my headphones in and music on. I even remember holding a math statistics experiment (probably in an attempt to liten to more music whie I studied) that measured if I was more productive while working and listening to music. Now this probably was not the most scientific experiment and I am sure the results were skewed. But I found I was more productive when I listened to music. Of course the only way that I anyone can completely focus is in silence. There are times when I need this, but most of the time if I have some music on I find I can tune out my surroundings and focus.</p><p>I am going to try and spend some time listening to music and coding and spend some other dedicated time trying to code without music and see in which setting I am more productive. I suppose that eventually, there will be times when listening to music to focus is necessary and other times when I should try and refrain and not plug in.</p></div>
+        </article>
+        </li><li class="entries">
         <article>
         <header>
         <h2><a class="entries" data-id="page-link" href="explaining_things.html">Explaining Things</a></h2>
@@ -97,22 +111,6 @@ public class FileCopyKata {
 }
 
 </code></pre></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="functionalprogramming.html">Functional Programming</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">06 November 2015</p>
-        </header>
-        <div data-id="content"><p>I thought I knew what functional programming was but I was wrong! I suppose I need to take one step at a time and I am sure during my apprenticeship I will eventually come to learn a functional language, but there is no harm in knowing the basics. So I thought I would share what I came across.</p><p>A functional language is a language that avoid mutating or changing data, so you would just create new data structures instead of changing ones that already exist. This really helps break a problem down into its component parts.</p><p>Functional programs are also required to be stateless, that is, they should perform every task as if they were performing it for the first time. This is a pretty different way of thinking and I have just got my head around object oriented (OO) programming so am glad I will tackle functional programming once I have a bit more practice at writing OO languages.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="yoga.html">Focus</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">06 November 2015</p>
-        </header>
-        <div data-id="content"><p>It is amazing how much of a difference keeping a calm and focused mind can make when you write code and try and solve a problem. Taking a break always helps, but doing yoga today reminded me of earlier this year when I did 20 days of yoga in a row and was never in better shape. I had more energy, more focus and was much more calm.</p><p>This is something that I also get from running which has an energizing effect on me. I am sure that I am happier, healthier and have more energy when I eat well and work out. So I am going to keep this up and see if this has a tangible effect on the code that I write.</p></div>
         </article>
         </li>
     </ol>

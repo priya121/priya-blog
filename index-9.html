@@ -15,8 +15,6 @@
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
-            <li class="news"><a href="#">News</a></li>
-            <li class="contact"><a href="http://www.twitter.com/priya104">Contact</a></li>
         </ul>
     </div>
 
@@ -40,6 +38,22 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="hashmaps.html">Hashmaps</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">12 October 2015</p>
+        </header>
+        <div data-id="content"><p>Because Java is so statically typed, it is useful to know what the right data structure to use before using it. In Ruby I used Arrays for almost all lists that I was creating. In Java, my go to is an ArrayList, but recently I used a HashMap when trying to build a Histogram for a simple kata. Having restrictions on the data types you can use and what methods you can call on them is something I think will have more utility when I build larger programs. Something I probably should brush up on then is data structures and their uses. </p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="thinking_operationally.html">Thinking Operationally </a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 October 2015</p>
+        </header>
+        <div data-id="content"><p>When I started to write a Battleship game earlier this year, I started with how I imagine I would build an actual game board if it was a physical object. Board does not really concern itself with the rules of the game and so even though this seems like a good place to start, it is better to first think about what the rules and operations of the game are and go from there.</p><p>It’s easy to approach most games/katas by thinking about a board or any of the physical parts of a task, as these seem like the obvious places to start building, but by doing it this way much more code needs to be written and it actually complicates a task. I am going to start thinking more operationally and hopefully this will force a better approach to writing more concise code.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="polymorphism.html">Polymorphism</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">08 October 2015</p>
         </header>
@@ -60,22 +74,6 @@
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">06 October 2015</p>
         </header>
         <div data-id="content"><p>I have heard about design patterns and their uses, how they are just tools that you can use to possibly improve your code. That they have their uses, but also their limitations.</p><p>But I think it is important to be aware of them at the very least and then decide whether or not you want to or should use them.</p><p>The first one I have come across at the classroom sessions we have daily is the Decorator Pattern that handles common instances by wrapping them within one another. </p><p>This is done in Java through the use of interfaces which I have implemented in my Guess the Number game. </p><p>This allows for the addition of new instances with slight variations that do not impact the original instance and so many different variations can be created easily and this makes extra requirements cleaner and easier to implement.</p><p>I think this was a good design pattern to start with, and something I can use in the code I am writing. </p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="code_retreats.html">Code Retreat</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 October 2015</p>
-        </header>
-        <div data-id="content"><p>When I first heard about code retreats I thought a holiday or trip was involved at some point. I suppose that was the original idea, that people would go and meet each other at a specific location and code together.</p><p>I took part in my first code retreat today and it was really fun! The retrospectives about what has been learnt is particularly interesting, but the part I enjoyed was working with people and seeing how they approach the specific problem, especially when it is so different to mine.</p><p>I saw how some people communicate through narration, others let code do the talking and others ask questions. I was even exposed to a new language and had to be quiet for a full 20 minutes when trying to complete a specific task with my pair, which was a struggle.</p><p>We had 20 minute iterations, or pairing sessions with a specific constraint and this made the challenges difficult, but it was a great way to get some exposure to a code retreat in a short space of time.</p><p>I am looking forward to my next one!</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="TDD.html">TDD</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">03 October 2015</p>
-        </header>
-        <div data-id="content"><p>I was talking to someone at a workshop who used the comparison of TDD with a religion. The reason given for this was that there is no definitive study that shows code written using TDD is better than that not using it. So it is mainly faith that causes people to use TDD. Now I have researched this a little and I know it is not true. There are scientific studies that prove the benefits so I mist remember to show him.</p><p>The idea of TDD is to write a test for some behaviour you expect, run the test to see it fail, write as little code as possible to see the test pass and then refactor if possible when the test is green. The next steps are to repeat this process until all the behaviour you want in your program has been tested effectively. </p><p>I feel the benefit of using TDD even in the small katas and programs that I am writing as I learn more. So I am going to keep using tests before I write, even though I have some way to go in learning which tests to start with for some problems. Hopefully this will come with practice. </p></div>
         </article>
         </li>
     </ol>
