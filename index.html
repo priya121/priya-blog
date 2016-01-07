@@ -38,6 +38,14 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="static_variables.html">static variables</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">07 January 2016</p>
+        </header>
+        <div data-id="content"><p>A static method or vaiable is one that does not belong to a particular object but to a class. There are a few reasons for doing this. You may want to keep track of how many objects of a certain type ofe class are created, or assign an id to each object created or just access a variable from outside the class. It is possible to then access the static, constant from outside the class, but in order to make it unchangable it is necessary to also declare it final.</p><p>It is convention to write constants in capitals. They will still work as expected if this is not done, but doing this means that it is clear to anyone reading your code that the variable is a constant.</p><p>I have tended to avoid using constants, but I am going to try and introduce them wherever necessary in my Java TicTacToe.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="trade-offs.html">trade offs</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 January 2016</p>
         </header>
@@ -66,40 +74,6 @@
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">18 December 2015</p>
         </header>
         <div data-id="content"><p>Today Micah, the founder of 8th Light held his second day of the mastery cohort and all of us were kindly given an Arduino starter kit. I had wanted one for a while and it felt like an early Christmas present. </p><p>Arduino is a company that designs, manufactures and sells micro-contollers and micro-controller accessories. These allow you to connect to your computer and program various circuits and components. It was interesting to read through the introductory book that came with the starter kit and it reminded me of my GCSE Physics classes. </p><p>The first exercise was to build a simple series circuit and write up code that would cause a LED bulb to light up. We then connected a paralell circuit and made flashing lights that were supposed to look like a spaceship. It was cool to see how simple code would cause the electrical components to do what we wanted them to do. Well, most of the time anyway!</p><p>After lunch we attempted a Love Machine exercise that used a thermometer component to tell how “hot” you were, and also managed to get the keyboard exercise working with 3 simple musical notes. </p><p>It was a great introduction to how software connects to simple hardware and I am excited to try some more of the exercises out in my own time. One I have my eye on is the Crystal Ball, which looks more complex as there are many more connections that must align with specific parts of the digital display. Hopefully, I’ll manage to get it working and will be able to build on it once I do.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="HTTPrequests.html">HTTP requests</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">17 December 2015</p>
-        </header>
-        <div data-id="content"><p>Today during Micah’s mastery cohort we had to make several GET requests to a local host and work on a game in which ants had to gather food from a grid of an infinite size. A coordinate of a nest is given from which ants can be spawned, (only 5 initially). Then if an ant goes to a coordinate with food, these have been randomly placed, it should go back to the nest and then another ant can be spawned, in addition to the original 5.</p><p>This was the second time over the past month in which the apprentices had the chance to look at how HTTP requests are sent and it is starting to make more sense.</p><p>Here is the code we used for the GET request:</p><pre>
-    <code class="language-java">
-public class AntSparring {
-    public String sendGETRequest(String url) {
-        try {
-            HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
-            con.setRequestMethod("GET");
-            con.setRequestProperty("User-Agent", "Mozilla/5.0");
-            con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
-            BufferedReader rd = new BufferedReader(new InputStreamReader(con.getInputStream()));
-            StringBuilder result = new StringBuilder();
-            String line;
-            while ((line = rd.readLine()) != null) {
-                result.append(line);
-            }
-            rd.close();
-            String finalResult = result.toString();
-            return finalResult;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return "Error";
-    }
-}
-   </code> 
-</pre>
-<p>In hindsight, Java may not have been the best language to do this challenge in, but I learnt a lot and I definitely would like to go back and try and finish off the program.</p></div>
         </article>
         </li>
     </ol>
