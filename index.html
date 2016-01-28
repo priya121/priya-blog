@@ -38,6 +38,34 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="streams.html">Streams</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 January 2016</p>
+        </header>
+        <div data-id="content"><p>I started to introduce streams into my TicTacToe last week and even though the basic operations seem pretty straightforward, I need to understand the details of what is going on and so one of my stories this week is to write a series of blog posts on Java 8 Streams. So here it goes!</p><p>A stream represents a sequence of elements and there are a series of operations that can be performed on them. These operations can be intermediate (which require a terminal operation to be called after them) or terminal (which return a non-stream or void result).</p><p>Most stream operations accept a lambda expression as a parameter.</p><p>A lambda expression is a function which can exist without belonging to a class. They are similar to anonymous inner classes in Java (which are classes that do not have a class name and are instantiated and declared at the same time).</p><p>Here is an example of very simple a lambda expression:</p><p>(int x, int y) -&gt; x + y)</p><p>The expression is divided into three parts: The argument list, the arrow token and the body.</p><p>So, back to streams. A stream represents a list of object references, there are also streams that represent primitives like IntStream, DoubleStream, LongStream. Stream operations are chained together into pipelines.</p><p>The first stream I implemented was to repace the loop I had that checked the valid moves (represented by empty cells) on the board. Previously I was using this for loop to find all the empty cells on my board:</p><pre><code>    But I have now introduced this stream:
+
+    &lt;pre&gt;
+    &lt;code class= "language-java"&gt;
+    public List&lt;Integer&gt; validMoves() {
+            return IntStream.range(0, this.board.size()).boxed()
+                            .filter(index -&gt; this.board.get(index).equals(E))
+                                            .collect(Collector.toList());
+    }
+      &lt;/code&gt;
+      &lt;/pre&gt;
+
+
+      IntStream streams through a list of indices from 0 to the total size of the board. Calling .boxed() converts the IntStream into a Stream&lt;Integer&gt;. .filter() then filters through the board and takes the arguement index and using a lambda expression applies it to the .get() method I have for my board.
+
+      Because this is an intermediate operation, without something following the .filter() nothing will be returned. This is why .collect(toList()) is needed. .collect() allows you to convert a stream into another type of result, in my case a list.
+
+      The operation .collect() accepts a Collector and there are many useful collectors, the one I have used is toList(), there are also many other useful ones like .groupingBy(), .averagingInt() etc. It is also possible to build your own collector which I think is overkill for what I needed it for here. I think I will explore this option in another blog post.
+
+      So this is the beginning of thinking of things in a functional way I guess as I think streams are a way of Java 8 trying to get in on the functional trend. They seem clear so far, but I think I have just scratched the surface! Next step, build my very own Collector...
+</code></pre></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="static_variables.html">static variables</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">07 January 2016</p>
         </header>
@@ -66,14 +94,6 @@
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">21 December 2015</p>
         </header>
         <div data-id="content"><p>When an object is created it takes up memory. Memory is not infinite and the more that is used up, the less there is for allocation. This is why memory that is no longer being used must be cleaned up so it can be re-used.</p><p>Garbage collection looks for things stored in memory that is no longer necessary and frees that space. There is a distinction between Garbage Collection and <em>Compaction</em> in which allocated objects are moved together in the memory and empty spaces are left together. Object creation and memory allocation can get much more complex, and the basics of these require a better understanding of the stack and heap, which I will write up on in another post.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="arduino.html">Arduino</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">18 December 2015</p>
-        </header>
-        <div data-id="content"><p>Today Micah, the founder of 8th Light held his second day of the mastery cohort and all of us were kindly given an Arduino starter kit. I had wanted one for a while and it felt like an early Christmas present. </p><p>Arduino is a company that designs, manufactures and sells micro-contollers and micro-controller accessories. These allow you to connect to your computer and program various circuits and components. It was interesting to read through the introductory book that came with the starter kit and it reminded me of my GCSE Physics classes. </p><p>The first exercise was to build a simple series circuit and write up code that would cause a LED bulb to light up. We then connected a paralell circuit and made flashing lights that were supposed to look like a spaceship. It was cool to see how simple code would cause the electrical components to do what we wanted them to do. Well, most of the time anyway!</p><p>After lunch we attempted a Love Machine exercise that used a thermometer component to tell how “hot” you were, and also managed to get the keyboard exercise working with 3 simple musical notes. </p><p>It was a great introduction to how software connects to simple hardware and I am excited to try some more of the exercises out in my own time. One I have my eye on is the Crystal Ball, which looks more complex as there are many more connections that must align with specific parts of the digital display. Hopefully, I’ll manage to get it working and will be able to build on it once I do.</p></div>
         </article>
         </li>
     </ol>
