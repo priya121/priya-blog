@@ -58,26 +58,7 @@
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 January 2016</p>
         </header>
         <div data-id="content"><p>I started to introduce streams into my TicTacToe last week and even though the basic operations seem pretty straightforward, I need to understand the details of what is going on and so one of my stories this week is to write a series of blog posts on Java 8 Streams. So here it goes!</p><p>A stream represents a sequence of elements and there are a series of operations that can be performed on them. These operations can be intermediate (which require a terminal operation to be called after them) or terminal (which return a non-stream or void result).</p><p>Most stream operations accept a lambda expression as a parameter.</p><p>A lambda expression is a function which can exist without belonging to a class. They are similar to anonymous inner classes in Java (which are classes that do not have a class name and are instantiated and declared at the same time).</p><p>Here is an example of very simple a lambda expression:</p><p>(int x, int y) -&gt; x + y)</p><p>The expression is divided into three parts: The argument list, the arrow token and the body.</p><p>So, back to streams. A stream represents a list of object references, there are also streams that represent primitives like IntStream, DoubleStream, LongStream. Stream operations are chained together into pipelines.</p><p>The first stream I implemented was to repace the loop I had that checked the valid moves (represented by empty cells) on the board. Previously I was using this for loop to find all the empty cells on my board:</p><pre><code>    But I have now introduced this stream:
-
-    &lt;pre&gt;
-    &lt;code class= "language-java"&gt;
-    public List&lt;Integer&gt; validMoves() {
-            return IntStream.range(0, this.board.size()).boxed()
-                            .filter(index -&gt; this.board.get(index).equals(E))
-                                            .collect(Collector.toList());
-    }
-      &lt;/code&gt;
-      &lt;/pre&gt;
-
-
-      IntStream streams through a list of indices from 0 to the total size of the board. Calling .boxed() converts the IntStream into a Stream&lt;Integer&gt;. .filter() then filters through the board and takes the arguement index and using a lambda expression applies it to the .get() method I have for my board.
-
-      Because this is an intermediate operation, without something following the .filter() nothing will be returned. This is why .collect(toList()) is needed. .collect() allows you to convert a stream into another type of result, in my case a list.
-
-      The operation .collect() accepts a Collector and there are many useful collectors, the one I have used is toList(), there are also many other useful ones like .groupingBy(), .averagingInt() etc. It is also possible to build your own collector which I think is overkill for what I needed it for here. I think I will explore this option in another blog post.
-
-      So this is the beginning of thinking of things in a functional way I guess as I think streams are a way of Java 8 trying to get in on the functional trend. They seem clear so far, but I think I have just scratched the surface! Next step, build my very own Collector...
-</code></pre></div>
+</code></pre><p>IntStream streams through a list of indices from 0 to the total size of the board. Calling .boxed() converts the IntStream into a Stream. .filter() then filters through the board and takes the arguement index and using a lambda expression applies it to the .get() method I have for my board.</p><p>Because this is an intermediate operation, without something following the .filter() nothing will be returned. This is why .collect(toList()) is needed. .collect() allows you to convert a stream into another type of result, in my case a list.</p><p>The operation .collect() accepts a Collector and there are many useful collectors, the one I have used is toList(), there are also many other useful ones like .groupingBy(), .averagingInt() etc. It is also possible to build your own collector which I think is overkill for what I needed it for here. I think I will explore this option in another blog post.</p><p>So this is the beginning of thinking of things in a functional way I guess as I think streams are a way of Java 8 trying to get in on the functional trend. They seem clear so far, but I think I have just scratched the surface! Next step, build my very own Collector...</p></div>
         </article>
         </li>
     </ol>
