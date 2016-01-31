@@ -15,6 +15,7 @@
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
+            <li class="100days"><a href="http://priya121.github.io/100days/">100days</a></li>
         </ul>
     </div>
 
@@ -38,42 +39,42 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="interfaces.html">Interfaces</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">10 September 2015</p>
+        </header>
+        <div data-id="content"><p>Interfaces are a set of classes that used to create an abstraction between two other related classes. They do not contain any new code but hold behaviours and method signatures and should be abstract classes with abstract names.</p><p>The advantage of using interfaces is that they help eliminate unnecessary dependencies that create rigid and fragile software. Adding interfaces hides the implementation of certain classes from others when they are not needed and allows for easier changes to the code later down the line.</p><p>Ruby and other dynamic languages do not need to have an explicit interface class, but it is necessary to define an interface class type explicitly for statically typed languages like Java.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="UML.html">UML Diagrams</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 September 2015</p>
+        </header>
+        <div data-id="content"><p>UML diagrams are commonly used when modelling for object oriented design programs. They are the graphical notation for drawing diagrams of software concepts.</p><p>Composite relationships are shown in a UML diagram by an arrow with one end a point and the other a diamond.</p><p>Inheritance is shown through a blank arrowhead and the arrows point in the direction that the inheritance flows from.</p><p>Class icons are divided into three components, a class title, the variables and the functions and interfaces are shown by the &lt;&gt; notation.</p><p>It is always a good idea to draw up a UML before starting to write a program, and adjust it as you go.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="loops.html">Loops in Java</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">08 September 2015</p>
+        </header>
+        <div data-id="content"><p>Loops in Java are useful even in the most simple program and contain their contents within curly braces. The two most common ones I have used so far are the for loop;</p><p>eg. for( int i = 0; i &lt; 5; i++ )</p><p>and the while loop;</p><p>eg. while ( i &lt; number.length )</p><p>Keeping track of the variables and loops can again be clarified through the use of an instruction table.</p><p>It is also possible to escape out of a loop if a certain condition is met using a label just before the beginning of the loop and a break after the end of the loop.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="single_responsibility_principle.html">The Single Responsibility Principle</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">07 September 2015</p>
+        </header>
+        <div data-id="content"><p>The single responsibility principle means that a class should only have one reason to change.</p><p>The idea is that each class should only have one role or handle one piece of behaviour. This does not mean that each class should contain one method, but if when describing a class behaviour, if the word ‘and’ is used, it is quite likely that the class is doing too much and the additional behaviour should be split out.</p><p>If the SRP is implemented well, then the design of the program will be more flexible and easier to change.</p><p>This is because if a class changes then only the class that handles that behaviour will have to change and the code will not be too coupled–meaning that one small change that must be made leads to numerous other things being forced to change.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="input_output.html">Input/Output</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 September 2015</p>
         </header>
         <div data-id="content"><p>Everything has to be explicitly declared in Java. I am starting to get used to it, even though the format looks different, the general structure of a class is not too different to Ruby. However, in Java there are a lot more restrictions on what you can and cannot do compared to a dynamic language.</p><p>In order to use Input Output in Java, the simplest way to do this is the InputStreamReader and OutputStreamReader.</p><p>The sytnax for these is System.in and System.out.print() respectively, but the format of these has to be changed accordingly when a certain type of display is needed.</p><p>It is also possible to use the Scanner class that parses primitive types and strings suing regular expressions.</p><p>There are so many tools and libraries that you can import in java that help you, it can be difficult to figure out which ones are best to use, but I am sure this is something that comes with practice and familiarity with the language. At the moment, I am avoiding using these until I get comfortable with what the standard Java Library contains.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="exceptions.html"> Throwing Exceptions</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">02 September 2015</p>
-        </header>
-        <div data-id="content"><p>Throwing an exception is a way of handling an error that a method may produce for a specific reason that was expected by the programmer who wrote it.</p><p>In Java, a complier will not let you compile a method if an exception is written that has not been handled or specifically declared.</p><p>Even though it is possible to declare that the main method throws the exception, it is always nicer to pass the declaration to another method and print a message to the user after another method has caught the exception. It is also good practice to tell the user how to address the error if at all possible.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="arrays_in_java.html">Arrays in Java</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">01 September 2015</p>
-        </header>
-        <div data-id="content"><p>Arrays in Ruby are incredibly useful and most of the tasks and programs that I built while I was learning Ruby had an array within them at some point or another. As I learn more Java I’m sure that arrays will be increasingly useful, (I have already used some briefly in some of the katas that I am practicing).</p><p>Arrays in Java must be created using an array creation expression. </p><p>e.g. new type[length] </p><p>The type must be explicitly set just like all data structures must be in Java. Similar to Ruby different elements can be accessed using array[i] where i is the index number of the element trying to be accessed.</p><p>It is also possible to create multi-dimensional arrays by writing type [] [], type [] [] [] etc.</p><p>There are also no array constants, new arrays are created every time an array initialiser is evaluated. </p><p>Despite there being these restrictions on arrays in Java, by using class Arrays in java.util certain utility methods are available that allow you manipulate the array.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="katas.html">Katas</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">31 August 2015</p>
-        </header>
-        <div data-id="content"><p>Coding Katas are a way of practicing muscle memory and approaching a simple problem in the simplest way possible. I have not attempted too many katas so far, but intend to do as many as I can going forwards. Two that I have approached are the roman numerals kata and the coin changer kata. The more you practice them the easier they become.</p><p>I am going to attempt to at least start one every morning. <a href="http://exercism.io/">This</a> is a great website that has a long list of different katas in different languages and the well-known <a href="http://www.codewars.com/about">CodeWars</a> is another that is fun and easy to use.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="encapsulation.html">Encapsulation in Ruby </a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 August 2015</p>
-        </header>
-        <div data-id="content"><p>There are many useful components in Ruby as a language and one I looked into closer recently is Encapsulation.</p><p>Encapsulation reduces coupling as it hides the internal representation or data structure of a particular object. This makes it easier to make changes when they become necessary, as if there are changes that need to be made to the data within the class, it will handle these changes and they will not have to be made throughout the entire program or application. </p><p>Encapsulation makes more sense when programs get larger, but I am going to try and implement it as soon as possible and this will make things easier to change.</p></div>
         </article>
         </li>
     </ol>

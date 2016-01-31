@@ -6,7 +6,7 @@ p { font-family: 'GothamLight',
 
 @font-face {
         font-family: 'GothamLight';
-        src: url("../../../../Downloads/GothamLightRegular/GothamLightRegular.otf");
+        src: url("../GothamLightRegular/GothamLightRegular.otf");
         }
 
 p.date { font-size: 10pt;

@@ -15,6 +15,7 @@
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
+            <li class="100days"><a href="http://priya121.github.io/100days/">100days</a></li>
         </ul>
     </div>
 
@@ -38,42 +39,42 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="yoga.html">Focus</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">06 November 2015</p>
+        </header>
+        <div data-id="content"><p>It is amazing how much of a difference keeping a calm and focused mind can make when you write code and try and solve a problem. Taking a break always helps, but doing yoga today reminded me of earlier this year when I did 20 days of yoga in a row and was never in better shape. I had more energy, more focus and was much more calm.</p><p>This is something that I also get from running which has an energizing effect on me. I am sure that I am happier, healthier and have more energy when I eat well and work out. So I am going to keep this up and see if this has a tangible effect on the code that I write.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="IOStreams.html">Java IO Streams</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 November 2015</p>
+        </header>
+        <div data-id="content"><p>Java Input Output streams abstract different ways in which you can input and output data. The stream can be sent to or taken from any source, it does not matter. It is really a stream or flow of bytes from one destination to another.</p><p>Java divides streams into bytes or character based categories. The character unit of a character based stream is a Unicode or ASCII character and transfers input and output of 8-bit bytes at a time.</p><p>This is in contrast to FileReader and FileWriter, which even though they internally use FileInputStream and FileOutputStream, read and write two bytes at a time. This can slow down your program and so it can be an advantage to use FileInputStream and FileOutputStream directly to transfer the data across sources.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="structuring_code.html">Implementation Patterns</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 November 2015</p>
+        </header>
+        <div data-id="content"><p>As my minesweeper program is getting bigger and I am starting to think about the different classes that could emerge from the existing ones it already has, it is becoming increasingly important to think about <em>how</em> they should be separated. </p><p>I am currently reading Kent Beck’s Implementation Patterns and he describes the various categories of class separation and state. There are a lot of categories, and I think the only way to really fully understand their use is to actually use them in my code.</p><p>The ones I have come across already are Interfaces, and Superclasses to some extent. He also talks about specialization and the types of questions you should be asking if you want to think about how to separate out classes. Some patterns I have not really used yet are the Implementor pattern and the Inner Class.</p><p>Most of the state based patterns are concerned with how an object changes state. This is primarily done through the internals of the object, so all the methods it contains.</p><p>I am going to try and notice when I use these patterns in my code and write up how I am trying to use them.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="clean_as_you_go.html">Clean as you go</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 November 2015</p>
+        </header>
+        <div data-id="content"><p>Writing clean code definitley becomes easier as you get better at writing code and your knowledge of what is possible grows. But making sure you write cleanly as you go is more about discipline. I have to reduce all the methods in my Minesweeper down to three methods which is quite tricky and is getting trickier as I am putting it off. I think it would actually have been better to start with small methods, refactoring at every possible stage and keep everything cleanly separated. So going forward, I am definitely going to start by keeping my methods short and saving myself the pain of refactoring so that I keep my code as clean as possible from the start.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="immutability.html">Keeping Track</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">03 November 2015</p>
         </header>
         <div data-id="content"><p>I was getting comfortable with deciding which objects should be separate in Ruby and starting to sense what they should and should not be doing. This was probably because I had built a few games and was starting to see the pattern of what should be separated out. </p><p>It is strange that when the syntax for something is new, even though the objects it represents might not be so different from another language, it feels different to think about how these objects should be separated out. Hopefully, with a bit of practice this will again start to become clear and the more I write, the easier it will become.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="recursion.html">Recursion</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">27 October 2015</p>
-        </header>
-        <div data-id="content"><p>Recursion is one of the most useful things I learnt when I first began how to code. </p><p>Recursion is simply when a method or function calls itself with changing data being assessed.</p><p>It is a good example of how a simple algorithm can handle complexity by analyzing data. It is similar to a loop, but instead of being given a finite termination condition or number of times to execute, it is able to assess itself when the condition has been met and this can be an extremely powerful tool.</p><p>It is best to see how recursion works by looking at a simple algorithm. I have found that this is actually the best way to learn most new concepts. Applying them one at a time to a simple problem helps as there is less to distract you from the actual use of the tool. I remember the first time I tried to apply it was with a prime factors kata and it was also well explained with a Towers of Hanoi kata. I usually use a while loop, but I am going to try and remember to use recursion if it makes more sense or makes my code easier to read.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="console_testing.html">Testing I/O</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 October 2015</p>
-        </header>
-        <div data-id="content"><p>Testing a randomised output can be difficult, as if an actual random number is returned, the result will be different every time. In order to tackle this I have used interfaces that swap in for certain tests and then also allow for simulated input to be tested. </p><p>In Java the simplest way to test input and output is to use a ByteArrayInputStream and ByteArrayOutputStream. These can then be easily swapped out for System.in and System.out when used in the main method and the program is run.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="enums.html">Enums in Java</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">22 October 2015</p>
-        </header>
-        <div data-id="content"><p>Enums in Java allow for a specific data type to be set as a list of predefined constants. Most of the time, these predefined constants represent constants in the real world, like days of the week or months in a year. These rarely change so can be set for the duration of a program and do not represent numeric values or textual data.</p><p>Enums in Java are type safe, meaning that they cannot be reassigned to another type once they have been set. It is also possible to set values for the enums and retrieve these by calling .values() on them.</p><p>They can be used somewhat recklessly when defining a type on a set of values, but used well they can be useful.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="BDD.html">BDD–Behaviour Driven Development</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">20 October 2015</p>
-        </header>
-        <div data-id="content"><p>I have been so focused on learning TDD and trying my best to stick to it I never really considered there were other ways of testing. BDD is the topic ofa Clean Coders video I watched this week and it was interesting to think of the need for business to be able to write specifications that programmers can write in. </p><p>Like so many industries it is the differences in terminology that really leads to miscommunication, so finding words that are understood by all is important. Of course terminology is there for a reason, it is always more concise and saves time. But for something to be useful outside of an industry, it is important to at least be able to communicate something simply. I think that is why Einstein said: If you cannot explain it simply enough, you do not understand it well enough. </p><p>It is similar to the idea that a problem must be broken down into its most basic components in order for any computation. If you want a person who is not in your industry, or a programmer you need to be able to break the words down into simple non-technical words for them to be able to understand, and this is only achievable through practice. </p></div>
         </article>
         </li>
     </ol>

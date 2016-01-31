@@ -15,6 +15,7 @@
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
+            <li class="100days"><a href="http://priya121.github.io/100days/">100days</a></li>
         </ul>
     </div>
 
@@ -38,42 +39,68 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="arduino.html">Arduino</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">18 December 2015</p>
+        </header>
+        <div data-id="content"><p>Today Micah, the founder of 8th Light held his second day of the mastery cohort and all of us were kindly given an Arduino starter kit. I had wanted one for a while and it felt like an early Christmas present. </p><p>Arduino is a company that designs, manufactures and sells micro-contollers and micro-controller accessories. These allow you to connect to your computer and program various circuits and components. It was interesting to read through the introductory book that came with the starter kit and it reminded me of my GCSE Physics classes. </p><p>The first exercise was to build a simple series circuit and write up code that would cause a LED bulb to light up. We then connected a paralell circuit and made flashing lights that were supposed to look like a spaceship. It was cool to see how simple code would cause the electrical components to do what we wanted them to do. Well, most of the time anyway!</p><p>After lunch we attempted a Love Machine exercise that used a thermometer component to tell how “hot” you were, and also managed to get the keyboard exercise working with 3 simple musical notes. </p><p>It was a great introduction to how software connects to simple hardware and I am excited to try some more of the exercises out in my own time. One I have my eye on is the Crystal Ball, which looks more complex as there are many more connections that must align with specific parts of the digital display. Hopefully, I’ll manage to get it working and will be able to build on it once I do.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="HTTPrequests.html">HTTP requests</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">17 December 2015</p>
+        </header>
+        <div data-id="content"><p>Today during Micah’s mastery cohort we had to make several GET requests to a local host and work on a game in which ants had to gather food from a grid of an infinite size. A coordinate of a nest is given from which ants can be spawned, (only 5 initially). Then if an ant goes to a coordinate with food, these have been randomly placed, it should go back to the nest and then another ant can be spawned, in addition to the original 5.</p><p>This was the second time over the past month in which the apprentices had the chance to look at how HTTP requests are sent and it is starting to make more sense.</p><p>Here is the code we used for the GET request:</p><pre>
+    <code class="language-java">
+public class AntSparring {
+    public String sendGETRequest(String url) {
+        try {
+            HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
+            con.setRequestMethod("GET");
+            con.setRequestProperty("User-Agent", "Mozilla/5.0");
+            con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+            BufferedReader rd = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            StringBuilder result = new StringBuilder();
+            String line;
+            while ((line = rd.readLine()) != null) {
+                result.append(line);
+            }
+            rd.close();
+            String finalResult = result.toString();
+            return finalResult;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "Error";
+    }
+}
+   </code> 
+</pre>
+<p>In hindsight, Java may not have been the best language to do this challenge in, but I learnt a lot and I definitely would like to go back and try and finish off the program.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="finding_your_pace.html">Find Your Pace</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">16 December 2015</p>
+        </header>
+        <div data-id="content"><p>It always amazes me how many analogies to life can come from running a marathon. One of them is definitely to find your own pace and stick to it. It is easy to get carried away at the beginning of the race, especially when there are others around you hurtling past, but staying focused on your own pace and knowing what your limits are is really important to being able to finish.</p><p>In the opposite sense, with Christmas round the corner and everything seemingly slowing down up to Christmas and New Year, it is easy to slow down along with everyone, but I still feel like I have a lot to do. So I am going to do stick to my pace and carry on learning through the holiday season, even when it is easy to feel like nobody is really working on anything! Of course I’ll be sure to enjoy the occasional mince pie and take time to see family and friends, but I’ll do my best to keep up my focus and pace the rest of the time.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="maven.html">Maven</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">15 December 2015</p>
+        </header>
+        <div data-id="content"><p>A lot of the building of a Java project is hidden when you are using Intellij. In order to get a project running from the command line it is necessary to use a build tool and Maven is one of these tools. It can build projects in Ruby, Scala and C# but is mainly used to build Java.</p><p>When a language is built, this simply means to compile the program into an executable format (taking the source files and compiling them into object files.) A compiler takes the source code written in a language and converts it into another computer language (often binary).</p><p>Maven works by using an XML file that describes the project and all the dependencies, build order and plug-ins.</p><p>Maven projects are configured using a POM or Project Object Model and these are stored in a pom.xml fie. <a href="https://en.wikipedia.org/wiki/Apache_Maven#Project_Object_Model">Here</a> is the wikipedia example.</p><p>When you write a Maven project the structure you need is:</p><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Maven_CoC.svg/150px-Maven_CoC.svg.png" alt="Smaller icon" /></p><p>By running the command: mvn package all the java files are compiled, all tests run and it packages all deliverable code and resources into target/my-app-1.0.jar.</p><p>The command I used to run my maven project (MineSweeper) was: mvn exec:java -Dexec.mainClass=”com.example.Main” in which com.example are packages you may have introduced in your class structure.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="vim.html">Vim</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">14 December 2015</p>
         </header>
         <div data-id="content"><p>When I first started to learn Ruby, I started with Vim, an advanced text editor that was difficult to navigate at first. My mentor sent me the Vim Adventures game, which is an easy introduction into learning how to navigate using Vim. It was <em>really slow</em> to begin with and I always reverted to using my arrow keys, so these were disabled to force me to use shortcuts. It was annoying and slow at first, but after a while I was noticably faster at writing code.</p><p>When I started to learn Java however, I moved on to the beautiful Intellij which I really enjoyed using. I was able to get started pretty quickly and there are so many autocomplete suggestions and eror checkers in Intellij, it really helped me with my syntax and refactoring. But there is a lot that Intellij does for you that you can take for granted. This is why I think my next task was to use gradle to set up my Human vs Human Tic Tac Toe. Luckily one of the other Apprentices, Georgina, had used gradle before and talked me through her build file and style configurations that I cloned and used to get started.</p><p>Checkstyle and PMD really ensure that your code has the correct format and at times when one of them would pass the other would break, which is quite frustrating. There are a <em>lot</em> of syntax issues that I needed to work on with my Java and I definitely disabled some of the style check suggestions that were too stringent, but slowly I have stared to get used to running tests and setting up my Human vs Human tic tac toe with gradle.</p><p>There have been advantages and disagvantages to using vim and gradle for this iteration (instead of Intellij). I will write up a longer post on this topic after a little more research. So far there seems to be quite good reasons to use both, or at least know how to use both.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="client_retro_day.html">Retros</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">11 December 2015</p>
-        </header>
-        <div data-id="content"><p>Today I spent the day at a client site and helped facilitate a retrospective in which the participants talked about all the things they learnt over the five weeks during which they built their product.</p><p>It was fun and it was great to see them able to demo their product well. It was also interesting that at one point they mentioned that they were concerned with how the final product looked more than the code underlying it. This can happen quite easily when you want to show something to people who do not understand code very well. But to people who know what lies beneath the user interface the structure and quality of the code is equally if not more important.</p><p>I got the impression that the 8th Light effect rubbed off on them, and they all seemed to really get along well and enjoy what they were doing. The fact that it was their final day might have been a contributing factor, but I hope they can carry their enthusiasm with them when they go on to their new projects and new teams.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="black_box_tests.html">Black Box Tests</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">10 December 2015</p>
-        </header>
-        <div data-id="content"><p>Testing and knowing what to test can be tough when you begin to code. Starting with a degenerate case is a good approach, but sometimes this can lead to testing implementation details that can change as your code evolves. This is where black box testing comes in. Here you only test the public methods that handle the overall functionality and behaviour you want from a piece of code. White box testing is where you test the internals of a class or individual methods that handle small pieces of behaviour that you eventually want to hide as private methods.</p><p>I know I am guilty of writing simple and small tests that test individual functions and I tend not to change these to black box tests even when I know I no longer need them. I am going to keep in mind the advantages of black box testing and try and think of the overall functionality I want to test more going forward.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="pair_programming.html">Pair Programming</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
-        </header>
-        <div data-id="content"><p>Pair programming can be a lot of fun. I am quite a social person and enjoy sitting with someone to solve a problem. The thing with code is that it can be tackled in so many different ways and it takes some level of compromise to work with someone as they might not think in the same way you do.</p><p>This can be quite tiring, and pair programming is tiring, but incredibly useful. You can learn new things in a practical way and learn how to think laterally.</p><p>Typically there is a driver (who handles the tactical/typing part of the coding) and a navigator (who thinks about the overall strategy). These roles of course switch regularly when ping pong programming.</p><p>Some tips that are useful to think about when pair programming that we covered in our Zagaku lesson today were:</p><ol><li><p>Set the ground rules before you start. (If checking phones or emails is alright, when you both agree to take breaks, how long you want to pair etc.)</p></li><li><p>Decide on the type of pair programming style you would like to adopt. The style we tend to practice the most at 8th light is ping pong. This is where one person writes a test, then the next writes code to make the test pass. Finally, the first person again has to refactor if possible to make the code better.</p></li><li><p>Ensure you have a comfortable set up, ideally with one screen and one or two keyboards.</p></li><li><p>Communication is the key factor, make sure you communicate clearly for the duration of your pair programming session.</p></li></ol><p>Pairing can seem daunting when you are inexperienced, but I think everyone hopefully gets something out of it, so I am going to try and pair daily and recommend you do to!</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="recursionagain.html">More Recursion</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">08 December 2015</p>
-        </header>
-        <div data-id="content"><p>Recursion can be a tricky concept and I know I definitely struggled with it when I first started learning how to code. But it is simply a method calling itself with changing parameters that causes it to recurse. This can often be accomplished by a while loop which actually creates fewer stack frames, but can be a less elegant way of tackling a simple problem.</p><p>So the main driving factor as far as I can see is the clarity of your code and the length of your program (including how much data it needs to analyze and compute).</p><p>This is a great <a href="http://roman01la.github.io/recursion-exercises/">webiste</a> that has a lot of great mini examples and ways to practice recursion.</p></div>
         </article>
         </li>
     </ol>

@@ -15,6 +15,7 @@
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
             <li class="about"><a href="#">About</a></li>
+            <li class="100days"><a href="http://priya121.github.io/100days/">100days</a></li>
         </ul>
     </div>
 
@@ -38,39 +39,47 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="exceptions.html"> Throwing Exceptions</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">02 September 2015</p>
+        </header>
+        <div data-id="content"><p>Throwing an exception is a way of handling an error that a method may produce for a specific reason that was expected by the programmer who wrote it.</p><p>In Java, a complier will not let you compile a method if an exception is written that has not been handled or specifically declared.</p><p>Even though it is possible to declare that the main method throws the exception, it is always nicer to pass the declaration to another method and print a message to the user after another method has caught the exception. It is also good practice to tell the user how to address the error if at all possible.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="arrays_in_java.html">Arrays in Java</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">01 September 2015</p>
+        </header>
+        <div data-id="content"><p>Arrays in Ruby are incredibly useful and most of the tasks and programs that I built while I was learning Ruby had an array within them at some point or another. As I learn more Java I’m sure that arrays will be increasingly useful, (I have already used some briefly in some of the katas that I am practicing).</p><p>Arrays in Java must be created using an array creation expression. </p><p>e.g. new type[length] </p><p>The type must be explicitly set just like all data structures must be in Java. Similar to Ruby different elements can be accessed using array[i] where i is the index number of the element trying to be accessed.</p><p>It is also possible to create multi-dimensional arrays by writing type [] [], type [] [] [] etc.</p><p>There are also no array constants, new arrays are created every time an array initialiser is evaluated. </p><p>Despite there being these restrictions on arrays in Java, by using class Arrays in java.util certain utility methods are available that allow you manipulate the array.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="katas.html">Katas</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">31 August 2015</p>
+        </header>
+        <div data-id="content"><p>Coding Katas are a way of practicing muscle memory and approaching a simple problem in the simplest way possible. I have not attempted too many katas so far, but intend to do as many as I can going forwards. Two that I have approached are the roman numerals kata and the coin changer kata. The more you practice them the easier they become.</p><p>I am going to attempt to at least start one every morning. <a href="http://exercism.io/">This</a> is a great website that has a long list of different katas in different languages and the well-known <a href="http://www.codewars.com/about">CodeWars</a> is another that is fun and easy to use.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="encapsulation.html">Encapsulation in Ruby </a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 August 2015</p>
+        </header>
+        <div data-id="content"><p>There are many useful components in Ruby as a language and one I looked into closer recently is Encapsulation.</p><p>Encapsulation reduces coupling as it hides the internal representation or data structure of a particular object. This makes it easier to make changes when they become necessary, as if there are changes that need to be made to the data within the class, it will handle these changes and they will not have to be made throughout the entire program or application. </p><p>Encapsulation makes more sense when programs get larger, but I am going to try and implement it as soon as possible and this will make things easier to change.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="dotfiles.html">Dotfiles</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 August 2015</p>
         </header>
         <div data-id="content"><p>Setting up a new machine can take time and it is always nice to take your time customizing the settings just how you like them. But this can take a really long time if there are many settings you have to set manually. A useful way to speed up this process and cut down duplication time is to copy across your dotfiles from git.</p><p>I recently did this and now am able to quickly work on my projects on the new machine just as I did before. In order to clone across the files, it is also necessary to set up your new machine with an SSH key on git. There are many resources that help with this. One I used is: [https://help.github.com/articles/generating-ssh-keys/] and it is a simple process.</p><p>Now I can manage my settings across multiple devices and am more comfortable with adding to my dotfiles. Next step is to change my vim colours!</p></div>
         </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="java.html">Java</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">27 August 2015</p>
-        </header>
-        <div data-id="content"><p>Java is a statically typed language and it takes some getting used to when moving across from a dynamic language like Ruby. This basically means that types have to be defined when you initially set them and there are restrictions on what they can be converted to at a later stage in an application or program. </p><p>This makes it more clear as to what is happening with data and provides for a clearer structure as less is hidden. The length of methods and simple statements are also therefore much longer than Ruby.</p><p>The Java koans are a good starting point and introduce basic Java tools (some used frequently and others not so much), but getting used to writing in a new language is the best way to learn it, so I better get writing.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="design.html">OO Design</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">25 August 2015</p>
-        </header>
-        <div data-id="content"><p>Object Oriented Design (OOD) is a phrase that gets thrown around a lot in software design and it is easy to think of it as an extra addition to add to code if you have the luxury of time. But actually good OOD saves a lot of pain if ever you need to change a program later on in time.</p><p>One of the main components of good OO design is the correct flow of dependencies. A dependency is when one class requires another to work or uses another class in order to work (the first class is said to depend on the second). A UML diagram often helps to figure out what the correct flow of dependencies should be. If you can control the flow of dependencies and recognise which direction the flow should be directed you have the basis of understanding good Object Oriented Design.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="type_casting.html">Type Casting</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">01 August 2015</p>
-        </header>
-        <div data-id="content"><p>Something I am getting used to while learning Java is Type Casting. Type Casting is the assignment of one type of variable to another type.</p><p>There are two different types of Type Casting in Java. The widening casting from byte up to double, including everything in between (these take up increasing amounts of memory) and narrowing casting (a decreasing amount of memory) from double down to byte, also including everything in between.</p><p>It is important that the type cast objects share the same type hierarchy, meaning that they have a parent child relationship between them. If this is not the case, the compiler will throw a ClassCastException. Narrowing casting needs to be explicitly set in that you need to be explicit in the type of casting required. </p><p>Type casting is mainly used to get access to fields and methods declared on a target type or class and I am sure I will be using more of them as I get more familiar with Java.</p></div>
-        </article>
         </li>
     </ol>
     <nav>
-    
+    <p class="previous" data-id="if-exists" data-key="prev"><a data-id="prev" data-set="attrs" href="index-16.html">&lt;&lt; Previous</a></p>
     <p class="next" data-id="if-exists" data-key="next"><a data-id="next" data-set="attrs" href="index-14.html">Next &gt;&gt;</a></p>
     </nav>
     </main>
