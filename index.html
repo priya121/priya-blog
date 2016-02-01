@@ -13,8 +13,8 @@
     <div class="nav">
         <ul>
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
-            <li class="news"><a class="active" href="#">News</a></li>
-            <li class="about"><a href="#">About</a></li>
+            <!--li class="news"><a class="active" href="#">News</a></li-->
+            <li class="old_blog"><a href="https://priyapatil101.wordpress.com/">MyOldBlog</a></li>
             <li class="100days"><a href="http://priya121.github.io/100days/">100days</a></li>
         </ul>
     </div>
@@ -37,6 +37,29 @@
 
     <ol class="entries" data-id="page-list" data-max-pages="5">
         <li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="streams_two.html">Mapping through streams</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">29 January 2016</p>
+        </header>
+        <div data-id="content"><p>I’m not sure if you can actually say mapping through streams, but .map() is another useful intermediate operation you can use on the Stream class. Simple sequential streams using .stream() to create a list of elements are relatively straightforward and once you have filtered the data you want to act on, it is also quite simple to use the .map() operation to manipulate the data. .map() allows you to apply a function to elements in the stream.</p><p>Here is an example of this:</p><pre>
+<code class="language-java">
+Stream&lt;String&gt; map = names.stream()
+        .filter(name -&gt; name.startsWith("p"))
+                .map(String::toUpperCase);
+</code>
+</pre>
+<p>In this example .map() converts each of the names starting with p in the list of names to a capital P.</p><p>As nothing has been explicitly returned yet, a terminal operation is neccesary, and here the .collect() operation can be used again.</p><pre>
+<code class="language-java">
+List&lt;String&gt; map = names.stream()
+.filter(name -&gt; name.startsWith("p"))
+.map(String::toUpperCase);
+.collect(toList());
+</code>
+</pre>
+<p>(Another useful way to map through a stream is to use .mapToInt(), which converts primitive ints to Integer objects, and .mapToObj() which converts primitives to Objects).</p><p>The syntax of streams looks a bit strange at the moment, but I suppose I’m just used to regular old for loops. I think I’m starting to see that the basic stream operations are actually relatively straightforward. I’m sure they are going to get much more complicated as I try and apply them more, but hopefully it’s just a case of getting used to the syntax and the way they look.</p></div>
+        </article>
+        </li><li class="entries">
         <article>
         <header>
         <h2><a class="entries" data-id="page-link" href="streams.html">Streams</a></h2>
@@ -91,14 +114,6 @@ public List&lt;Integer&gt; validMoves() {
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">04 January 2016</p>
         </header>
         <div data-id="content"><p>Memory is something that seems pretty abstract before you face a real problem with it. Objects and data are stored on the Java Virtual Machine and when writing simple small programs, when and how these are created is not that important.</p><p>It becomes more important when lots of different classes interact and the order objects are created and destroyed affects the efficiency of a program.</p><p>Java has two areas of memory. The stack and the heap.</p><p>The stack is where variables live and they live on the stack frame where the method they belong to is stored. Object reference variables also are stored in this way.</p><p>All objects however, live on the heap so that they can be destroyed by the garbage collector when they are no longer needed (when there are no longer any live references to them). If your program starts to run low on memory, the garbage collector destroys the objects that are no longer needed and memory will not run out.</p><p>I am working on a longer blog post about testing in Vim for Java using Gradle and even though I’m sure I’ve just scratched the surface, hopefully understanding memory management will make understanding how threads and sockets work more clear.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="garbage_collection.html">Garbage Collection</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">21 December 2015</p>
-        </header>
-        <div data-id="content"><p>When an object is created it takes up memory. Memory is not infinite and the more that is used up, the less there is for allocation. This is why memory that is no longer being used must be cleaned up so it can be re-used.</p><p>Garbage collection looks for things stored in memory that is no longer necessary and frees that space. There is a distinction between Garbage Collection and <em>Compaction</em> in which allocated objects are moved together in the memory and empty spaces are left together. Object creation and memory allocation can get much more complex, and the basics of these require a better understanding of the stack and heap, which I will write up on in another post.</p></div>
         </article>
         </li>
     </ol>

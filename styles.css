@@ -81,8 +81,8 @@ a.entries { text-decoration: none; color: black; }
 #top ul li {
   display: inline-block;
   list-style-type: none;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 100px;
+  padding-left: 100px;
 }
 
 #top h1 {
@@ -137,6 +137,7 @@ nav p {
     }
 
     .nav li {
+        display: inline;
         font-family: 'Syncopate', sans-serif;
         font-weight: 200;
         font-size: 1.2em;
@@ -162,7 +163,6 @@ nav p {
 
 @media screen and (min-width: 600px) {
     .nav li {
-        width: 120px;
         border-bottom: none;
         height: 50px;
         line-height: 50px;
@@ -171,8 +171,9 @@ nav p {
 
 
 .nav li {
+    margin-left: 5;
+    margin-right: 5;
     display: inline-block;
-    margin-right: -4px;
 }
 code[class*="language-"],
 pre[class*="language-"] {

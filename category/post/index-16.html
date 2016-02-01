@@ -84,6 +84,29 @@ public List&lt;Integer&gt; validMoves() {
 </pre>
 <p>IntStream streams through a list of indices from 0 to the total size of the board. Calling .boxed() converts the IntStream into a Stream. .filter() then filters through the board and takes the arguement index and using a lambda expression applies it to the .get() method I have for my board.</p><p>Because this is an intermediate operation, without something following the .filter() nothing will be returned. This is why .collect(toList()) is needed. .collect() allows you to convert a stream into another type of result, in my case a list.</p><p>The operation .collect() accepts a Collector and there are many useful collectors, the one I have used is toList(), there are also many other useful ones like .groupingBy(), .averagingInt() etc. It is also possible to build your own collector which I think is overkill for what I needed it for here. I think I will explore this option in another blog post.</p><p>So this is the beginning of thinking of things in a functional way I guess as I think streams are a way of Java 8 trying to get in on the functional trend. They seem clear so far, but I think I have just scratched the surface! Next step, build my very own Collector...</p></div>
         </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="../../streams_two.html">Mapping through streams</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">29 January 2016</p>
+        </header>
+        <div data-id="content"><p>I’m not sure if you can actually say mapping through streams, but .map() is another useful intermediate operation you can use on the Stream class. Simple sequential streams using .stream() to create a list of elements are relatively straightforward and once you have filtered the data you want to act on, it is also quite simple to use the .map() operation to manipulate the data. .map() allows you to apply a function to elements in the stream.</p><p>Here is an example of this:</p><pre>
+<code class="language-java">
+Stream&lt;String&gt; map = names.stream()
+        .filter(name -&gt; name.startsWith("p"))
+                .map(String::toUpperCase);
+</code>
+</pre>
+<p>In this example .map() converts each of the names starting with p in the list of names to a capital P.</p><p>As nothing has been explicitly returned yet, a terminal operation is neccesary, and here the .collect() operation can be used again.</p><pre>
+<code class="language-java">
+List&lt;String&gt; map = names.stream()
+.filter(name -&gt; name.startsWith("p"))
+.map(String::toUpperCase);
+.collect(toList());
+</code>
+</pre>
+<p>(Another useful way to map through a stream is to use .mapToInt(), which converts primitive ints to Integer objects, and .mapToObj() which converts primitives to Objects).</p><p>The syntax of streams looks a bit strange at the moment, but I suppose I’m just used to regular old for loops. I think I’m starting to see that the basic stream operations are actually relatively straightforward. I’m sure they are going to get much more complicated as I try and apply them more, but hopefully it’s just a case of getting used to the syntax and the way they look.</p></div>
+        </article>
         </li>
     </ol>
     <nav>
