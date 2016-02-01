@@ -14,7 +14,7 @@
         <ul>
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
-            <li class="about"><a href="#">About</a></li>
+            <li class="old_blog"><a href="https://priyapatil101.wordpress.com/">OldBlog</a></li>
             <li class="100days"><a href="http://priya121.github.io/100days/">100days</a></li>
         </ul>
     </div>
@@ -39,6 +39,40 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="CreatingObjects.html">Creating Objects</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">24 November 2015</p>
+        </header>
+        <div data-id="content"><p>As Java documentation explains, a class is like a blueprint that can be used to create an object. Each time an object is created by calling new ObjectName an object constructed with the relevant constructors. </p><pre>
+    <code class="langauage-java">
+Square square = new Square(50,50);
+   </code> 
+</pre>
+<p>A class can have multiple constructors, and it is possible to create variations of an object by using these different constructors (if the constructors are different they must have different signatures. A constructor has the same name as the class and has no return type.</p><pre>
+    <code class="langauage-java">
+public class Shape {
+    public Shape(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+    public void areaOfSquare() {
+        return width * height;
+    }
+}
+   </code> 
+</pre>
+</div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="liskov_principle.html">The Liskov Principle</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 November 2015</p>
+        </header>
+        <div data-id="content"><p>The Liskov Principle was formulated by Barbara Liskov and Jeannette Wing in 1994. It was described by them as:</p><p>Let Φ(x) be a property provable about objects x of type T. Then Φ(y) should be true for objects y of type S where S is a subtype of T.</p><p>This essentially means that subtypes of a an object may replace the object itself, without totally changing the functioning of a program.</p><p>In java this is ususally implemented with the use of abstract classes and interfaces. </p><p>The typical example for this is the square and the rectangle, which I think does not illustrate the example very well. A much better expalination was given by one of the craftsmen during a Zagaku this week. Here is the link: <a href="https://github.com/8thlight/zagaku/blob/master/solid/lsp.md">Liskov</a>.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="music.html">Music While Coding</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 November 2015</p>
         </header>
@@ -59,59 +93,6 @@
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">10 November 2015</p>
         </header>
         <div data-id="content"><p>Sorting algorithms incredibly useful and underlie so many of the algorithms that we use for analysing complex data. Some are more efficient than others and all of them use the concept of nodes. A node is a way to represent a section of the data you would like to analyse. This node is compared with other nodes and its relative position is then decided. </p><p>The efficiency of sorting algorithms is determined by the O(log)n logarithm. This is more a measure of time, and has variations that explain how and how quickly an algorithm can perform its operations. I am due to perfrom a kata next week, so I will write up a detailed post on one of these sorting algorithms next week. </p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="file_copy_kata.html">File Copy Kata</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 November 2015</p>
-        </header>
-        <div data-id="content"><p>Last week, I worked on a file copy kata that transferred a file from one location to another. Looking at how bytes are transferred across is really interesting. I am enjoying looking at how hardware interelates with software, because before understanding this, it really seems like magic. It is amazing how you can use something so much and depend on it and not really know how it works. This of course isn’t unique to programming. I am sure most people do not have an indepth understanding of the human body or plumbing systems in their house, but I am enjoying looking at low level concepts, mainly because they are relatively new to me.</p><p>The file copy kata works by, taking a file path as a string and translating that string into a file format. This is then converted into an InputStream that has methods that allow it to read a stream of bytes from the stream of data.</p><p>There are two methods that can read a stream of bytes, there is .read() with no arguements that reads one byte at a time and .read(byte[]) that takes a byte array. There is also .read(byte[] b, int off, int len) that allaw a certain length of bytes to be read from an input stream. </p><p>In my code I used the .read that takes a byte array so I could specify how many bytes it should read across as an int every time it reads and writes the bytes across to the new file location. </p><p>Passing the byte array into String(byte[]) allows for the bytes to be translated in my case into their ASCII representation. This is to do with how Vim encodes the characters, and I will write another blog post about encoding after a bit more research.</p><p>Writing to the output stream effectively does the inverse of reading from the input stream and my transfer method combones the read and write functions into a loop that will read and write a certain amount of bytes from the original file in increments, until it reaches the end of the file at -1.</p><p>I originally forgot to close the stream, and even though this is a small enough program to ignore it. It is always good practice to do so.</p><p>Here is the code: </p><pre><code>
-public class FileCopyKata {
-    ReportProgress currentReport = new ReportProgress();
-
-    public String read(String inputFilePath, int amountOfBytes) throws IOException {
-        File inputFile = new File(inputFilePath);
-        InputStream input = new FileInputStream(inputFile);
-        byte[] buffer = new byte[amountOfBytes];
-
-        input.read(buffer);
-
-        return new String(buffer);
-    }
-
-    public void write(String destinationFilePath, byte[] buffer) throws IOException {
-        File destinationFile =  new File(destinationFilePath);
-        OutputStream output = new FileOutputStream(destinationFile);
-
-        output.write(buffer);
-    }
-
-    public void transfer(String inputFilePath, String destinationFilePath, int amountOfBytes) throws IOException {
-        File inputFile = new File(inputFilePath);
-        InputStream input = new FileInputStream(inputFile);
-        OutputStream output = new FileOutputStream(new File(destinationFilePath));
-        byte[] buffer = new byte[amountOfBytes];
-
-        int data;
-        while ((data = input.read(buffer)) != -1) {
-            currentReport.progressReport(data, (int) inputFile.length());
-            output.write(buffer);
-        }
-        input.close();
-        System.out.print("Done!");
-    }
-}
-
-</code></pre></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="functionalprogramming.html">Functional Programming</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">06 November 2015</p>
-        </header>
-        <div data-id="content"><p>I thought I knew what functional programming was but I was wrong! I suppose I need to take one step at a time and I am sure during my apprenticeship I will eventually come to learn a functional language, but there is no harm in knowing the basics. So I thought I would share what I came across.</p><p>A functional language is a language that avoid mutating or changing data, so you would just create new data structures instead of changing ones that already exist. This really helps break a problem down into its component parts.</p><p>Functional programs are also required to be stateless, that is, they should perform every task as if they were performing it for the first time. This is a pretty different way of thinking and I have just got my head around object oriented (OO) programming so am glad I will tackle functional programming once I have a bit more practice at writing OO languages.</p></div>
         </article>
         </li>
     </ol>

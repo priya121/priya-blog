@@ -14,7 +14,7 @@
         <ul>
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
-            <li class="about"><a href="#">About</a></li>
+            <li class="old_blog"><a href="https://priyapatil101.wordpress.com/">OldBlog</a></li>
             <li class="100days"><a href="http://priya121.github.io/100days/">100days</a></li>
         </ul>
     </div>
@@ -39,6 +39,22 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="maven.html">Maven</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">15 December 2015</p>
+        </header>
+        <div data-id="content"><p>A lot of the building of a Java project is hidden when you are using Intellij. In order to get a project running from the command line it is necessary to use a build tool and Maven is one of these tools. It can build projects in Ruby, Scala and C# but is mainly used to build Java.</p><p>When a language is built, this simply means to compile the program into an executable format (taking the source files and compiling them into object files.) A compiler takes the source code written in a language and converts it into another computer language (often binary).</p><p>Maven works by using an XML file that describes the project and all the dependencies, build order and plug-ins.</p><p>Maven projects are configured using a POM or Project Object Model and these are stored in a pom.xml fie. <a href="https://en.wikipedia.org/wiki/Apache_Maven#Project_Object_Model">Here</a> is the wikipedia example.</p><p>When you write a Maven project the structure you need is:</p><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Maven_CoC.svg/150px-Maven_CoC.svg.png" alt="Smaller icon" /></p><p>By running the command: mvn package all the java files are compiled, all tests run and it packages all deliverable code and resources into target/my-app-1.0.jar.</p><p>The command I used to run my maven project (MineSweeper) was: mvn exec:java -Dexec.mainClass=”com.example.Main” in which com.example are packages you may have introduced in your class structure.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="vim.html">Vim</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">14 December 2015</p>
+        </header>
+        <div data-id="content"><p>When I first started to learn Ruby, I started with Vim, an advanced text editor that was difficult to navigate at first. My mentor sent me the Vim Adventures game, which is an easy introduction into learning how to navigate using Vim. It was <em>really slow</em> to begin with and I always reverted to using my arrow keys, so these were disabled to force me to use shortcuts. It was annoying and slow at first, but after a while I was noticably faster at writing code.</p><p>When I started to learn Java however, I moved on to the beautiful Intellij which I really enjoyed using. I was able to get started pretty quickly and there are so many autocomplete suggestions and eror checkers in Intellij, it really helped me with my syntax and refactoring. But there is a lot that Intellij does for you that you can take for granted. This is why I think my next task was to use gradle to set up my Human vs Human Tic Tac Toe. Luckily one of the other Apprentices, Georgina, had used gradle before and talked me through her build file and style configurations that I cloned and used to get started.</p><p>Checkstyle and PMD really ensure that your code has the correct format and at times when one of them would pass the other would break, which is quite frustrating. There are a <em>lot</em> of syntax issues that I needed to work on with my Java and I definitely disabled some of the style check suggestions that were too stringent, but slowly I have stared to get used to running tests and setting up my Human vs Human tic tac toe with gradle.</p><p>There have been advantages and disagvantages to using vim and gradle for this iteration (instead of Intellij). I will write up a longer post on this topic after a little more research. So far there seems to be quite good reasons to use both, or at least know how to use both.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="client_retro_day.html">Retros</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">11 December 2015</p>
         </header>
@@ -59,22 +75,6 @@
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">09 December 2015</p>
         </header>
         <div data-id="content"><p>Pair programming can be a lot of fun. I am quite a social person and enjoy sitting with someone to solve a problem. The thing with code is that it can be tackled in so many different ways and it takes some level of compromise to work with someone as they might not think in the same way you do.</p><p>This can be quite tiring, and pair programming is tiring, but incredibly useful. You can learn new things in a practical way and learn how to think laterally.</p><p>Typically there is a driver (who handles the tactical/typing part of the coding) and a navigator (who thinks about the overall strategy). These roles of course switch regularly when ping pong programming.</p><p>Some tips that are useful to think about when pair programming that we covered in our Zagaku lesson today were:</p><ol><li><p>Set the ground rules before you start. (If checking phones or emails is alright, when you both agree to take breaks, how long you want to pair etc.)</p></li><li><p>Decide on the type of pair programming style you would like to adopt. The style we tend to practice the most at 8th light is ping pong. This is where one person writes a test, then the next writes code to make the test pass. Finally, the first person again has to refactor if possible to make the code better.</p></li><li><p>Ensure you have a comfortable set up, ideally with one screen and one or two keyboards.</p></li><li><p>Communication is the key factor, make sure you communicate clearly for the duration of your pair programming session.</p></li></ol><p>Pairing can seem daunting when you are inexperienced, but I think everyone hopefully gets something out of it, so I am going to try and pair daily and recommend you do to!</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="recursionagain.html">More Recursion</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">08 December 2015</p>
-        </header>
-        <div data-id="content"><p>Recursion can be a tricky concept and I know I definitely struggled with it when I first started learning how to code. But it is simply a method calling itself with changing parameters that causes it to recurse. This can often be accomplished by a while loop which actually creates fewer stack frames, but can be a less elegant way of tackling a simple problem.</p><p>So the main driving factor as far as I can see is the clarity of your code and the length of your program (including how much data it needs to analyze and compute).</p><p>This is a great <a href="http://roman01la.github.io/recursion-exercises/">webiste</a> that has a lot of great mini examples and ways to practice recursion.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="opensource.html">Open Source</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">07 December 2015</p>
-        </header>
-        <div data-id="content"><p>Git is actually quite an amazing tool. I am aware I use it to a fraction of its capacity, but even the idea that so much code is open for anyone to see is inspired.</p><p>I recently helped organize an open source workshop to encourage others to learn how to collaborate with others and create pull requests. It was called @24pullrequests and the idea behind @24pullrequests is that everyday in December leading up to Christmas you submit a pull request on an open source project that has some issues.</p><p>There was even a table of new Java developers who could not find a project to contribute to so I helped them create a pull request for my Minesweeper game! I hope I can create more pull requests and get other people to contribute to my issues. I suppose the first step to this however would be to have small and regular commits so that anyone who actually wants to find certain functionality won’t have to wade through my code so they can help. So this a reminder to myself and others, make regular commits and make pull requests!</p></div>
         </article>
         </li>
     </ol>

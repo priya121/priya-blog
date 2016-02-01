@@ -14,7 +14,7 @@
         <ul>
             <li class="home"><a href="http://priya121.github.io/priyas-blog/index.html">Home</a></li>
             <li class="news"><a class="active" href="#">News</a></li>
-            <li class="about"><a href="#">About</a></li>
+            <li class="old_blog"><a href="https://priyapatil101.wordpress.com/">OldBlog</a></li>
             <li class="100days"><a href="http://priya121.github.io/100days/">100days</a></li>
         </ul>
     </div>
@@ -37,6 +37,22 @@
 
     <ol class="entries" data-id="page-list" data-max-pages="5">
         <li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="open_close_principle.html">Open Close Principle</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">29 September 2015</p>
+        </header>
+        <div data-id="content"><p>I am still getting familiar with the SOLID principles and am trying to assess their value. It is often only when I see them in bad code that I have written or problems that I come up against after not implementing them that I can spot them.</p><p>But I think reading through them at this stage is a good exercise. The Open Close Principle is the next one I am looking at, which states, that software entities should be closed for modification but open for extension.</p><p>That is, that it should be possible to make changes to the exisiting code and extend its behaviour without breaking the exisiting functionality of the code. Interfaces help with this as they allow you to extend the code more easily and help create compact classes that hold the required behaviour.</p><p>I am using this principle to a certain degree without realising it, but will try and be more concious of when I am using it and make sure I do so when required.</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
+        <h2><a class="entries" data-id="page-link" href="fakes.html">Using Fakes in Java</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">28 September 2015</p>
+        </header>
+        <div data-id="content"><p>I am starting to really see the benefit of using fakes in my code. Working through a Guess the Number game and creating a fake that simulates the input and intermediate output is useful when writing tests because you need to be able to test behaviour that is not certain and can change each time a program is run.</p><p>The way this is done is through the use of an interface. An interface is essentially a class that contains the methods or behaviour that must be present for your class to work. The class that ultimately uses this behaviour is not aware of the behaviour of the object that implements the interface, provided that it contains the methods that the interface requires.</p><p>In the tests you can then create class that implements the methods or behaviour the interface requires, but set what they return to a value that is hardcoded. Then the actual console implementation can be passed in when the actual game is run so that the Fakes hardcoded returns can be replaced with a user input and the correct output.</p><p>Guess the number is a simple enough program to test this so this is a good way to start understanding IO and fakes in Java.</p></div>
+        </article>
+        </li><li class="entries">
         <article>
         <header>
         <h2><a class="entries" data-id="page-link" href="do_while.html">do-while loops</a></h2>
@@ -62,22 +78,6 @@
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">24 September 2015</p>
         </header>
         <div data-id="content"><p>Creating a git pull request allows a developer to ask others to review their code when a new feature has been added, a change has been made or they want other developers to review their code for any other reason. </p><p>In order to do this the following steps are necessary:</p><p>If you want to work on an exisiting project, a fork of the exisiting project repository needs to be made. Once this is done a copy of the project will have been made.</p><p>Then a clone of the forked repository must be made, this will create a new working copy of the project on a local machine.</p><p>Before creating a new feature, a new branch for the feature has to be created and any changes must be added and commited to this branch.</p><p>Once these changes have been made it is possible to push these to the copy of the repository, (not the main repository) by a git push. </p><p>After this has been done, a pull request can be made through the relevant copied repository page. </p><p>Creating pull requests is useful when working in a team and it encourages collaboration. I am going to try and make one pull request a day.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="static_methods.html">Static Methods </a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">23 September 2015</p>
-        </header>
-        <div data-id="content"><p>Static methods in Java are used when the method needs to be called without creating an object of the class.</p><p>An instance variable needs an object to be created for it to be called whereas a static method does not. That is why most main classes in Java must be static.</p><p>Static methods typically take all their data from their parameters and create something from those parameters. They also typically have no reference to variables.</p><p>It is possible to make many methods static, but this is bad practice as it is unclear as to what the responsibility of the class is when many methods can be called on it that are not necssarily related to what it does. A static method called on a class is also not polymorpic so this means that it is not possible to override the behavior set by a static method.</p><p>So it is important to think carefully when creating a static method and avoid using them unless necessary.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="binary.html">Counting in Binary</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">21 September 2015</p>
-        </header>
-        <div data-id="content"><p>Mathematics is not vital to knowing how to program, but it definitely helps if you are good at it. This is formal logic. If x then y is not the same as if y then x (a mistake people make all the time in everyday conversation). Counting in binary is simple if you imagine that all a computer has access to is 0 and 1 or on and off in an electrical circuit.</p><p>Because of this, everything it reads has to be represented in 0s and 1s. So this means that once it has used 0 and 1 to represent a number it can repetitively reuse 0 and 1 to add onto the end of a previous combination of 0 and 1. </p><p>This is similar to the use of hexadecimal numbers. If you imagine that you can only count using the digits 0–10 and a–j once you have counted to 10 using the numbers in order to carry on 0a would represent 11 and 1a would be 21 etc. </p><p>In a similar way a computer uses 0s and 1s and combinations of these when it needs to add to a previous value.</p><p>The easiest way to calculate the binary value of a number is to divide a number by 2 and record the remainder value as part of the binary result until the number you are dividing is one.</p></div>
         </article>
         </li>
     </ol>
