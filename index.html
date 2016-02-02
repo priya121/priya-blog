@@ -39,6 +39,14 @@
         <li class="entries">
         <article>
         <header>
+        <h2><a class="entries" data-id="page-link" href="patterns.html">Patterns and Anti-Patterns</a></h2>
+        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">02 February 2016</p>
+        </header>
+        <div data-id="content"><p>One thing I am sure of is that there a lot of patterns in code. I am able to recognize some these patterns when we go through them in Zagaku or read about them in simple terms, but when things get more complex I have a bit of a hard time. This is probably because the examples given are purposefully simple and it is clear what the pattern is trying to achieve in the code.</p><p>I think I’d also have a harder time trying to actively incorporate them into my own code or spot them in a complex code base. So, in order to improve on this, one of my stories this week is to read the first part of Implementation Patterns by Kent Back and try and actively incorporate the patterns mentioned into my code.</p><p>I think now is a good time to do this, because my Java Tic Tac Toe is starting to get quite big, and I feel like it definitely needs some cleaning up as I am starting to loose track of the file stucture. This is probably normal when you start working on larger programs and systems, but it isn’t something I’m that used to.</p><p>I’m starting to read about the simple class patterns he discusses, but I thought one of the underlying principles he talks about is quite interesting. He writes that you should keep the consequances local. This, he says, is one of the underlying principles of most of the other patterns. It makes sense because if you are trying to build something complex that needs to change, having tiny bits of functionality you can swap out is a really good idea.</p><p>I know I’ve fallen into a few problems where I have a variable that is not within a method and so is not updated at the right point in time, so this is something I should really try and be more aware of.</p><p>Keeping things that change together (and at the same rate) in the same place is another principle he mentions in the book. The best way to do this is also to probably break things down into small pieces that logically belong together. I have fallen into the trap of making some field variables in my Tic Tac Toe that probably do not need to be field varibles so I am going to start there. I hope that the first step to being able to use patterns is maybe by spotting anti-patterns, but maybe that is just hopeful because I am sure I am following quite a few of those!</p></div>
+        </article>
+        </li><li class="entries">
+        <article>
+        <header>
         <h2><a class="entries" data-id="page-link" href="collecting_with_streams.html">Building a collection</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">01 February 2016</p>
         </header>
@@ -137,14 +145,6 @@ public List&lt;Integer&gt; validMoves() {
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">07 January 2016</p>
         </header>
         <div data-id="content"><p>A static method or vaiable is one that does not belong to a particular object but to a class. There are a few reasons for doing this. You may want to keep track of how many objects of a certain type ofe class are created, or assign an id to each object created or just access a variable from outside the class. It is possible to then access the static, constant from outside the class, but in order to make it unchangable it is necessary to also declare it final.</p><p>It is convention to write constants in capitals. They will still work as expected if this is not done, but doing this means that it is clear to anyone reading your code that the variable is a constant.</p><p>I have tended to avoid using constants, but I am going to try and introduce them wherever necessary in my Java TicTacToe.</p></div>
-        </article>
-        </li><li class="entries">
-        <article>
-        <header>
-        <h2><a class="entries" data-id="page-link" href="trade-offs.html">trade offs</a></h2>
-        <p class="date" data-id="published-at" data-format="dd MMMM yyyy">05 January 2016</p>
-        </header>
-        <div data-id="content"><p>So much in coding (and in life really!) is about trade offs. There are so many ways to do the same thing when you write code that most of the time there are a lot of advantages and disadvantages to a single approach.</p><p>I suppose that is why everyone in the coding community seems to be so opinionated about what they believe is the optimal way to do something. I am still forming my opinions about the tools and approaches I am learning. </p><p>I am sure once I learn the restrictions and frustrations of using a tool in a real world environment I’ll form some stronger opinions about what I prefer, but right now I can see the trade offs for most approaches and think you can probably find a use for most tools depending on the job.</p></div>
         </article>
         </li>
     </ol>
