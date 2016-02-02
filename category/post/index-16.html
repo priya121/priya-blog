@@ -113,18 +113,18 @@ List&lt;String&gt; map = names.stream()
         <h2><a class="entries" data-id="page-link" href="../../collecting_with_streams.html">Building a collection</a></h2>
         <p class="date" data-id="published-at" data-format="dd MMMM yyyy">01 February 2016</p>
         </header>
-        <div data-id="content"><p>Woah, I just got a beast of an error message from my stream method and have no idea what it means. I suppose this is another disadvantage of using something new, when something goes wrong, it is harder to understand why at first.</p><p>Anyway, it wasn’t the streams fault, but something else in my code so crisis averted (kind of).</p><p>So I wanted to look at Collectors more today, starting by looking at the built in collectors and then maybe making my own.</p><p>Collectors are useful for creating a list out of the elements of a stream. I have already used .collect(toList()); quite a lot but some other really useful collectors are ones you can use for Integers:</p><pre>
+        <div data-id="content"><p>Woah, I just got a beast of an error message from my stream method and have no idea what it means. I suppose this is another disadvantage of using something new, when something goes wrong, it is harder to understand why at first.</p><p>Anyway, it wasn’t the streams fault, but something else in my code so crisis averted (kind of).</p><p>I wanted to look at Collectors more today, starting by looking at the built in collectors and then maybe making my own.</p><p>Collectors are useful for creating a list out of the elements of a stream. I have already used .collect(toList()); quite a lot, but some other really useful collectors are ones you can use for Integers:</p><pre>
  <code class="language-java">
       int total = groceries.stream()
                        .collect(Collectors.summingInt(GroceryItem::getPrice)));
 </code> 
 </pre>
-<p>There is also .counting() that increments by the number of input elements, and .averagingInt() that like .summingInt() above aggregates the elements and then performs the operation sequentially on them, this time returning the average of the elements. These operations are also available for Doubles and Longs.</p><p>.joining() concatenates the elements into a String in the order they are processed and can take a delimiter (how the elements are joined together), a prefix and a suffix as arguments. If you don’t give a prefix and suffix the only arguement required is the delimiter.</p><pre>
+<p>There is also .counting() that increments by the number of input elements, and .averagingInt() that like .summingInt() above aggregates the elements and then performs the operation sequentially on them, this time returning the average of the elements. These operations are also available for Doubles and Longs.</p><p>.joining() concatenates the elements into a String in the order they are processed and can take a delimiter (how the elements are joined together), a prefix and a suffix as arguments. If you don’t give a prefix and suffix the only argument required is the delimiter.</p><pre>
  <code class="language-java">
      String invitation = guests.stream()
       .filter(p -&gt; p.address == "18 Cedar Way")
       .map(p -&gt; p.name)
-      .collect(Collectors.joining(" and ", "Hi ", "! You are invited to the party.);
+      .collect(Collectors.joining(" and ", "Hi ", "! You are invited to the party.");
  </code> 
 </pre>
 <p>This would produce: Hi, Luda and Tom! You are invited to the party.  (Assuming Luda and Tom were two of the Person objects within the Stream of guests, each having instance variables of an address and name).</p><p><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#toMap-java.util.function.Function-java.util.function.Function-">.toMap()</a> is another useful one that allows you to change the elements of the stream into a map.</p><p>All of these collectors are predefined but it is possible to build your own collector using Collector.of() These take a supplier, combiner, accumulator and finsher.</p><p>The interface of a Collector starts with Collector&lt;T, A, R&gt;:</p><p>This means a Collector accepts items of type T and produces aggregated/accumulated (A) values of the return type R.</p><p>Here is an example:</p><pre>
@@ -137,14 +137,14 @@ List&lt;String&gt; map = names.stream()
          StringJoiner::toString);
 </code> 
 </pre>
-<p>The first part (the supplier) of this Collector is the supplier that creates a new immutable set, which is an unchangeable list of unique elements.</p><p>The second part (the accumulator) of this is the supplier that takes an element of the type T and joins it to the immutable set (the new StringJoiner(“ , “)) it’s called list here.</p><p>The third part (the combiner) joins or merges the elements together one by one.</p><p>Finally the fourth part (the finisher) returns the immutable set as the return type you specify.</p><p>If names is returned within a function it should produce a list of names of the Guest objects as a String, joined by a comma.</p><pre>
+<p>The first part (the supplier) of this Collector is the supplier that creates a new immutable set, which is an unchangeable list of unique elements.</p><p>The second part (the accumulator) of this is accumulation of elements of type T to the immutable set (the new StringJoiner(“ , “)), it’s called list here.</p><p>The third part (the combiner) joins or merges the elements together one by one.</p><p>Finally the fourth part (the finisher) returns the immutable set as the return type you specify.</p><p>When names is returned or printed to the console within a function it should produce a list of names of the Guest objects as a String, joined by a comma.</p><pre>
   <code class="language-java">
    String names = guests
 .stream()
     .collect(guestList);
 </code> 
 </pre>
-<p>So that is how you build your own collection. There are also .flatmap() and .reduce() which I should probably look into, but not I have put off integrating streams into my TicTacToe when determining rows and columns enough so should probably do that first.</p></div>
+<p>So that is how you build your a simple collector. There are also .flatmap() and .reduce() which I should probably look into, but not I have put off integrating streams into my TicTacToe when determining rows and columns enough so should probably do that first. Creating your own collection is probably more useful for when things get complex, but for now I am going to stick to using the predefined collectors.</p></div>
         </article>
         </li>
     </ol>
